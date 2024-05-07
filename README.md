@@ -13,13 +13,13 @@ DevBook está dirigida a una amplia audiencia relacionada con el mundo de la tec
 #### **Misión, Visión y Valores**
 
 **Misión:**  
-En DevBook, nos comprometemos a ofrecer soluciones web y tecnológicas innovadoras y de vanguardia para satisfacer las necesidades de nuestros usuarios. Nuestro objetivo es proporcionar servicios de alta calidad que impulsen el crecimiento y el éxito de los profesionales y empresas del sector tecnológico.
+En Formatech , nos comprometemos a ofrecer soluciones web y tecnológicas innovadoras y de vanguardia para satisfacer las necesidades de nuestros usuarios. Nuestro objetivo es proporcionar servicios de alta calidad que impulsen el crecimiento y el éxito de los profesionales y empresas del sector tecnológico.
 
 **Visión:**  
 Nos visualizamos como líderes en la implementación de soluciones tecnológicas, destacando por nuestra excelencia en el servicio al cliente, nuestra constante innovación y nuestra capacidad para adaptarnos a un entorno tecnológico en evolución constante.
 
 **Valores:**  
-Los pilares fundamentales que conforman DevBook son los siguientes:  
+Los pilares fundamentales que conforman Formatech  son los siguientes:  
 - Excelencia
 - Responsabilidad Social
 - Adaptabilidad
@@ -29,11 +29,18 @@ Los pilares fundamentales que conforman DevBook son los siguientes:
 #### **Modelo de Negocios**
 
 **Modelo de Negocio:**  
-DevBook ofrece una plataforma de redes sociales innovadora centrada en la experiencia del usuario, con un fuerte enfoque en la privacidad y seguridad de los datos del usuario. Además, permite la personalización y adaptabilidad para satisfacer las necesidades individuales de los usuarios.
+Formatech ofrece una plataforma de redes sociales innovadora centrada en la experiencia del usuario, con un fuerte enfoque en la privacidad y seguridad de los datos del usuario. Además, permite la personalización y adaptabilidad para satisfacer las necesidades individuales de los usuarios.
 
 #### **Propuesta de Valor**
 
-En DevBook, nos dedicamos a proporcionar soluciones web y tecnológicas de vanguardia que transforman la forma en que los desarrolladores operan y crecen. Nuestra propuesta de valor radica en ofrecer innovación, adaptabilidad, eficiencia y colaboración continua. Con DevBook, los usuarios pueden confiar en una plataforma sólida y confiable que les permite innovar, crecer y alcanzar sus metas profesionales de manera efectiva y eficiente.
+En Formatech , nos dedicamos a proporcionar soluciones web y tecnológicas de vanguardia que transforman la forma en que los desarrolladores operan y crecen. Nuestra propuesta de valor radica en ofrecer innovación, adaptabilidad, eficiencia y colaboración continua. Con DevBook, los usuarios pueden confiar en una plataforma sólida y confiable que les permite innovar, crecer y alcanzar sus metas profesionales de manera efectiva y eficiente.
+
+
+#### **Anexos**
+
+[Ver diseño en Figma](https://www.figma.com/file/jkd472AsGEB1q23NpVG4hD/Figma-basics?type=design&node-id=0-1&mode=design&t=WJOPH8uFXhwJdmBo-0)
+
+
 
 ---
 
