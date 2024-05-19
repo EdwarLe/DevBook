@@ -17,7 +17,7 @@ header {
 }
 
 #buscador {
-    /* Estilos para el buscador */
+
     margin: 1em 0;
     text-align: center;
 }
@@ -43,15 +43,66 @@ main {
     text-align: center;
 }
 
-.tarjeta h2 {
-    color: #333;
-}
 
-.tarjeta p, .tarjeta ul {
+.tarjeta p{
     color: #555;
     font-size: 1em;
     line-height: 1.5em;
+    text-align: justify;
 }
+
+.tarjeta.tarjeta.valores img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 1em 0;
+}
+
+
+.tarjeta.mision{
+ background-color: #F2FFF1;
+
+}
+.tarjeta.tarjeta.mision img {
+    width: 35%;
+    height: 30%;
+    border-radius: 5px;
+    margin: 1em 0;
+}
+
+.tarjeta.mision h2 {
+    color: #259D19;
+    text-align: center;
+}
+
+.tarjeta.vision {
+    background-color: #F0F0FF;
+    
+}
+.tarjeta.vision h2 {
+    color: #E3A11F;
+    text-align: center;
+    
+}
+
+.tarjeta.tarjeta.vision img {
+    width: 35%;
+    height: 30%;
+    border-radius: 5px;
+    margin: 1em 0;
+}
+
+
+.tarjeta.valores {
+    background-color: #fff3e0; 
+}
+
+.tarjeta.valores h2 {
+    color: #171A8F;
+    text-align: center;
+}
+
+
 
 footer {
     background-color: #333;
