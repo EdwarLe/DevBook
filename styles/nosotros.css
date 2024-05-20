@@ -1,1 +1,29 @@
 @import url(./styles.css);
+
+.contenedor-equipo {
+    background-color: blue;
+    width: 100%;
+    display: grid;
+    gap:var(--padding-20);
+    place-content: center;
+}
+
+.contenedor-equipo > h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.contenedor-persona {
+    width: 100%;
+    background-color: var(--terciario-400);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--padding-20);
+}
+
+.equipo {
+    background-color: var(--secundario-200);
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
