@@ -1,5 +1,188 @@
 @import url(./styles.css);
 
+.encabezado h1{
+    color: #2272FF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 50px */
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.encabezado h3{
+    color: var(--oscuro-300);
+    font-family: "Josefin Sans";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.encabezado p{
+    flex-shrink: 0;
+    color: var(--oscuro-300);
+    text-align: justify;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+.encabezado button {
+    color:white;
+    display: flex;
+    width: 249px;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: #2272FF;
+    margin-top: 10px;
+}
+
+.encabezado button:hover {
+    border: 2px solid var(--Primary-300, #1D58BD);
+    color: var(--primario-400);
+    background-color: rgba(0, 0, 0, 0)
+    }
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+}
+.imagen-gris {
+    background: rgba(217, 217, 217, 0.46);
+    height: 40vw;
+    width: 80vw;
+    border-radius: 1.8rem;
+    position: relative;
+    margin: 60px auto;
+}
+
+.imagen-1{
+    width: 50%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--gris) 50% / cover no-repeat, #D9D9D9;
+    position: absolute;
+    bottom: -30px; 
+    left: -15px;
+    z-index: 0;
+}
+
+.imagen-2{
+    width: 50%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--gris) 50% / cover no-repeat, #D9D9D9;
+    position: absolute;
+    top: -30px; 
+    right: -25px;
+    z-index: 0;
+}
+
+.btn-top {
+    display: none;
+}
+.btn-bottom {
+    display: block;
+}
+
+@media (min-width: 744px){
+    .imagen-gris {
+        width: 70vw;
+    }
+
+    .btn-top {
+        display: block;
+    }
+    .btn-bottom {
+        display: none;
+    }
+
+    .contenedorPrincipal {
+        margin-left: 66px;
+        margin-right: 66px;
+    }
+
+    .encabezado h1{
+        font-size: 60px;
+        line-height: 100%; /* 60px */
+    }
+
+    .encabezado h3{
+        color: var(--oscuro-300);
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: left;
+    }
+
+    .encabezado button {
+        display: inline-flex;
+        padding: 16px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .principal {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+}
+@media (min-width: 1200px){
+    .principal{
+        width: 616px;
+        gap:20px;
+    }
+
+    .encabezado button{
+        display: inline-flex;
+        padding: 16px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 20px;
+    }
+
+    .encabezado{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-gap: 10px;
+    }
+    .imagen-1{
+        width: 100%;
+        bottom: -40px; 
+        left: -60px;
+    }
+    
+    .imagen-2{
+        width: 100%;
+        top: -40px; 
+        right: -60px;
+    }
+
+    .imagen-gris {
+        width: 20vw;
+        height: 40vh;
+    }
+    
+}
+
 #menu-principal {
     /* Estilos para el menú principal */
 }
