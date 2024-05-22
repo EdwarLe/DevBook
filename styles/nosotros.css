@@ -1,9 +1,9 @@
 @import url(./styles.css);
 
 .contenedor-equipo {
-    background-color: blue;
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap:var(--padding-20);
     place-content: center;
 }
@@ -11,19 +11,78 @@
 .contenedor-equipo > h2 {
     text-align: center;
     font-size: 40px;
+    color: #0E877D;
+    font-family: 'Ubuntu';
 }
 
 .contenedor-persona {
     width: 100%;
-    background-color: var(--terciario-400);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--padding-20);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: var(--padding-30);
 }
 
-.equipo {
-    background-color: var(--secundario-200);
+.info-equipo {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-equipo {
     height: 250px;
     width: 250px;
     border-radius: 50%;
+    padding: var(--padding-10);
+}
+
+.img-equipo:hover > p {
+    top: 50%;
+}
+
+.edwar {
+    background: url(../public/images/edwar-leon.png);
+}
+.vanessa {
+    background: url(../public/images/vanessa-mora.png);
+}
+.mateo {
+    background: url(../public/images/mateo-castro.png);
+}
+.yuli {
+    background: url(../public/images/yu);
+}
+
+.equipo {
+    text-align: center;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-10)
+}
+
+.equipo h3 {
+    font-size: 28px;
+    font-family: 'Josefin Sans';
+}
+
+.equipo p {
+    position: absolute;
+    color: var(--blanco);
+    font-size: 14px;
+    top: 150%;
+    left: 0;
+    translate: 0 -50%;
+    background-color: #1c202f79;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
 }
