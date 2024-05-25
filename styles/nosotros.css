@@ -233,6 +233,8 @@
     width: 45%;
   }
   /* seccion mision, vision y valores  */
+
+
 }
 @media (min-width: 1200px) {
   /* sección acerca de nosotros  */
@@ -279,13 +281,77 @@
   }
   /* seccion mision vision valores */
 }
-
-footer {
-  background-color: #333;
+/* seccion pie de pagina  */
+.pie-pagina {
+  background-color: #101828;
   color: white;
-  padding: 1em 0;
+  padding: 2em 0;  /* Aumentamos el padding para un mejor espaciado */
   text-align: center;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
+
+.contenedor-piepagina {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 1em;
+}
+
+.columna {
+  flex: 1;
+  min-width: 200px;
+  padding: 1em;
+}
+
+.columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columna ul li {
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+}
+
+.columna ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.columna ul li a:hover {
+  text-decoration: underline;
+}
+
+.columna ul li a i {
+  margin-right: 0.5em;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.redes-sociales a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-size: 1.5em;
+}
+
+.redes-sociales a:hover {
+  color: #ffcc00;  /* Color al pasar el cursor */
+}
+
+.derechos {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+
+
+/* seccion pie de pagina  */
