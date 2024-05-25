@@ -42,13 +42,17 @@
                 <h3>Leave us a message</h3>
                 <form>
                     <div class="inputs">
-                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required data-error-message="Por favor, ingrese un nombre válido. Acepta solo texto y solo NOMBRES y APELLIDOS">
+                        <span class="error-message" id="name-error"></span>
+                        
                     </div>
                     <div class="inputs">
-                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required data-error-message="Por favor, ingrese un correo electrónico válido. Formato email@example.com">
+                        <span class="error-message" id="email-error"></span>
                     </div>
                     <div class="inputs">
-                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required data-error-message="El mensaje no puede exceder las 100 palabras."></textarea>
+                        <span class="error-message" id="message-error"></span>
                     </div>
                     <div class="inputs">
                         <button type="submit">Send</button>
@@ -58,7 +62,7 @@
         </div>
 
     </div>
-    <script></script>
+    <script src="../js/formulario_de_contacto.js"></script>
 </body>
 
 </html>

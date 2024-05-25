@@ -100,6 +100,15 @@
     display: none;
 }
 
+input.invalid, textarea.invalid {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: var(font-size)
+}
+
 @media (min-width: 744px){
         .contenedorPrincipal{
         border-radius: 10px;
