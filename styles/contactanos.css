@@ -12,14 +12,15 @@
     gap: 20px;
 }
 
-.direccion h1{
+.titulo{
     color: #2272FF;
     text-align: center;
     font-family: Ubuntu; 
     font-size: 50px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%;   
+    line-height: 100%;
+    width: 100%;   
 }
 
 .direccion .datos{
@@ -121,7 +122,7 @@
         margin-right: 2vw;
         font-size: 38px;
     }
-    .direccion h1 {
+    .titulo {
         text-decoration: underline;
         text-underline-offset: 3vh; 
         text-transform: uppercase;
@@ -155,3 +156,48 @@
     }
 
 }
+
+@media (min-width: 1200px){
+    .contenedorPrincipal{
+        flex-wrap: wrap;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        margin: 30vh;
+        width: 80%;
+        flex-direction: column;
+    }
+    .direccion, .formulario {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+        margin-top: 2em;
+    }
+    .direccion{
+        order:1
+    }
+
+    .icons{
+        margin-top: 0px;
+    }
+    .icons i{
+        font-size: 30px;
+    }
+    .info .datos{
+        margin-top: 3em;
+        text-align: left;
+    }
+    .formulario h3{
+        text-align: left;
+    }
+
+    .contenido {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
