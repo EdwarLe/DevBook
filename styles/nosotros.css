@@ -233,8 +233,18 @@
     width: 45%;
   }
   /* seccion mision, vision y valores  */
+  /* Sección footer  */
+  .pie-pagina{
+    padding: 10px;
+  }
+  .contenedor-piepagina{
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
 
 
+  
+ /* Sección footer  */
 }
 @media (min-width: 1200px) {
   /* sección acerca de nosotros  */
@@ -282,8 +292,21 @@
   /* seccion mision vision valores */
 }
 /* seccion pie de pagina  */
+
+.columnaLogo {
+  width: 200px;
+  height: 150px;
+
+}
+
+.columnaLogo img {
+  width: 100%;
+}
+
+
+
 .pie-pagina {
-  background-color: #101828;
+  background-color: var(--oscuro-400);
   color: white;
   padding: 2em 0;  /* Aumentamos el padding para un mejor espaciado */
   text-align: center;
@@ -297,35 +320,40 @@
   padding: 0 1em;
 }
 
-.columna {
-  flex: 1;
+.columnaContactoLogo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columnaContacto, .columnaInstitucional {
   min-width: 200px;
   padding: 1em;
 }
 
-.columna ul {
+.columnaContacto ul , .columnaInstitucional ul {
   list-style: none;
   padding: 0;
 }
 
-.columna ul li {
+.columnaContacto ul li ,.columnaInstitucional ul li {
   margin: 0.5em 0;
   display: flex;
   align-items: center;
 }
 
-.columna ul li a {
+.columnaContacto ul li a, .columnaInstitucional ul li a {
   color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
 
-.columna ul li a:hover {
+.columnaContacto ul li a:hover , .columnaInstitucional ul li a:hover{
   text-decoration: underline;
 }
 
-.columna ul li a i {
+.columnaContacto ul li a i , .columnaInstitucional ul li a i {
   margin-right: 0.5em;
 }
 
