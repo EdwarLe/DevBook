@@ -483,6 +483,18 @@
     width: 45%;
   }
   /* seccion mision, vision y valores  */
+  /* Sección footer  */
+  .pie-pagina{
+    padding: 10px;
+  }
+  .contenedor-piepagina{
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+
+  
+ /* Sección footer  */
 }
 @media (min-width: 1200px) {
   /* sección acerca de nosotros  */
@@ -529,13 +541,95 @@
   }
   /* seccion mision vision valores */
 }
+/* seccion pie de pagina  */
 
-footer {
-  background-color: #333;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
+.columnaLogo {
+  width: 200px;
+  height: 150px;
+
+}
+
+.columnaLogo img {
   width: 100%;
 }
+
+
+
+.pie-pagina {
+  background-color: var(--oscuro-400);
+  color: white;
+  padding: 2em 0;  /* Aumentamos el padding para un mejor espaciado */
+  text-align: center;
+  width: 100%;
+}
+
+.contenedor-piepagina {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 1em;
+}
+
+.columnaContactoLogo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.columnaContacto, .columnaInstitucional {
+  min-width: 200px;
+  padding: 1em;
+}
+
+.columnaContacto ul , .columnaInstitucional ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columnaContacto ul li ,.columnaInstitucional ul li {
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+}
+
+.columnaContacto ul li a, .columnaInstitucional ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.columnaContacto ul li a:hover , .columnaInstitucional ul li a:hover{
+  text-decoration: underline;
+}
+
+.columnaContacto ul li a i , .columnaInstitucional ul li a i {
+  margin-right: 0.5em;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.redes-sociales a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-size: 1.5em;
+}
+
+.redes-sociales a:hover {
+  color: #ffcc00;  /* Color al pasar el cursor */
+}
+
+.derechos {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+
+
+/* seccion pie de pagina  */
