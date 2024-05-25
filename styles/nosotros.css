@@ -10,7 +10,8 @@
 }
 
 .nav {
-    background: linear-gradient(0deg, rgba(7, 245, 229, 0.08) 0%, rgba(11, 241, 227, 0.08) 100%), rgba(217, 217, 217, 0.50);
+    /* background: linear-gradient(0deg, rgba(7, 245, 229, 0.08) 0%, rgba(11, 241, 227, 0.08) 100%), rgba(217, 217, 217, 0.50); */
+    background-color: var(--oscuro-400);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     width: 100%;
@@ -150,7 +151,7 @@
 }
 
 @media(min-width: 744px) {
-    .encabezado {
+    .encabezadoNosotros {
         height: 80px;
     }
 
@@ -201,7 +202,7 @@
 }
 
 @media(min-width: 1200px) {
-    .encabezado {
+    .encabezadoNosotros {
         border-radius: 20px;
         top: 20px;
         margin: 0 10px;
@@ -250,7 +251,7 @@
 
 /* Finaliza  sección encabezado */
 /* sección acerca de nosotros  */
-.encabezado h1 {
+.encabezadoNosotros h1 {
   color: #2272ff;
   text-align: center;
   font-family: Inter;
@@ -268,7 +269,7 @@
   gap: 20px;
 }
 
-.encabezado h3 {
+.encabezadoNosotros h3 {
   color: var(--oscuro-300);
   font-family: "Josefin Sans";
   font-size: 35px;
@@ -276,7 +277,7 @@
   font-weight: 500;
   line-height: normal;
 }
-.encabezado p {
+.encabezadoNosotros p {
   flex-shrink: 0;
   color: var(--oscuro-300);
   text-align: justify;
@@ -286,7 +287,7 @@
   font-weight: 400;
   line-height: 26px; /* 162.5% */
 }
-.encabezado button {
+.encabezadoNosotros button {
   color: white;
   display: flex;
   width: 249px;
@@ -299,7 +300,7 @@
   margin-top: 10px;
 }
 
-.encabezado button:hover {
+.encabezadoNosotros button:hover {
   border: 2px solid var(--Primary-300, #1d58bd);
   color: var(--primario-400);
   background-color: rgba(0, 0, 0, 0);
@@ -438,12 +439,12 @@
     display: none;
   }
 
-  .encabezado h1 {
+  .encabezadoNosotros h1 {
     font-size: 60px;
     line-height: 100%; /* 60px */
   }
 
-  .encabezado h3 {
+  .encabezadoNosotros h3 {
     color: var(--oscuro-300);
     font-size: 35px;
     font-style: normal;
@@ -452,7 +453,7 @@
     text-align: left;
   }
 
-  .encabezado button {
+  .encabezadoNosotros button {
     display: inline-flex;
     padding: 16px 20px;
     justify-content: center;
@@ -490,7 +491,7 @@
     gap: 20px;
   }
 
-  .encabezado button {
+  .encabezadoNosotros button {
     display: inline-flex;
     padding: 16px 20px;
     justify-content: center;
@@ -499,7 +500,7 @@
     border-radius: 20px;
   }
 
-  .encabezado {
+  .encabezadoNosotros {
     display: grid;
     grid-template-columns: 60% 40%;
     grid-gap: 10px;
