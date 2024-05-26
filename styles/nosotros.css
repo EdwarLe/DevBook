@@ -1,97 +1,5 @@
 @import url(./styles.css);
 
-/* Sección equipo de trabajo */
-.contenedor-equipo {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap:var(--padding-20);
-    place-content: center;
-}
-
-.contenedor-equipo > h2 {
-    text-align: center;
-    font-size: 40px;
-    color: #0E877D;
-    font-family: 'Ubuntu';
-}
-
-.contenedor-persona {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    margin-top: var(--padding-30);
-}
-
-.info-equipo {
-    position: relative;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px 1px rgba(14, 1, 87, 0.5);
-}
-
-.img-equipo {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    padding: var(--padding-10);
-}
-
-.img-equipo:hover > p {
-    top: 50%;
-}
-
-.edwar {
-    background: url(../public/images/edwar-leon.png);
-}
-.vanessa {
-    background: url(../public/images/vanessa-mora.png);
-}
-.mateo {
-    background: url(../public/images/mateo-castro.png);
-}
-.yuli {
-    background: url(../public/images/yuli-leon.png);
-}
-
-.equipo {
-    text-align: center;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--padding-10);
-}
-
-.equipo h3 {
-    font-size: 28px;
-    font-family: 'Josefin Sans';
-}
-
-.equipo p {
-    position: absolute;
-    color: var(--blanco);
-    font-size: 14px;
-    top: 150%;
-    left: 0;
-    translate: 0 -50%;
-    background-color: #1c202f79;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    padding: 20px;
-}
-
-/* Finaliza Sección Equipo de Trabajo/*
-
 /* Estilos de la barra de navegación */
 .encabezado {
   height: 60px;
@@ -154,7 +62,6 @@
 
 }
 
-
 .nav-menu-item:hover {
   background-color: var(--secundario-200);
   border-radius: var(--padding-10);
@@ -172,6 +79,7 @@
   height: 30px;
   display: grid;
   place-content: center;
+  cursor: pointer;
 }
 
 .buscar-contenedor {
@@ -242,6 +150,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
+  cursor: pointer;
 }
 
 .mostrar-menu {
@@ -432,6 +341,99 @@
 }
 
 /* Finaliza sección mision vision valores */
+
+/* Sección equipo de trabajo */
+
+.contenedor-equipo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:var(--padding-20);
+  place-content: center;
+}
+
+.contenedor-equipo > h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #0E877D;
+  font-family: 'Ubuntu';
+}
+
+.contenedor-persona {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-top: var(--padding-30);
+}
+
+.info-equipo {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px 1px rgba(14, 1, 87, 0.5);
+}
+
+.img-equipo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  padding: var(--padding-10);
+}
+
+.img-equipo:hover > p {
+  top: 50%;
+}
+
+.edwar {
+  background: url(../public/images/edwar-leon.png);
+}
+.vanessa {
+  background: url(../public/images/vanessa-mora.png);
+}
+.mateo {
+  background: url(../public/images/mateo-castro.png);
+}
+.yuli {
+  background: url(../public/images/yuli-leon.png);
+}
+
+.equipo {
+  text-align: center;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--padding-10);
+}
+
+.equipo h3 {
+  font-size: 28px;
+  font-family: 'Josefin Sans';
+}
+
+.equipo p {
+  position: absolute;
+  color: var(--blanco);
+  font-size: 14px;
+  top: 150%;
+  left: 0;
+  translate: 0 -50%;
+  background-color: #1c202f79;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  padding: 20px;
+}
+
+/* Finaliza Sección Equipo de Trabajo/*
 
 /* seccion pie de pagina  */
 
