@@ -202,7 +202,7 @@
   line-height: 26px;
 }
 
-.encabezadoNosotros button {
+.encabezadoNosotros .botones a {
   color: white;
   display: flex;
   width: 250px;
@@ -214,9 +214,10 @@
   background: var(--primario-200);
   border: solid 2px transparent;
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
 }
 
-.encabezadoNosotros button:hover {
+.encabezadoNosotros a:hover {
   border: 2px solid var(--primario-300);
   color: var(--primario-400);
   background-color: transparent;
@@ -382,7 +383,7 @@
   padding: var(--padding-10);
 }
 
-.img-equipo:hover > p {
+.img-equipo:hover p {
   top: 50%;
 }
 
@@ -509,7 +510,7 @@
 }
 
 .redes-sociales a:hover {
-  color: #ffcc00;
+  color: var(--primario-200);
 }
 
 .derechos {
@@ -532,6 +533,7 @@
 }
 
 /* Finaliza seccion pie de pagina  */
+
 
 @media(min-width: 744px) {
 
@@ -597,7 +599,9 @@
   }
 
   .btn-top {
-    display: block;
+    display: flex;
+    gap: var(--padding-10);
+    
   }
 
   .btn-bottom {
