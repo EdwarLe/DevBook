@@ -52,4 +52,4 @@ const fracmentoNombrePagina = nombrePagina.map((ele)=>{
         
     })
 })
-// Finaliza
+// Finaliza funcionalidad del menu

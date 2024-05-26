@@ -10,7 +10,6 @@
 }
 
 .nav {
-    /* background: linear-gradient(0deg, rgba(7, 245, 229, 0.08) 0%, rgba(11, 241, 227, 0.08) 100%), rgba(217, 217, 217, 0.50); */
     background-color: var(--oscuro-400);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -149,8 +148,9 @@
 .nav-activo {
     color: var(--primario-300);
 }
-
+/* Finaliza estilos de la barra de navegación */
 @media(min-width: 744px) {
+/* Estilos de la barra de navegación */
     .encabezadoNosotros {
         height: 80px;
     }
@@ -198,10 +198,11 @@
     .inputBuscador:focus + label {
         display: none;
     }
-
+/* Finaliza estilos de la barra de navegación */
 }
 
 @media(min-width: 1200px) {
+/* Estilos de la barra de navegación */
     .encabezadoNosotros {
         border-radius: 20px;
         top: 20px;
@@ -247,9 +248,10 @@
         display: flex;
         order: 1
     }
+/* Finaliza estilos de la barra de navegación */
 }
+/* Finaliza estilos de la barra de navegación */
 
-/* Finaliza  sección encabezado */
 /* sección acerca de nosotros  */
 .encabezadoNosotros h1 {
   color: #2272ff;
