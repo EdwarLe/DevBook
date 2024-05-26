@@ -35,6 +35,25 @@
     font-size: 18px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--oscuro-400);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--blanco);
+    width: 8px;
+    border-radius: 8px;
+}
+
 body {
     background-color: var(--gris);
 }
@@ -43,11 +62,36 @@ body {
     background-color: var(--blanco);
     min-height: 100vh;
     max-width: 1200px;
-    width: 100vw;
     margin: 0 auto;
-    width: 100vw;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-30);
 }
+
+/* Botón para subir */
+
+.btnArriba {
+    width: 40px;
+    height: 40px;
+    background-color: var(--oscuro-400);
+    border-radius: 100%;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    display: grid;
+    place-content: center;
+    border: solid var(--blanco) 2px;
+    cursor: pointer;
+}
+
+.bxs-chevron-down {
+    font-size: 30px;
+    color: var(--blanco);
+    transform: rotateX(180deg);
+}
+
+/* Finaliza Botón para subir */
 
 .contenedorPrincipalApp {
     background-color: var(--oscuro-400);
