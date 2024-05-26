@@ -45,6 +45,8 @@ body {
     max-width: 1200px;
     width: 100vw;
     margin: 0 auto;
+    width: 100vw;
+    position: relative;
 }
 
 .contenedorPrincipalApp {
@@ -52,4 +54,5 @@ body {
     max-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
+    width: 100vw;
 }
