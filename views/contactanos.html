@@ -15,9 +15,12 @@
     <title>Contáctanos</title>
 </head>
 
-<body>
+<body class="contenedor">
+    
     <div class="contenedorPrincipal">
-        <!-- Yuli - Header - Menú -->
+
+                                         
+<!-- Header - Menú -->
         <header class="encabezado">
             <nav class="nav">
                 <a href="#" class="logo" id="logo-menu"><img src="../img/LogoDocOfi.png" class="logo"></a>
@@ -35,12 +38,67 @@
                 </ul>
             </nav>
         </header>
-        <!-- Finaliza codigo Yuli -->
-    </div>
+        <!-- Finaliza codigo Header -->                                         
+        
+        <h1 class="titulo">Contact Us</h1>
+        <div class="contenido">
+            <div class="direccion">
+                <div class="info">
+                    <section class="icons">
+                        <i class='bx bxl-youtube' ></i><i class='bx bxl-instagram' ></i><i class='bx bxl-twitter' ></i><i class='bx bxl-facebook'></i>
+                    </section>
+                    <h3 class="datos">
+                        <p class="p p1">
+                            FormaTech 
+                        </p>
+                        <p class="p p2">
+                            B 37/3 Ground Floor Double StoryRamesh Nagar , Near Raja Garden Chowk.Bogotá D.C: 110110 <br>
+                        </p>
+                        <p class="p p3">
+                            <a>+57 312 456 7890 </a>
+                        </p> 
+                        <p class="p p4">                
+                        FormaTech@info.com.ng
+                        </p>
+                    </h3>
+                </div>
+                <img src="../img/celu.png">
+            </div>
+            <div class="formulario">
+                <h3>Leave us a message</h3>
+                <form>
+                    <div class="inputs">
+                        <input type="text" id="name" name="name"required data-error-message="Por favor, ingrese un nombre válido. Acepta solo texto y solo NOMBRES y APELLIDOS">
+                        <label for="name">Name</label>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="inputs">
+                        <input type="email" id="email" name="email" required data-error-message="Por favor, ingrese un correo electrónico válido. Formato email@example.com">
+                        <label for="email">Email Address</label>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="inputs">
+                        <textarea id="message" name="message" rows="4"  required data-error-message="El mensaje no puede exceder las 100 palabras."></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <div class="inputs">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    <!-- Codigo Js Yuli -->
+    </div>
+    <script src="../js/formulario_de_contacto.js"></script>
+
+        
+
+
+
     <script src="../js/menu-hamburguesa.js"></script>
-    <!-- Finaliza Js Yuli-->
+   
+
 </body>
 
 </html>
