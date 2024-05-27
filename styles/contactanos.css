@@ -413,7 +413,7 @@ input.invalid, textarea.invalid {
         padding: var(--padding-30);
         margin: 20vh 0;
     }
-    body.contenedor { 
+    body .contenedor { 
         background-color: #fff;
         display: flex;
         justify-content: center;
