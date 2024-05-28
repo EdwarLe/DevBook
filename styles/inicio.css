@@ -1,1 +1,16 @@
 @import url(./styles.css);
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.nav-menu h2 {
+    padding-left: var(--padding-10);
+}
+
+.nav-menu .navegacion{
+    p
+
+}
