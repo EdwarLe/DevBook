@@ -1,1 +1,179 @@
 @import url(./styles.css);
+
+/* Header */
+.header {
+    background-color: yellow;
+    height: 60px;
+    width: 100%;
+    /* position: fixed; */
+    /* z-index: 100; */
+}
+
+.header h4 {
+    font-family: "Josefin Sans";
+    font-size: 23px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.line-division {
+    width: 100%;
+    height: 1px;
+    background-color: var(--blanco);
+    margin-top: 10px;
+}
+/* Finaliza Header */
+/* Sección de foto de portada y perfil  */
+.cover-photo-profile {
+    /* background-color: red; */
+    margin-top: 80px;
+    padding: 0 var(--padding-10);
+
+}
+
+.cover-photo-banner {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    background-color: blue;
+
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-image: url(https://img.freepik.com/foto-gratis/majestuoso-leon-descansando-sabana-mirando-camara-fuerza-generada-inteligencia-artificial_25030-63833.jpg);
+}
+
+.btn-coverbanner {
+    position: relative;
+    right: -90%;
+    top: -55%;
+    background-color: var(--oscuro-0);
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+
+}
+.bxs-camera{
+    color: var(--negro);
+    font-size: 20px;
+}
+.profile{
+    position: relative;
+    top: -50%;
+    right: -28%;
+    align-items: center;
+    justify-content: center;
+    width: 134px;
+    height: 134px;
+    border-radius: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    border: solid var(--oscuro-400) 5px;
+
+}
+.photo-profile{
+    width: 126px;
+    height: 126px;
+    border-radius: 100%;
+}
+.btn-coverphoto{
+    position: relative;
+    right: -25%;
+    top: -98%;
+    background-color: var(--oscuro-0);
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+}
+.Username{
+    position: relative;
+    top: 70px;
+    /* background-color: aqua; */
+}
+.Username h4{
+    font-family: Poppins;
+    font-size: 21px;
+    text-align: center;
+}
+/* Finaliza sección de foto de portada y perfil */
+/* descripción del perfil  */
+.container-details{
+    /* background-color: chocolate; */
+    margin-top: 40px;
+    padding: 0 var(--padding-10);
+}
+.profile-description{
+    /* background-color: cadetblue; */
+}
+.profile-description h4{
+    display: none;
+}
+.line-division-details{
+    display: none;
+}
+.main-contac{
+    display: none;
+}
+.btn-photo-friends-new-post{
+    display: none;
+}
+.container-btn-edit-profile-config{
+    margin-top: 20px;
+}
+#btn-edit-profile{
+    border-radius: 4px;
+    width: 192px;
+    height: 30px;
+    justify-content: center;
+    font-size: 18px;
+    border: none;
+    color: var(--secundario-0);
+    background: var(--primario-100);
+    padding: 0 10px;
+    gap: 5px;
+}
+#btn-config{
+    border-radius: 4px;
+    width: 93px;
+    height: 30px;
+    justify-content: center;
+    font-size: 18px;
+    border: none;
+    color: var(--secundario-0);
+    background: var(--primario-400);
+    padding: 0 10px;
+    gap: 5px;
+}
+.line-division-btn{
+    width: 100%;
+    height: 1px;
+    background-color: var(--blanco);
+    margin-top: 20px;
+}
+/* Finaliza descripción del perfil  */
+/* Publicaciones */
+
+/* Finaliza publicaciones */
+/* Detalles */
+
+/* Finaliza detalles */
+/* Perfil  */
+
+/* Finaliza perfil  */
+/* configuración  */
+
+/* Finaliza configuración  */
+/* Footer con notificaciones, amigos y crear nueva publicación  */
+
+/* Finaliza footer con notificaciones, amigos y crear nueva publicación  */
