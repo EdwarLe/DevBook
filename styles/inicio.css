@@ -141,8 +141,56 @@ section #fecha {
     margin: var(--padding-10) var(--padding-10) auto;
     font-family: "Poppins";
     font-size: 18px;
+}
+.content{
+    text-align: center;
+}
+.content img{
+    width: 95%;
+}
+.content video{
+    width: 95%;
+}
 
+.interactions hr{
+    width: 95%; 
+    margin: 0 auto; 
+}
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2.5vw 2.5vw
+}
+.bxs-heart{
+    color: #FF0000;
+    margin-right: 1vw;
+}
+.icons .bxs-like {
+    color: #00FFA3;
+    margin-right: 1vw;
+}
+.bxs-donate-heart{
+    color: #FFB627
+}
+.post-actions {
+    display: flex;
+    justify-content: space-between; 
+    padding: var(--padding-10);
+}
 
+.post-actions section {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+}
+
+.post-actions section i {
+    font-size: 24px;
+}
+
+.post-actions section p {
+    margin: 0;
 }
 
 @media (min-width: 744px){}

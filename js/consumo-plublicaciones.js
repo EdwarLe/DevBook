@@ -30,7 +30,31 @@ async function dataJSON() {
                 </section>
             </div>
             <p class="text">${post.content.text}</p>
-            ${mediaContent}
+            <div class="content">
+                <img id="media" class="media">${mediaContent}
+            </div>
+            <div class="interactions">
+                <section class="icons">
+                    <i class='bx bxs-heart'></i>
+                    <i class='bx bxs-like '></i>
+                    <i class='bx bxs-donate-heart'></i>
+                </section>
+                <hr>
+                <div class="post-actions">
+                    <section class="Like">
+                        <i class='bx bx-like'></i>
+                        <p>Like</p>
+                    </section>
+                    <section class="Comment">
+                        <i class='bx bx-comment'></i>
+                        <p>Comment</p>
+                    </section>
+                    <section class="Share">
+                        <i class='bx bx-share-alt'></i>
+                        <p>Share</p>
+                    </section>
+                </div>    
+            </div>    
         </div>`;
         
 
