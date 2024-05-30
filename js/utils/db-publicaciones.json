@@ -5,14 +5,14 @@
             "user": {
                 "id": "user_1",
                 "name": "John Doe",
-                "profile_picture": "http://example.com/profile1.jpg"
+                "profile_picture": "../public/profile/friend1.jpg"
             },
             "content": {
                 "text": "Just had a great lunch!",
                 "media": [],
                 "link": null
             },
-            "timestamp": "2024-05-22T12:00:00Z",
+            "timestamp": "2024-05-27T12:00:00Z",
             "likes": 10,
             "comments": [],
             "shares": 1
@@ -22,14 +22,14 @@
             "user": {
                 "id": "user_2",
                 "name": "Jane Smith",
-                "profile_picture": "http://example.com/profile2.jpg"
+                "profile_picture": "../public/profile/friend2.jpg"
             },
             "content": {
                 "text": "Loving the new book I'm reading.",
                 "media": [
                     {
                         "type": "image",
-                        "url": "http://example.com/image1.jpg"
+                        "url": "../public/media/public1.jpg"
                     }
                 ],
                 "link": null
@@ -55,19 +55,19 @@
             "user": {
                 "id": "user_3",
                 "name": "Alice Brown",
-                "profile_picture": "http://example.com/profile3.jpg"
+                "profile_picture": "../public/profile/friend3.jpg"
             },
             "content": {
                 "text": "Amazing sunset today!",
                 "media": [
                     {
                         "type": "image",
-                        "url": "http://example.com/sunset.jpg"
+                        "url": "../public/media/public2.jpg"
                     }
                 ],
                 "link": null
             },
-            "timestamp": "2024-05-22T14:00:00Z",
+            "timestamp": "2024-04-22T14:00:00Z",
             "likes": 50,
             "comments": [
                 {
@@ -88,19 +88,19 @@
             "user": {
                 "id": "user_4",
                 "name": "Bob Johnson",
-                "profile_picture": "http://example.com/profile4.jpg"
+                "profile_picture": "../public/profile/friend4.jpg"
             },
             "content": {
                 "text": "Check out this video!",
                 "media": [
                     {
                         "type": "video",
-                        "url": "http://example.com/video1.mp4"
+                        "url": "../public/media/public4.mp4"
                     }
                 ],
                 "link": null
             },
-            "timestamp": "2024-05-22T15:00:00Z",
+            "timestamp": "2024-05-28T15:00:00Z",
             "likes": 30,
             "comments": [
                 {
@@ -121,7 +121,7 @@
             "user": {
                 "id": "user_5",
                 "name": "Charlie Green",
-                "profile_picture": "http://example.com/profile5.jpg"
+                "profile_picture": "../public/profile/friend5.jpg"
             },
             "content": {
                 "text": "New blog post is up!",
@@ -133,7 +133,7 @@
                     "image": "http://example.com/blog-image.jpg"
                 }
             },
-            "timestamp": "2024-05-22T16:00:00Z",
+            "timestamp": "2024-05-29T19:58:00Z",
             "likes": 20,
             "comments": [
                 {
@@ -154,7 +154,7 @@
             "user": {
                 "id": "user_6",
                 "name": "David Lee",
-                "profile_picture": "http://example.com/profile6.jpg"
+                "profile_picture": "../public/profile/friend6.jpg"
             },
             "content": {
                 "text": "Feeling grateful today.",
@@ -171,7 +171,7 @@
             "user": {
                 "id": "user_7",
                 "name": "Eva White",
-                "profile_picture": "http://example.com/profile7.jpg"
+                "profile_picture": "../public/images/edwar-leon.png"
             },
             "content": {
                 "text": "Check out this cool article!",
@@ -193,7 +193,7 @@
             "user": {
                 "id": "user_8",
                 "name": "Frank Brown",
-                "profile_picture": "http://example.com/profile8.jpg"
+                "profile_picture": "../public/images/yuli-leon.png"
             },
             "content": {
                 "text": "Happy to announce my new project!",
@@ -221,7 +221,7 @@
             "user": {
                 "id": "user_9",
                 "name": "Grace Clark",
-                "profile_picture": "http://example.com/profile9.jpg"
+                "profile_picture": "../public/images/vanessa-mora1.jpeg"
             },
             "content": {
                 "text": "Had a fantastic workout today.",
@@ -238,14 +238,14 @@
             "user": {
                 "id": "user_10",
                 "name": "Helen Harris",
-                "profile_picture": "http://example.com/profile10.jpg"
+                "profile_picture": "../public/images/mateo-castro.png"
             },
             "content": {
                 "text": "Celebrating a special occasion with family.",
                 "media": [
                     {
                         "type": "image",
-                        "url": "http://example.com/family.jpg"
+                        "url": "../public/media/public3.jpg"
                     }
                 ],
                 "link": null
@@ -265,6 +265,7 @@
                 }
             ],
             "shares": 7
-        }
+        }       
+        
     ]
 }

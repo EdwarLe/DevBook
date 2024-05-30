@@ -1,16 +1,149 @@
 @import url(./styles.css);
-
+/* Seccion nav-menu */
 .nav-menu {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
 }
-.nav-menu h2 {
-    padding-left: var(--padding-10);
+.nav-menu {
+    padding: var(--padding-10);
+    color: var(--blanco);
+    padding-bottom: 0px;
+}
+.nav-menu .title{
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 300;
+}
+.nav-menu .bx{
+    padding-left: 11vw;
+    color: var(--blanco);
+    font-size: 18px;
 }
 
-.nav-menu .navegacion{
-    p
+.nav-menu .bx-user-circle{
+    padding-left: 0;
+}
+.busquedad {
+    display: flex;
+    margin: var(--padding-10) 0;
+    align-items: center;
+    justify-content: center;
+}
+.contenedorPrincipla{
+    background-color: var(--oscuro-200);
+}
+
+.busquedad input {
+    width: 80%;
+    height: 50px;
+    padding: 0 var(--padding-20);
+    border-radius: 8px;
+    border: 1px solid var(--gris);
+    background: var(--White, #FFF);
+}
+.busquedad img {
+    display: none;
+}
+.busquedad i{
+    position: absolute;
+    right: 14vw; 
+    color:var(--gris)
+}
+
+@media (min-width: 744px){
+    .nav-menu .title{
+        font-size: 28px;
+        font-weight: 500;
+    }
+    .nav-menu .bx{
+        padding-left: 5vw;
+        font-size: 28px;
+    }
+    .busquedad {
+        justify-content: left;
+        margin-left: 10vw;
+    }
+    .busquedad img {
+        display: block;
+        width: 90px;
+        height: 81px;
+        border-radius: 50%;
+        margin-right: var(--padding-10);
+    }
+    .busquedad input {
+        width: 50%;
+    }
+    .busquedad i{
+        right: 37vw;
+        font-size: 28px;
+    }
 
 }
+
+@media (min-width: 1200px){
+    .nav-menu .title{
+        font-size: 45px;
+        font-weight: 500;
+    }
+    .nav-menu .bx{
+        margin-top: 15px;
+        padding-left: 3vw;
+    }
+    .busquedad input {
+        width: 30%;
+    }
+    .busquedad i{
+        right: 56vw;
+    }
+
+
+}
+/* fin seccion nav-menu */
+/* Seccion publicaciones*/
+.tarjeta {
+    background-color: var(--oscuro-200);
+    margin: var(--padding-10) 0;
+}
+
+.tarjeta .foto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+} 
+
+.encabezado {
+    display: flex;
+    
+}
+.encabezado section {
+    display: grid;
+    grid-template-rows: 21px 9px;
+    gap: 4px;
+    padding-left: 3px;
+}
+
+section #usuario {
+    font-size: 21px;
+    margin-left: 3px;
+    
+}
+
+section #fecha {
+    font-size: 9px;
+    margin-left: 3px;
+}
+
+.tarjeta .text {
+    margin: var(--padding-10) var(--padding-10) auto;
+    font-family: "Poppins";
+    font-size: 18px;
+
+
+}
+
+@media (min-width: 744px){}
+@media (min-width: 1200px){}
