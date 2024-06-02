@@ -20,6 +20,7 @@ async function dataJSON() {
                         </video>`;
                 }
             }
+            
         contenedorPost.innerHTML = `
         <div class="tarjeta">
             <div class="encabezado">
@@ -53,12 +54,35 @@ async function dataJSON() {
                         <i class='bx bx-share-alt'></i>
                         <p>Share</p>
                     </section>
-                </div>    
+                </div> 
+                <div class="comments-section" style="display: none;">
+                    <h3>Comments</h3>
+                    <div class="comments-list">
+                        <div class="new-comment">
+                            <input type="text" placeholder="¿Qué estás pensando?">
+                            <button>Send</button>
+                        </div>
+                        ${post.comments.map(comment => `
+                        <div class="comment">
+                            <p><strong>${comment.user.name}</strong>: ${comment.text}</p>
+                        </div>
+                        `).join('')}
+                    </div>
+                </div>
             </div>    
         </div>`;
         
 
         publicaciones.appendChild(contenedorPost);
+
+        contenedorPost.querySelector('.Comment').addEventListener('click', function() {
+            const commentsSection = contenedorPost.querySelector('.comments-section');
+            if (commentsSection.style.display === 'none') {
+                commentsSection.style.display = 'block';
+            } else {
+                commentsSection.style.display = 'none';
+            }
+        });
     });
 }
 
