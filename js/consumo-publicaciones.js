@@ -1,4 +1,5 @@
 const publicaciones = document.getElementById("publicaciones");
+const listaAmigos = document.querySelector(".lista-amigos")
 
 async function dataJSON() {
     const response = await fetch("../js/utils/db-publicaciones.json");
@@ -82,8 +83,18 @@ async function dataJSON() {
             } else {
                 commentsSection.style.display = 'none';
             }
-        });
+        });  
     });
+
+    posts.forEach(amigo=>{
+        const contenedorAmigos = document.createElement("div");
+        contenedorAmigos.innerHTML = `
+        <div class="amigo">
+            <img src="${amigo.user.profile_picture}" alt="${amigo.user.name}">
+            <p>${amigo.user.name}</p>
+        </div>`
+        listaAmigos.appendChild(contenedorAmigos);
+    })
 }
 
 dataJSON().then((res) => console.log(res));
