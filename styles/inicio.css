@@ -242,6 +242,10 @@ section #fecha {
     display: none;
 }
 
+.lista-amigos{
+    display: none;
+}
+
 
 
 @media (min-width: 744px){
@@ -437,5 +441,39 @@ section #fecha {
 }
 
 
-@media (min-width: 744px){}
-@media (min-width: 1200px){}
+@media (min-width: 744px){
+    .pie-pagina{
+        display: flex;
+        justify-content: center;
+    }
+    .pie-pagina section{
+        width: 80%;
+        justify-content: center;
+        background-color: #ffffff00;
+    }
+    .pie-pagina .notificacion{
+        margin-left: var(--padding-20);
+    }
+    .pie-pagina .publicacion{
+        margin-right: var(--padding-20);
+    }
+    .pie-pagina h3 {
+        font-size: 20px;
+    }
+    .pie-pagina i {
+        color: var(--blanco);
+        padding-right: 4px;
+        font-size: 30px;
+    }
+}
+@media (min-width: 1200px){
+    .pie-pagina{
+        display: flex;
+        justify-content: center;
+    }
+    .pie-pagina section{
+        width: 60%;
+        justify-content: left;
+        background-color: #ffffff00;
+    }
+}
