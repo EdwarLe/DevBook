@@ -51,7 +51,7 @@
 
 .nav-menu-item {
   text-decoration: none;
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-size: 21px;
   font-weight: bold;
   transition: all 0.02 ease-in-out;
@@ -176,7 +176,7 @@
   color: var(--primario-300);
   text-align: center;
   font-family: 'Ubuntu';
-  font-size: 51px;
+  font-size: 40px;
   line-height: 100%;
 }
 
@@ -205,12 +205,12 @@
 .encabezadoNosotros .botones a {
   color: white;
   display: flex;
-  width: 250px;
-  padding: 16px 20px;
+  width: 220px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   gap: var(--padding-10);
-  border-radius: 20px;
+  border-radius: 8px;
   background: var(--primario-200);
   border: solid 2px transparent;
   transition: all 0.2s ease-in-out;
@@ -490,7 +490,7 @@
   text-decoration: underline;
 }
 
-.columnaContacto ul li a i,
+.columnaContacto ul li i,
 .columnaInstitucional ul li a i {
   margin-right: 0.5em;
 }
@@ -584,6 +584,10 @@
 
   .inputBuscador:focus + label {
     display: none;
+  }
+
+  .nav-activo {
+    color: var(--primario-300);
   }
 
   /* Finaliza estilos de la barra de navegación */
@@ -688,6 +692,10 @@
   #buscar-boton {
     display: flex;
     order: 1
+  }
+
+  .nav-activo {
+    color: var(--primario-300);
   }
 
   /* Finaliza estilos de la barra de navegación */
