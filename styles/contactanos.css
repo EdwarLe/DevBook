@@ -489,6 +489,10 @@ textarea.invalid {
         display: none;
     }
 
+    .nav-activo {
+        color: var(--primario-300);
+      }
+
     /* Finaliza estilos de la barra de navegación */
 
 
@@ -599,6 +603,10 @@ textarea.invalid {
         display: flex;
         order: 1
     }
+
+    .nav-activo {
+        color: var(--primario-300);
+      }
 
     /* Finaliza estilos de la barra de navegación */
 

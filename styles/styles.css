@@ -83,6 +83,7 @@ body {
     place-content: center;
     border: solid var(--blanco) 2px;
     cursor: pointer;
+    z-index: 100;
 }
 
 .bxs-chevron-down {
