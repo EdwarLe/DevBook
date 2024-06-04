@@ -18,21 +18,45 @@
 <body>
     <div class="contenedorPrincipalApp">
         <div class="register-container">
-            <h1>Registrarse</h1>
-            <form id="register-form">
+            <img src="../img/LogoDevBook.png" alt="Logo" class="logo">
+            <h1>Crea una cuenta</h1>
+            <p>Ingrese su correo electrónico para registrarse en esta aplicación</p>
+            <form id="register-form-part1">
                 <div class="input-group">
-                    <label for="new-username">Usuario:</label>
-                    <input type="text" id="new-username" name="new-username" required>
+                    <input type="email" id="email" name="email" required placeholder="email@email.com">
+                    <label for="email"></label>
                 </div>
-                <div class="input-group">
-                    <label for="new-password">Contraseña:</label>
-                    <input type="password" id="new-password" name="new-password" required>
-                </div>
-                <button type="submit">Registrarse</button>
-                <p>¿Ya tienes una cuenta? <a href="ingreso.html">Inicia sesión aquí</a></p>
+                <button type="button" id="next-button">Registrar</button>
+                <section class="icons">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-google'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </section>
+                <p>Al hacer clic en Continuar, acepta nuestros Términos de servicio y Política de privacidad</p>
             </form>
+    
+            <form id="register-form-part2" style="display: none;">
+                <div class="input-group">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="apellido" name="apellido" required>
+                    <label for="apellido">Apellido</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="contraseña" name="contraseña" required>
+                    <label for="contraseña">Contraseña</label>
+                </div>
+                <div class="input-group">
+                    <select type="country" id="country" name="country" required>
+                    <label for="contraseña">Contraseña</label>
+                </div>
+                <button type="submit">Continuar</button>
+            </form>
+            <p>Al hacer clic en Continuar, acepta nuestros Términos de servicio y Política de privacidad</p>
         </div>
-        <script src="register.js"></script>
+        <script src="../js/registro.js"></script>
     </div>
 </body>
 

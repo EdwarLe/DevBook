@@ -1,1 +1,89 @@
 @import url(./styles.css);
+
+
+
+.register-container img.logo {
+    width: 150px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.register-container {
+    background-color: var(--oscuro-400);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+
+.register-container h1 {
+    margin-bottom: 20px;
+}
+
+.register-container p{
+    font-size: small;
+    color: rgba(201, 201, 194, 0.836);
+    padding: 10px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--oscuro-400);
+    padding: 0 5px;
+    transition: 0.2s;
+    color: #aaa;
+    pointer-events: none;
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--gris);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+  }
+  
+  .icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5em;
+    font-size: 1.5em;
+  }
+  
+  .icons a:hover {
+    color: var(--primario-200);
+  }
+  
