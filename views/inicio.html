@@ -16,11 +16,52 @@
 </head>
 
 <body>
-    <div class="contenedorPrincipalApp" id="contenedorPrincipal">
-
+    <div class="contenedorPrincipalApp">
+        <header>
+            <div class="nav-menu">
+                <p class="title">DevBook</p>
+                <section class="navegacion">
+                    <a href="#"><i class='bx bx-user-circle'></i></a>
+                    <a href="#"><i class='bx bx-shopping-bag' ></i></a>
+                    <a href="#"><i class='bx bxs-cog' ></i></a>
+                </section>
+            </div>
+            <hr>
+            <div class="busquedad">
+                <img src="../public/profile/user.jpg" id="userPicture">
+                <input placeholder="Buscar">
+                <!-- Elemento i posicionado absolutamente -->
+                <i class='bx bx-search-alt'></i> 
+            </div>
+        </header>
+        <main class="contenedor-publicacion">
+            <div class="publicaciones" id="publicaciones">
+                <div id="media"> </div>
+            </div>
+            <div class="sidebar">
+                <div id="notificaciones" class="notificaciones">
+                </div>
+                <div class="lista-amigos">
+                </div>
+            </div>
+        </main>
+        <footer class="pie-pagina">
+            <section class="pie notificacion">
+                <a href="#"><i class='bx bxs-bell'></i></a>
+                <h3>Notificaciones</h3>
+            </section>
+            <section class="pie amigos">
+                <a href="#"><i class='bx bxs-group' ></i></a>
+                <h3>Amigos</h3>
+            </section>
+            <section class="pie publicacion">
+                <a href="#"><i class='bx bxs-add-to-queue'></i></a>
+                <h3>Nuevo post</h3>
+            </section>
+        </footer>
     </div>
-
-    <script src="../js/consumo-plublicaciones.js" type="module"></script>
+    <script src="../js/consumo-publicaciones.js" type="module"></script>
+    <script src="../js/consumo-notificaciones.js" type="module"></script>
 </body>
 
 </html>
