@@ -15,6 +15,7 @@
     text-align: center;
     color: white;
     margin: auto;
+ 
 }
 
 .register-container h1 {
@@ -25,6 +26,22 @@
     font-size: small;
     color: rgba(201, 201, 194, 0.836);
     padding: 10px;
+}
+
+#register-form-part1, #register-form-part2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+#register-form-part2{
+    display: none;
+}
+
+.doubleForm{
+ position: relative;
+
 }
 
 .input-group {
@@ -86,4 +103,41 @@ button:hover {
   .icons a:hover {
     color: var(--primario-200);
   }
+
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group select,
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+}
   

@@ -3,17 +3,12 @@
 .login-container {
     background-color: var(--oscuro-400);
     padding: 20px;
-    /* border-radius: 8px; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    width: 300px;
+    width: 100%;
+    min-height: 100vh;
     text-align: center;
-}
+    margin: 0 auto;
 
-/* .login-container h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color:var(--oscuro-0);
-} */
+}
 
 .login-container img.logo {
     width: 150px;
@@ -115,4 +110,29 @@ button:hover {
     color: red;
     font-size: 14px;
     margin-top: 10px;
+}
+
+
+@media (min-width:744px) {
+    .login-container {
+        width: 50%;
+
+    }    
+}
+
+@media (min-width:1200px){
+
+    .login-container img.logo {
+        width: 250px;
+    }
+
+    .input-group input {
+        width: 60%;
+    }
+
+    button {
+        width: 60%;
+        
+    }
+    
 }

@@ -11,7 +11,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         errorMessage.textContent = '';
         alert('Inicio de sesión exitoso');
         localStorage.setItem('username', username);
-        window.location.href = 'Inicio.html';
+        window.location.href = 'inicio.html';
     } else {
         errorMessage.textContent = 'Por favor, introduce un correo electrónico válido y una contraseña.';
     }
