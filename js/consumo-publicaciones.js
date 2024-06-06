@@ -85,7 +85,10 @@ async function dataJSON() {
             }
         });  
     });
+    friendsList(posts, listaAmigos)
+}
 
+function friendsList(posts, containerFriends){
     posts.forEach(amigo=>{
         const contenedorAmigos = document.createElement("div");
         contenedorAmigos.innerHTML = `
@@ -93,8 +96,9 @@ async function dataJSON() {
             <img src="${amigo.user.profile_picture}" alt="${amigo.user.name}">
             <p>${amigo.user.name}</p>
         </div>`
-        listaAmigos.appendChild(contenedorAmigos);
+        containerFriends.appendChild(contenedorAmigos);
     })
+    
 }
 
 dataJSON().then((res) => console.log(res));
@@ -128,3 +132,5 @@ function calculateElapsedTime(timestamp) {
 
     return elapsedTimeString;
 }
+
+export default friendsList

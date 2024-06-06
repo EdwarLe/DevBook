@@ -23,10 +23,10 @@
                 <section class="navegacion">
                     <a href="#"><i class='bx bx-user-circle'></i></a>
                     <a href="#"><i class='bx bx-shopping-bag' ></i></a>
-                    <a href="#"><i class='bx bxs-cog' ></i></a>
+                    <i id="configuration" class='bx bxs-cog' ></i>
                 </section>
             </div>
-            <hr>
+            <!-- <hr> -->
             <div class="busquedad">
                 <img src="../public/profile/user.jpg" id="userPicture">
                 <input placeholder="Buscar">
@@ -40,8 +40,10 @@
             </div>
             <div class="sidebar">
                 <div id="notificaciones" class="notificaciones">
+                    <h3>Notificaciones</h3>
                 </div>
                 <div class="lista-amigos">
+                    <h3>Amigos</h3>
                 </div>
             </div>
         </main>
@@ -50,7 +52,7 @@
                 <a href="#"><i class='bx bxs-bell'></i></a>
                 <h3>Notificaciones</h3>
             </section>
-            <section class="pie amigos">
+            <section class="pie amigos" id="friends">
                 <a href="#"><i class='bx bxs-group' ></i></a>
                 <h3>Amigos</h3>
             </section>
@@ -59,9 +61,20 @@
                 <h3>Nuevo post</h3>
             </section>
         </footer>
+        <div class="modal-configuration hidden" id="modal-configuration">
+            
+        </div>
+        <div class="modal-friends hidden" id="modal-friends">
+            <div class="friendsList">
+
+            </div>
+            
+        </div>
     </div>
     <script src="../js/consumo-publicaciones.js" type="module"></script>
     <script src="../js/consumo-notificaciones.js" type="module"></script>
+    <script src="../js/modal-configuration.js" type="module"></script>
+    <script src="../js/modal-friends.js" type="module"></script>
 </body>
 
 </html>

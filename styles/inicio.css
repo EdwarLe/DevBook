@@ -8,6 +8,12 @@
     padding: var(--padding-10);
     color: var(--blanco);
     padding-bottom: 0px;
+    border-bottom: var(--blanco) solid 1px;
+    background-color: var(--oscuro-400);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    max-width: 1200px;
 }
 .nav-menu .title{
     font-family: "Poppins";
@@ -28,6 +34,9 @@
     margin: var(--padding-10) 0;
     align-items: center;
     justify-content: center;
+    position: relative;
+    margin-top: 3vh;
+    padding-top: var(--padding-30);
 }
 
 .busquedad input {
@@ -43,8 +52,106 @@
 }
 .busquedad i{
     position: absolute;
-    right: 14vw; 
+    right: 16%; 
     color:var(--gris)
+}
+
+/* Modal Configuracion */
+
+.modal-configuration{
+    width: 230px;
+    height: 180px;
+    background-color: var(--oscuro-300);
+    border-radius: 8px;
+    color:var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-10);
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1);
+}
+.hidden{
+    transform: scaleX(0) translate(200%, -200%);
+}
+.btn-configuration{
+    display: flex;
+    gap: var(--padding-10);
+    font-size: 14px;
+    padding: var(--padding-10);
+    align-self: flex-start;
+    padding-left: var(--padding-20);
+}
+.modal-configuration>p{
+    border-bottom: solid 1px var(--blanco);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+/* Modal Friends */
+.modal-friends{}
+
+.modal-friends{
+    background-color: var(--oscuro-300);
+    border: var(--blanco) solid 1px;
+    position: fixed;
+    width: 90%;
+    height: 83%;
+    top:7%;
+    right: 5%;
+    overflow-y: scroll;
+}
+.modal-friends .hidden{
+    
+}
+.modal-friends .lista-amigos {
+    display: block;
+    width: 80%;
+    height: 45vh;
+    margin-left: var(--padding-20);
+    margin-right: 9%;
+    padding: var(--padding-10);
+    border-radius: 10px;
+    background-color: var(--oscuro-300);
+    position: sticky;
+    top: 50vh; 
+} 
+.modal-friends .lista-amigos>h3{
+    text-align: center;
+    background-color: var(--oscuro-200);
+}
+.modal-friends .amigo {
+    display: flex;
+    align-items: center;
+    background-color: var(--oscuro-200);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.modal-friends .amigo:hover {
+    background-color: var(--oscuro-100);
+}
+
+.modal-friends .amigo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.modal-friends .amigo p {
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--blanco);
+    margin: 0;
 }
 
 @media (min-width: 744px){
@@ -59,6 +166,7 @@
     .busquedad {
         justify-content: left;
         margin-left: 10vw;
+        margin-top: 5vh;
     }
     .busquedad img {
         display: block;
@@ -70,8 +178,12 @@
         width: 50%;
     }
     .busquedad i{
-        right: 37vw;
+        right: 43%;
         font-size: 28px;
+    }
+    .modal-configuration{
+        top: 55px;
+        right: 25px;
     }
 }
 
@@ -84,11 +196,18 @@
         margin-top: 15px;
         padding-left: 3vw;
     }
+    .busquedad{
+        margin-top: 8vh;
+    }
     .busquedad input {
         width: 30%;
     }
     .busquedad i{
-        right: 56vw;
+        right: 63%;
+    }
+    .modal-configuration{
+        top: 80px;
+        right: 25px;
     }
 }
 /* fin seccion nav-menu */
@@ -246,8 +365,6 @@ section #fecha {
     display: none;
 }
 
-
-
 @media (min-width: 744px){
     .contenedor-publicacion{
         display: flex;
@@ -325,7 +442,7 @@ section #fecha {
     .notificaciones {
         display: block;
         width: 80%; 
-        height: 43vh;
+        height: 45vh;
         margin-left: var(--padding-20);
         margin-right: 9%;
         margin-top: var(--padding-10);
@@ -334,7 +451,12 @@ section #fecha {
         background-color: var(--oscuro-300);
         overflow-y: auto;
         position: sticky;
-        top: 20px; 
+        top: 20px;
+    }
+    .notificaciones>h3{
+        text-align: center;
+        background-color: var(--oscuro-200);
+        
     }
 
     .notificaciones .notificacion {
@@ -359,10 +481,14 @@ section #fecha {
         margin-top: 5px;
     }
 
+    .modal-friends{
+        display: none;
+    }
+
     .lista-amigos {
         display: block;
         width: 80%;
-        height: 43vh;
+        height: 45vh;
         margin-left: var(--padding-20);
         margin-right: 9%;
         padding: var(--padding-10);
@@ -370,8 +496,12 @@ section #fecha {
         background-color: var(--oscuro-300);
         overflow-y: auto;
         position: sticky;
-        top: 48vh; 
+        top: 50vh; 
     } 
+    .lista-amigos>h3{
+        text-align: center;
+        background-color: var(--oscuro-200);
+    }
     .amigo {
         display: flex;
         align-items: center;
@@ -399,9 +529,6 @@ section #fecha {
         color: var(--blanco);
         margin: 0;
     }
-    
-
-
 }
 
 /* Fin seccion publicaciones */
@@ -418,6 +545,7 @@ section #fecha {
     height: 8%;
     flex-shrink: 0;
     border-top: 1px solid var(--blanco);
+    z-index: 100;
 }
 
 .pie-pagina section {
@@ -469,12 +597,14 @@ section #fecha {
 @media (min-width: 1200px){
     .pie-pagina{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        width: 804px;
     }
     .pie-pagina section{
         width: 60%;
-        justify-content: left;
         background-color: #ffffff00;
     }
     
 }
+
+
