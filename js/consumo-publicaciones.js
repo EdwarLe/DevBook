@@ -97,7 +97,7 @@ async function dataJSON() {
     })
 }
 
-dataJSON().then((res) => console.log(res));
+dataJSON();
 
 function calculateElapsedTime(timestamp) {
     const initialDate = new Date(timestamp);
