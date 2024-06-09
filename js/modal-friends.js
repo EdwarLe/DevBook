@@ -14,5 +14,5 @@ const modalFriends = document.getElementById("modal-friends")
 const btnFriends = document.getElementById("friends")
 
 btnFriends.addEventListener("click",()=>{
-    modalFriends.classList.toggle("hidden")
+    modalFriends.classList.toggle("hidden-friends")
 })
