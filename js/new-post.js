@@ -50,14 +50,24 @@ modalNewPost.addEventListener('submit', (e) => {
     if (uploadVideo.value) {
         mediaData.push({
             "type": "video",
-            "url": uploadVideo.vale
+            "url": uploadVideo.value
         })
+        msgPost.value += uploadVideo.value
+        msgPost.value += "\n"
     }
     if (uploadPhoto.value) {
         mediaData.push({
             "type": "image",
-            "url": uploadPhoto.vale
+            "url": uploadPhoto.value
         })
+        msgPost.value += uploadPhoto.value
+        msgPost.value += "\n"
+    }
+
+    if (msgPost.value === '') {
+        confirm('¿Quieres descartar los cambios?')
+        closeModal()
+        return
     }
 
     const newPost = {
@@ -84,6 +94,9 @@ modalNewPost.addEventListener('submit', (e) => {
     localStorage.setItem('posts', JSON.stringify(dataPostLocal))
 
     postIdCount++
+    closeModal()
+    msgPost.value = ''
+    location.reload()
 })
 
 
