@@ -10,17 +10,17 @@ async function dataJSON() {
     notificationsList ( notifications,notificacionesSelect)
 }
 
-function notificationsList(posts, containerNotifications){
-    posts.forEach(notificacion=>{
+function notificationsList(notifications, containerNotifications){
+    notifications.forEach(notification=>{
         const contenedorNotificatios = document.createElement("div");
         contenedorNotificatios.innerHTML = `
         <div class="notificacion"> 
-            <div class="titulo">${notificacion.content.username}</div>
+            <div class="titulo">${notification.content.username}</div>
                 <div class="contenido">
-                    ${notificacion.type === "comment" ? 
-                        `<p>Commented on your post: "${notificacion.content.commentText}"</p>` :
-                        `<p>Liked your post: "${notificacion.content.postTitle}"</p>`}
-                    <span class="timestamp">${new Date(notificacion.content.timestamp).toLocaleString()}</span>
+                    ${notification.type === "comment" ? 
+                        `<p>Commented on your post: "${notification.content.commentText}"</p>` :
+                        `<p>Liked your post: "${notification.content.postTitle}"</p>`}
+                    <span class="timestamp">${new Date(notification.content.timestamp).toLocaleString()}</span>
                 </div>
             </div>
         </div>  

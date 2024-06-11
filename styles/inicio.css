@@ -108,18 +108,7 @@
     transform: translate(0, 100%) scale(0);
     filter: blur(0px);
 }
-.modal-friends .lista-amigos {
-    display: block; 
-    width: 80%;
-    height: 45vh;
-    margin-left: var(--padding-20);
-    margin-right: 9%;
-    padding: var(--padding-10);
-    border-radius: 10px;
-    background-color: var(--oscuro-300);
-    position: sticky;
-    top: 50vh; 
-} 
+
 .modal-friends .friendsList>h3{
     text-align: center;
     background-color: var(--oscuro-200); 
@@ -189,22 +178,22 @@
     position: sticky;
     top: 0;
 }
-.modal-notifications .notificacionesModal .notificacion {
+.modal-notifications .notificacion {
     background-color: var(--oscuro-200);
     margin: 10px 0;
     padding: 10px;
 }
-.modal-notifications .notificacionesModal .notificacion .titulo {
+.modal-notifications .notificacion .titulo {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.modal-notifications .notificacionesModal .notificacion .contenido {
+.modal-notifications .notificacion .contenido {
     font-size: 0.9em;
     color: var(--blanco);
 }
 
-.modal-notifications .notificacionesModal .notificacion .timestamp {
+.modal-notifications .notificacion .timestamp {
     font-size: 0.8em;
     color: #e9e9e942;
     margin-top: 5px;
