@@ -1,8 +1,6 @@
 const notificaciones = document.querySelector(".notificaciones")
 const notificacionesSelect = document.querySelector(".notificacionesSelect")
 
-
-
 async function dataJSON() {
     const response = await fetch("../js/utils/db-notificaciones.json");
     const { notifications } = await response.json();

@@ -48,45 +48,26 @@ async function dataJSON() {
                         <p>Like</p>
                     </section>
                     <section class="Comment">
-                        <i class='bx bx-comment'></i>
-                        <p>Comment</p>
+                        <div class="openComments">
+                            <i class='bx bx-comment'></i>
+                            <p>Comment</p>
+                        </div>
                     </section>
                     <section class="Share">
                         <i class='bx bx-share-alt'></i>
                         <p>Share</p>
                     </section>
                 </div> 
-                <div class="comments-section" style="display: none;">
-                    <h3>Comments</h3>
-                    <div class="comments-list">
-                        <div class="new-comment">
-                            <input type="text" placeholder="¿Qué estás pensando?">
-                            <button>Send</button>
-                        </div>
-                        ${post.comments.map(comment => `
-                        <div class="comment">
-                            <p><strong>${comment.user.name}</strong>: ${comment.text}</p>
-                        </div>
-                        `).join('')}
-                    </div>
-                </div>
             </div>    
         </div>`;
         
 
         publicaciones.appendChild(contenedorPost);
 
-        contenedorPost.querySelector('.Comment').addEventListener('click', function() {
-            const commentsSection = contenedorPost.querySelector('.comments-section');
-            if (commentsSection.style.display === 'none') {
-                commentsSection.style.display = 'block';
-            } else {
-                commentsSection.style.display = 'none';
-            }
-        });  
     });
     friendsList(posts, listaAmigos)
 }
+
 
 function friendsList(posts, containerFriends){
     posts.forEach(amigo=>{

@@ -199,6 +199,23 @@
     margin-top: 5px;
 }
 
+/* Modal Comments */
+.commentModal{
+    background-color: var(--oscuro-300);
+    border: var(--blanco) solid 1px;
+    position: fixed;
+    width: 90%;
+    height: 83%;
+    top:7%;
+    right: 5%;
+    overflow-y: scroll;
+    transition: all 0.4s ease-in-out;
+    transform: translate(0, 0) scale(1);
+}
+.hiddenComment{
+    transform: translate(-80%, 100%) scale(0);
+}
+
 @media (min-width: 744px){
     .nav-menu .title{
         font-size: 28px;
