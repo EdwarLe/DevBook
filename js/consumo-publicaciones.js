@@ -10,10 +10,13 @@ async function dataJSON() {
 
     const postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
 
+    console.log(postsLocalStorage)
 
-    if (postsLocalStorage.length <= 10) {
+    if (!postsLocalStorage) {
         localStorage.setItem('posts', dataToString)
+        location.reload()
     }
+
     postsLocalStorage.forEach(post => {
         const contenedorPost = document.createElement("div");
         const elapsedTime = calculateElapsedTime(post.timestamp);
