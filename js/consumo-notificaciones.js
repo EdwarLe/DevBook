@@ -23,4 +23,4 @@ async function dataJSON() {
 
 }
 
-dataJSON().then((res) => console.log(res));
+dataJSON();
