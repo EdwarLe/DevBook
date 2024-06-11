@@ -1,4 +1,6 @@
-const notificaciones = document.querySelector(".notifications")
+import notificationsList from "./consumo-notificaciones.js"
+
+const notificaciones = document.querySelector(".notificationsList")
 
 async function dataJSONNotifications() {
     const response = await fetch("../js/utils/db-publicaciones.json");

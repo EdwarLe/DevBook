@@ -1,12 +1,19 @@
-const notificaciones = document.getElementById("notificaciones");
+const notificaciones = document.querySelector(".notificaciones")
+const notificacionesSelect = document.querySelector(".notificacionesSelect")
+
+
 
 async function dataJSON() {
     const response = await fetch("../js/utils/db-notificaciones.json");
     const { notifications } = await response.json();
-    notifications.forEach(notificacion => {
-        const contenedorNotificacion = document.createElement("div");
+    notificationsList ( notifications,notificaciones)
+    notificationsList ( notifications,notificacionesSelect)
+}
 
-        contenedorNotificacion.innerHTML = `
+function notificationsList(posts, containerNotifications){
+    posts.forEach(notificacion=>{
+        const contenedorNotificatios = document.createElement("div");
+        contenedorNotificatios.innerHTML = `
         <div class="notificacion"> 
             <div class="titulo">${notificacion.content.username}</div>
                 <div class="contenido">
@@ -16,11 +23,12 @@ async function dataJSON() {
                     <span class="timestamp">${new Date(notificacion.content.timestamp).toLocaleString()}</span>
                 </div>
             </div>
-        </div>        
+        </div>  
         `
-        notificaciones.appendChild(contenedorNotificacion)
-    });
-
+        containerNotifications.appendChild(contenedorNotificatios);
+    })
 }
 
 dataJSON().then((res) => console.log(res));
+
+export default notificationsList
