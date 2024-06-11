@@ -4,7 +4,15 @@ const listaAmigos = document.querySelector(".lista-amigos")
 async function dataJSON() {
     const response = await fetch("../js/utils/db-publicaciones.json");
     const { posts } = await response.json();
-    posts.forEach(post => {
+
+    const dataToString = JSON.stringify(posts)
+    localStorage.setItem('posts', dataToString)
+
+    const postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
+
+   
+
+    postsLocalStorage.forEach(post => {
         const contenedorPost = document.createElement("div");
         const elapsedTime = calculateElapsedTime(post.timestamp);
         let mediaContent = '';

@@ -275,7 +275,7 @@ section #fecha {
     color: var(--blanco);
     top: 100%;
     left: 0;
-    padding: var(--padding-10);
+    /* padding: var(--padding-10); */
     gap: var(--padding-10);
     transition: all 0.3s ease-in-out;
 }
@@ -285,7 +285,7 @@ section #fecha {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -348,6 +348,7 @@ section #fecha {
     border: none;
     color: var(--blanco);
     resize: none;
+    padding: var(--padding-10);
 }
 
 .msg-post::placeholder {
@@ -365,13 +366,34 @@ section #fecha {
 .media-box-post {
     display: flex;
     align-items: center;
+    width: 100%;
     gap: var(--padding-10);
     cursor: pointer;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.media-box-post label {
+    cursor: pointer;
+}
+
+.media-box-post:hover {
+    background-color: var(--oscuro-200);
+}
+
+.vid-box {
+    border-right: 1px solid var(--gris);
 }
 
 .media-box-post i {
     font-size: 24px;
 }
+
+.media-post {
+    display: none;
+}
+
+
 
 /* Finaliza Modal Publicaciones */
 
@@ -524,7 +546,7 @@ section #fecha {
 
     .container-modal {
         background-color: var(--oscuro-300);
-        padding: var(--padding-10);
+        gap: var(--padding-10);
         height: 70%;
         width: 60%;
         max-width: 700px;

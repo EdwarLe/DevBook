@@ -59,12 +59,12 @@
                 <h3>Nuevo post</h3>
             </section>
         </footer>
-        <section class="modal-new-post" id="modal-new-post">
+        <form class="modal-new-post" id="modal-new-post">
             <div class="container-modal">
                 <div class="back-post">
                     <i class='bx bxs-chevrons-left' id="btn-back-post"></i>
                     <p>Crear Publicación</p>
-                    <button class="btn-post">Post</button>
+                    <button class="btn-post" type="submit">Post</button>
                 </div>
                 <div class="profile-post">
                     <div class="img-new-post">
@@ -74,17 +74,19 @@
                 </div>
                 <textarea class="msg-post" name="msg-post" id="msg-post" placeholder="¿Qué estás pensando?"></textarea>
                 <div class="footer-post">
-                    <div class="media-box-post">
-                        <p>Videos</p>
+                    <div class="media-box-post vid-box" id="btn-video-file">
+                        <input type="file" name="video-file" id="video-file" class="media-post">
+                        <label>Videos</label>
                         <i class='bx bxs-video'></i>
                     </div>
-                    <div class="media-box-post">
+                    <div class="media-box-post" id="btn-photo-file">
+                        <input type="file" name="video-file" id="photo-file" class="media-post">
                         <p>Fotos</p>
                         <i class='bx bxs-image'></i>
                     </div>
                 </div>
             </div>
-        </section>
+        </form>
     </main>
     <script src="../js/consumo-publicaciones.js" type="module"></script>
     <script src="../js/consumo-notificaciones.js" type="module"></script>
