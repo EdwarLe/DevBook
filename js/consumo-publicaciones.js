@@ -6,30 +6,32 @@ async function dataJSON() {
     const { posts } = await response.json();
 
     const dataToString = JSON.stringify(posts)
-    localStorage.setItem('posts', dataToString)
+
 
     const postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
 
-   
 
+    if (postsLocalStorage.length <= 10) {
+        localStorage.setItem('posts', dataToString)
+    }
     postsLocalStorage.forEach(post => {
         const contenedorPost = document.createElement("div");
         const elapsedTime = calculateElapsedTime(post.timestamp);
         let mediaContent = '';
 
-            if (post.content.media && post.content.media.length > 0) {
-                const media = post.content.media[0];
-                if (media.type === "image") {
-                    mediaContent = `<img class="content" src="${media.url}" alt="media">`;
-                } else if (media.type === "video") {
-                    mediaContent = `
+        if (post.content.media && post.content.media.length > 0) {
+            const media = post.content.media[0];
+            if (media.type === "image") {
+                mediaContent = `<img class="content" src="${media.url}" alt="media">`;
+            } else if (media.type === "video") {
+                mediaContent = `
                         <video class="content" controls>
                             <source src="${media.url}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>`;
-                }
             }
-            
+        }
+
         contenedorPost.innerHTML = `
         <div class="tarjeta">
             <div class="encabezado">
@@ -80,21 +82,21 @@ async function dataJSON() {
                 </div>
             </div>    
         </div>`;
-        
+
 
         publicaciones.appendChild(contenedorPost);
 
-        contenedorPost.querySelector('.Comment').addEventListener('click', function() {
+        contenedorPost.querySelector('.Comment').addEventListener('click', function () {
             const commentsSection = contenedorPost.querySelector('.comments-section');
             if (commentsSection.style.display === 'none') {
                 commentsSection.style.display = 'block';
             } else {
                 commentsSection.style.display = 'none';
             }
-        });  
+        });
     });
 
-    posts.forEach(amigo=>{
+    posts.forEach(amigo => {
         const contenedorAmigos = document.createElement("div");
         contenedorAmigos.innerHTML = `
         <div class="amigo">

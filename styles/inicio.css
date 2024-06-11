@@ -61,6 +61,11 @@
 
 /* Seccion publicaciones*/
 
+.publicaciones {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .tarjeta {
     background-color: var(--oscuro-200);
     margin: var(--padding-10) 0;
@@ -305,8 +310,7 @@ section #fecha {
 }
 
 .btn-post {
-    width: 65px;
-    height: 37px;
+    padding: var(--padding-10) var(--padding-10);
     border-radius: 8px;
     background-color: var(--oscuro-200);
     color: var(--blanco);
