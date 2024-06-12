@@ -1,5 +1,10 @@
 @import url(./styles.css);
 /* Seccion nav-menu */
+
+/* header {
+    background-color: blueviolet;
+    width: 100%;
+} */
 .nav-menu {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +12,7 @@
     justify-content: space-between;
     padding: var(--padding-10);
     color: var(--blanco);
+
     padding-bottom: 0px;
     border-bottom: var(--blanco) solid 1px;
     background-color: var(--oscuro-400);
@@ -14,20 +20,25 @@
     top: 0;
     z-index: 100;
     max-width: 1200px;
+
 }
-.nav-menu .title{
+
+.nav-menu .title {
     font-family: "Poppins";
     font-size: 18px;
     font-weight: 300;
 }
-.nav-menu .bx{
+
+.nav-menu .bx {
     padding-left: 11vw;
     color: var(--blanco);
     font-size: 18px;
 }
 .nav-menu .bx-user-circle{
+
     padding-left: 0;
 }
+
 .busquedad {
     display: flex;
     margin: var(--padding-10) 0;
@@ -36,6 +47,8 @@
     position: relative;
     margin-top: 3vh;
     padding-top: var(--padding-30);
+    width: 100%;
+
 }
 .busquedad input {
     width: 80%;
@@ -43,16 +56,20 @@
     padding: 0 var(--padding-20);
     border-radius: 8px;
     border: 1px solid var(--gris);
-    background: var(--White, #FFF);
+    background: var(--blanco);
 }
+
 .busquedad img {
     display: none;
 }
-.busquedad i{
+
+.busquedad i {
     position: absolute;
     right: 16%; 
-    color:var(--gris)
+    color: var(--gris)
 }
+
+/* Finaliza Seccion nav-menu */
 
 /* Modal Configuracion */
 
@@ -284,15 +301,19 @@
         right: 25px;
     }
 }
-/* fin seccion nav-menu */
+
 /* Seccion publicaciones*/
 
 .publicaciones {
-    padding-bottom: 10vh
+    display: flex;
+    flex-direction: column-reverse;
 }
+
 .tarjeta {
     background-color: var(--oscuro-200);
     margin: var(--padding-10) 0;
+    width: 100%;
+    color: var(--blanco);
 }
 
 .tarjeta .foto {
@@ -301,12 +322,13 @@
     border-radius: 50%;
     margin-top: 10px;
     margin-left: 10px;
-} 
+}
 
 .encabezado {
     display: flex;
-    
+    width: 100%;
 }
+
 .encabezado section {
     display: grid;
     grid-template-rows: 21px 9px;
@@ -317,7 +339,7 @@
 section #usuario {
     font-size: 21px;
     margin-left: 3px;
-    
+
 }
 
 section #fecha {
@@ -330,39 +352,47 @@ section #fecha {
     font-family: "Poppins";
     font-size: 18px;
 }
-.content{
+
+.content {
     text-align: center;
 }
-.content img{
-    width: 95%;
-}
-.content video{
+
+.content img {
     width: 95%;
 }
 
-.interactions hr{
-    width: 95%; 
-    margin: 0 auto; 
+.content video {
+    width: 95%;
 }
+
+.interactions hr {
+    width: 95%;
+    margin: 0 auto;
+}
+
 .icons {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0 2.5vw 2.5vw
 }
-.bxs-heart{
+
+.bxs-heart {
     color: #FF0000;
     margin-right: 1vw;
 }
+
 .icons .bxs-like {
     color: #00FFA3;
     margin-right: 1vw;
 }
-.bxs-donate-heart{
+
+.bxs-donate-heart {
     color: #FFB627
 }
+
 .post-actions {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: var(--padding-10);
 }
 
@@ -390,7 +420,7 @@ section #fecha {
     padding: 10px;
 }
 
-.comments-section input{
+.comments-section input {
     width: 67%;
     color: var(--gris);
     font-family: "Poppins";
@@ -401,18 +431,20 @@ section #fecha {
     padding-left: 5px;
     border-radius: 10px;
 }
-.comments-section button{
+
+.comments-section button {
     padding: 2px 21px;
     gap: 10px;
     border-radius: 8px;
     border: 2px solid var(--primario-400);
-    background: var(--Dark-100, #5B6794);
+    background: var(--oscuro-100);
     color: var(--oscuro-400);
     width: 30%;
 
 }
-.comments-section button:hover{
-    background: var(--Dark-100, #5B6794);
+
+.comments-section button:hover {
+    background: var(--oscuro-100);
 }
 
 .comments-section h3 {
@@ -434,74 +466,377 @@ section #fecha {
     display: none;
 }
 
-.lista-amigos{
+.lista-amigos {
     display: none;
 }
 
-@media (min-width: 744px){
-    .contenedor-publicacion{
+/* Finaliza Seccion publicaciones*/
+
+/* Footer */
+
+.pie-pagina {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--oscuro-400);
+    width: 100%;
+    justify-content: space-between;
+    height: 50px;
+    border-top: 1px solid var(--blanco);
+    gap: var(--padding-10);
+    color: var(--blanco);
+}
+
+.pie {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pie-pagina h3 {
+    font-size: 12px;
+}
+
+.pie-pagina i {
+    color: var(--blanco);
+    font-size: 20px;
+}
+
+/* Finaliza Footer */
+
+
+/* Modal publicaciones */
+
+.modal-new-post {
+    width: 100%;
+    height: 100%;
+    background-color: var(--oscuro-300);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    top: 100%;
+    left: 0;
+    /* padding: var(--padding-10); */
+    gap: var(--padding-10);
+    transition: all 0.3s ease-in-out;
+}
+
+.container-modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-post {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-10);
+    align-items: center;
+    align-self: flex-start;
+    width: 100%;
+    font-size: 14px;
+    border-bottom: 2px solid var(--blanco);
+}
+
+.bxs-chevrons-left {
+    cursor: pointer;
+}
+
+.btn-post {
+    padding: var(--padding-10) var(--padding-10);
+    border-radius: 8px;
+    background-color: var(--oscuro-200);
+    color: var(--blanco);
+    border: transparent 1px solid;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-post:hover {
+    background-color: transparent;
+    border: 1px solid var(--primario-400);
+}
+
+.profile-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    gap: var(--padding-10);
+    padding: var(--padding-10);
+}
+
+.img-new-post {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.img-new-post img {
+    width: 100%;
+}
+
+.msg-post {
+    width: 100%;
+    height: 70%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: var(--blanco);
+    resize: none;
+    padding: var(--padding-10);
+}
+
+.msg-post::placeholder {
+    color: var(--gris);
+}
+
+.footer-post {
+    height: 60px;
+    border-top: 2px solid var(--blanco);
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.media-box-post {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: var(--padding-10);
+    cursor: pointer;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.media-box-post label {
+    cursor: pointer;
+}
+
+.media-box-post:hover {
+    background-color: var(--oscuro-200);
+}
+
+.vid-box {
+    border-right: 1px solid var(--gris);
+}
+
+.media-box-post i {
+    font-size: 24px;
+}
+
+.media-post {
+    display: none;
+}
+
+
+
+/* Finaliza Modal Publicaciones */
+
+@media (min-width: 744px) {
+
+    /* Seccion nav-menu */
+    .nav-menu .title {
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .nav-menu .bx {
+        padding-left: 5vw;
+        font-size: 28px;
+    }
+
+    .busquedad {
+        justify-content: left;
+        margin-left: 10vw;
+    }
+
+    .busquedad img {
+        display: block;
+        width: 75px;
+        border-radius: 50%;
+        margin-right: var(--padding-10);
+    }
+
+    .busquedad input {
+        width: 50%;
+    }
+
+    .busquedad i {
+        right: 37vw;
+        font-size: 28px;
+    }
+
+    /* Finaliza Seccion nav-menu */
+
+    /* Seccion publicaciones*/
+
+    .contenedor-publicacion {
         display: flex;
         justify-content: center;
     }
-    .publicaciones{
+  
+
+    .publicaciones {
         width: 80%;
     }
-    .encabezado .foto{
+
+    .encabezado .foto {
         width: 10%;
         height: 10%;
     }
-    .encabezado #usuario{
-        font-size:xx-large;
+
+    .encabezado #usuario {
+        font-size: xx-large;
     }
+
     .encabezado #fecha {
         font-size: 13px;
         margin-left: 9px;
         margin-top: 10px;
     }
 
-    .tarjeta .text{
+    .tarjeta .text {
         font-size: 23px;
     }
 
-    .tarjeta .content{
+    .tarjeta .content {
         width: 100%;
     }
-    .interactions i{
+
+    .interactions i {
         font-size: 24px;
         margin-top: 3px;
     }
+
     .post-actions {
         margin-left: var(--padding-10);
     }
-    .post-actions p , i{
+
+    .post-actions p,
+    i {
         font-size: 25px;
     }
-    .comments-section h3{
+
+    .comments-section h3 {
         font-size: 23px;
     }
-    .comments-section input{
+
+    .comments-section input {
         font-size: 23px;
         padding: 4px;
     }
-    .comments-section button{
+
+    .comments-section button {
         font-size: 23px;
     }
+
     .comment p strong {
         font-size: 23px;
     }
-    .comment p{
+
+    .comment p {
         font-size: 23px;
     }
+
+    /* Finaliza Seccion publicaciones*/
+
+    /* Footer */
+
+    .pie-pagina {
+        display: flex;
+        justify-content: center;
+    }
+
+    .pie-pagina section {
+        width: 80%;
+        justify-content: center;
+        background-color: #ffffff00;
+    }
+
+    .pie-pagina .notificacion {
+        margin-left: var(--padding-20);
+    }
+
+    .pie-pagina .publicacion {
+        margin-right: var(--padding-20);
+    }
+
+    .pie-pagina h3 {
+        font-size: 20px;
+    }
+
+    .pie-pagina i {
+        color: var(--blanco);
+        padding-right: 4px;
+        font-size: 30px;
+    }
+
+    /* Finaliza Footer */
+
+    /* Modal Publicaciones */
+
+    .modal-new-post {
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+    }
+
+    .container-modal {
+        background-color: var(--oscuro-300);
+        gap: var(--padding-10);
+        height: 70%;
+        width: 60%;
+        max-width: 700px;
+        max-height: 600px;
+    }
+
+    /* Finaliza Modal Publicaciones */
 }
 
-@media (min-width: 1200px){
-    .contenedor-publicacion{
+@media (min-width: 1200px) {
+
+    /* Seccion nav-menu */
+
+    .nav-menu .title {
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+    .nav-menu .bx {
+        margin-top: 15px;
+        padding-left: 3vw;
+    }
+
+    .busquedad input {
+        width: 30%;
+    }
+
+    .busquedad i {
+        right: 56vw;
+    }
+
+    /* fin seccion nav-menu */
+
+    /* Seccion publicaciones*/
+
+    .contenedor-publicacion {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 20px;
         padding: 20px;
     }
-    .publicaciones{
+
+    .publicaciones {
         width: 90%;
         margin-left: 9%;
     }
@@ -514,8 +849,8 @@ section #fecha {
 
     .notificaciones {
         display: block;
-        width: 80%; 
-        height: 45vh;
+        width: 80%;
+        height: 43vh;
         margin-left: var(--padding-20);
         margin-right: 9%;
         margin-top: var(--padding-10);
@@ -529,7 +864,6 @@ section #fecha {
     .notificaciones>h3{
         text-align: center;
         background-color: var(--oscuro-200);
-        
     }
 
     .notificaciones .notificacion {
@@ -537,17 +871,17 @@ section #fecha {
         margin: 10px 0;
         padding: 10px;
     }
-    
+
     .notificaciones .notificacion .titulo {
         font-weight: bold;
         margin-bottom: 5px;
     }
-    
+
     .notificaciones .notificacion .contenido {
         font-size: 0.9em;
         color: var(--blanco);
     }
-    
+
     .notificaciones .notificacion .timestamp {
         font-size: 0.8em;
         color: #e9e9e942;
@@ -572,12 +906,13 @@ section #fecha {
         background-color: var(--oscuro-300);
         overflow-y: auto;
         position: sticky;
-        top: 50vh; 
+        top: 48vh; 
     } 
     .lista-amigos>h3{
         text-align: center;
         background-color: var(--oscuro-200);
     }
+
     .amigo {
         display: flex;
         align-items: center;
@@ -587,25 +922,24 @@ section #fecha {
         border-radius: 5px;
         transition: background-color 0.3s;
     }
-    
+
     .amigo:hover {
         background-color: var(--oscuro-100);
     }
-    
+
     .amigo img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         margin-right: 10px;
     }
-    
+
     .amigo p {
         font-weight: bold;
         font-size: 1em;
         color: var(--blanco);
         margin: 0;
     }
-}
 
 /* Fin seccion publicaciones */
 /* Footer */
@@ -671,16 +1005,20 @@ section #fecha {
     }
 }
 @media (min-width: 1200px){
-    .pie-pagina{
+    
+
+
+    .pie-pagina {
         display: flex;
-        justify-content: space-around;
-        width: 804px;
+        justify-content: center;
     }
-    .pie-pagina section{
+
+    .pie-pagina section {
         width: 60%;
         background-color: #ffffff00;
     }
-    
-}
 
+
+    /* Finaliza Footer */
+}
 

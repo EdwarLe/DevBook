@@ -27,6 +27,6 @@ function notificationsList(notifications, containerNotifications){
     })
 }
 
-dataJSON().then((res) => console.log(res));
 
 export default notificationsList
+dataJSON();
