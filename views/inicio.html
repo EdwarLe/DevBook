@@ -22,8 +22,8 @@
                 <p class="title">DevBook</p>
                 <section class="navegacion">
                     <a href="#"><i class='bx bx-user-circle'></i></a>
-                    <a href="#"><i class='bx bx-shopping-bag' ></i></a>
-                    <i id="configuration" class='bx bxs-cog' ></i>
+                    <a href="#"><i class='bx bx-shopping-bag'></i></a>
+                    <i id="configuration" class='bx bxs-cog'></i>
 
                 </section>
             </div>
@@ -49,11 +49,11 @@
             </div>
         </main>
         <footer class="pie-pagina">
-            <section class="pie notificacion">
+            <section class="pie notificacion" id="notifications">
                 <i class='bx bxs-bell'></i>
                 <h3>Notificaciones</h3>
             </section>
-            <section class="pie amigos">
+            <section class="pie amigos" id="friends">
                 <i class='bx bxs-group'></i>
                 <h3>Amigos</h3>
             </section>
@@ -63,29 +63,28 @@
             </section>
         </footer>
         <div class="modal-configuration hidden-setting" id="modal-configuration">
-            
+
         </div>
+
         <div class="modal-friends hidden-friends" id="modal-friends">
             <div class="friendsList">
                 <div class="friendsTitle"></div>
-                    <h3>Amigos</h3>
-                </div>
-
+                <h3>Amigos</h3>
             </div>
         </div>
-
+        
         <div class="modal-notifications hidden-notifications notificacionesSelect" id="modal-notifications">
             <div class="notificationsList notificacionesModal">
                 <div class="notificattionTitle">
                     <h3>Notificaciones</h3>
                 </div>
-
             </div>
         </div>
+
         <div class="commentModal hiddenComment">
             <a class="closeComment"><i class='bx bx-chevrons-left'></i>Cerrar</a>
-
         </div>
+
         <form class="modal-new-post" id="modal-new-post">
             <div class="container-modal">
                 <div class="back-post">
@@ -114,9 +113,9 @@
                 </div>
             </div>
         </form>
-    
-    
-    </div>
+
+
+        
     </main>
     <script src="../js/consumo-publicaciones.js" type="module"></script>
     <script src="../js/consumo-notificaciones.js" type="module"></script>
@@ -125,7 +124,7 @@
     <script src="../js/modal-notifications.js" type="module"></script>
     <script src="../js/modal-comments.js" type="module"></script>
     <script src="/js/new-post.js"></script>
-    
+
 </body>
 
 </html>

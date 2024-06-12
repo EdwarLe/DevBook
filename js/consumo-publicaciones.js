@@ -78,16 +78,6 @@ async function dataJSON() {
         publicaciones.appendChild(contenedorPost);
 
 
-=======
-        contenedorPost.querySelector('.Comment').addEventListener('click', function () {
-            const commentsSection = contenedorPost.querySelector('.comments-section');
-            if (commentsSection.style.display === 'none') {
-                commentsSection.style.display = 'block';
-            } else {
-                commentsSection.style.display = 'none';
-            }
-        });
-
     });
     friendsList(posts, listaAmigos)
 }

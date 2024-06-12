@@ -26,7 +26,7 @@ async function dataJSON() {
         `
         
     commentModal.appendChild(contenedor)
-    console.log(contenedor)
+    /* console.log(contenedor) */
     })
     
     openComments.addEventListener("click",()=>{

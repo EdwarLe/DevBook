@@ -977,7 +977,7 @@ section #fecha {
     padding-right: 4px;
     font-size: 20px;
 }
-
+}
 
 @media (min-width: 744px){
     .pie-pagina{
@@ -1006,8 +1006,6 @@ section #fecha {
 }
 @media (min-width: 1200px){
     
-
-
     .pie-pagina {
         display: flex;
         justify-content: center;
