@@ -2,6 +2,7 @@ const commentModal = document.querySelector(".commentModal")
 const closeComments =document.querySelector(".closeComment")
 const openComments= document.querySelector(".openComments")
 
+console.log (openComments)
 async function dataJSON() {
     const response = await fetch("../js/utils/db-publicaciones.json");
     const { posts } = await response.json();
@@ -27,11 +28,12 @@ async function dataJSON() {
         
     commentModal.appendChild(contenedor)
     /* console.log(contenedor) */
-    })
-    
     openComments.addEventListener("click",()=>{
         commentModal.classList.remove("hiddenComment")
+        })
     })
+    
+    
     closeComments.addEventListener("click",()=>{
         commentModal.classList.add("hiddenComment")
     })
