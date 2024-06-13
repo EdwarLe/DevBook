@@ -17,7 +17,86 @@
 
 <body>
     <div class="contenedorPrincipalApp">
-
+        <div class="register-container">
+            <img src="../img/LogoDevBook.png" alt="Logo" class="logo">
+            <h1>Crea una cuenta</h1>
+            <p>Ingrese su correo electrónico para registrarse en esta aplicación</p>
+            <div class="doubleForm">
+            <form id="register-form-part1">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required placeholder="email@email.com">
+                    <label for="email"></label>
+                </div>
+                <button type="button" id="next-button">Registrar</button>
+                <section class="icons">
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-google'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </section>
+                <p>Al hacer clic en Continuar, acepta nuestros Términos de servicio y Política de privacidad</p>
+            </form>
+    
+            <form id="register-form-part2" >
+                <div class="input-group">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="contraseña" name="contraseña" required placeholder="Contraseña">
+                </div>
+                <div class="input-group">
+                    <div class="form-group">
+                        <select id="country" name="country" required>
+                            <option value="">Seleccione un país</option>
+                            <option value="US">Estados Unidos</option>
+                            <option value="CA">Canada</option>
+                            <option value="MX">Mexico</option>
+                            <option value="CO">Colombia</option>
+->
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="phone" id="phone" name="phone" required placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                        <select id="gender" name="gender" required>
+                            <option value="">Seleccione un género</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="birthday" name="birthday" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="role" name="role" required>
+                            <option value="">Seleccione un rol</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                            <option value="fullstack">Fullstack Developer</option>
+                            <option value="devops">DevOps</option>
+                            <option value="data_scientist">Data Scientist</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="stack" name="stack" required>
+                            <option value="">Seleccione un stack</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="php">PHP</option>
+                        </select>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+            <p>Al hacer clic en guardar, acepta nuestros Términos de servicio y Política de privacidad</p>
+        </div>
+        <script src="../js/registro.js"></script>
     </div>
 </body>
 

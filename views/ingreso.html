@@ -17,6 +17,31 @@
 
 <body>
     <div class="contenedorPrincipalApp">
+        <div class="login-container">
+            <img src="../img/LogoDevBook.png" alt="Logo" class="logo">
+            <!-- <h1>Iniciar Sesión</h1> -->
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" required placeholder="E-mail">
+                    <label for="username"></label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required placeholder="Contraseña">
+                    <label for="password"></label>
+                </div>
+                <div class="input-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Recordar mis datos</label>
+                </div>
+                <button type="submit">Ingresar</button>
+                <div class="links">
+                    <p class="pass"><a href="">Olvidaste tu contraseña?</a></p>
+                    <p class="register"><a href="register.html">Regístrate</a></p>
+                </div>
+                <p id="error-message" class="error-message"></p>
+            </form>
+        </div>
+        <script src="../js/ingreso.js"></script>
 
     </div>
 </body>
