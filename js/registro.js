@@ -1,6 +1,6 @@
-    let button = document.getElementById("next-button")
+let button = document.getElementById("next-button")
 
-    document.getElementById('register-form-part1').addEventListener('submit', function(event) {
+document.getElementById('register-form-part1').addEventListener('submit', function (event) {
     event.preventDefault();
 
     var newUsername = document.getElementById('new-username').value;
@@ -15,10 +15,10 @@
 
 });
 
-    button.addEventListener('click', function(event) {
-       
-    document.getElementById('register-form-part1').style.display = 'none';
-    document.getElementById('register-form-part2').style.display ='block';
+button.addEventListener('click', function (event) {
 
-}); 
+    document.getElementById('register-form-part1').style.display = 'none';
+    document.getElementById('register-form-part2').style.display = 'flex';
+
+});
 
