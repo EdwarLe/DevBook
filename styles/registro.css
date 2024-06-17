@@ -117,7 +117,18 @@ button:hover {
     max-width: 300px;
 }
 
-
+.modalValidations {
+    background-color: var(--oscuro-100);
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    padding: var(--padding-10);
+    position: absolute;
+    top: 20%;
+    right: 0;
+}
 
 
 @media (min-width: 744px) {
