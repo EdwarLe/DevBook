@@ -127,7 +127,8 @@ button:hover {
     padding: var(--padding-10);
     position: absolute;
     top: 20%;
-    right: 0;
+    right: -100%;
+    transition: all 0.2s ease-in-out;
 }
 
 
