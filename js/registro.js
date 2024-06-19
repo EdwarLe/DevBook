@@ -8,7 +8,7 @@ const emailInputRegister = document.getElementById("email")
 const registerFormPart2 = document.getElementById("register-form-part2")
 const nombre = document.getElementById("nombre")
 const apellido = document.getElementById("apellido")
-const contraseña = document.getElementById("contraseña")
+const password = document.getElementById("password")
 const country = document.getElementById("country")
 const phone = document.getElementById("phone")
 const gender = document.getElementById("gender")
@@ -16,24 +16,39 @@ const birthday = document.getElementById("birthday")
 const role = document.getElementById("role")
 const stack = document.getElementById("stack")
 
+const usersLocal = JSON.parse(localStorage.getItem('users'))
 
+// Validación del formulario del correo
 registerFormPart1.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    if (!emailInputRegister.value.includes("@")) {
+    const emailInput = emailInputRegister.value
+
+    if (!emailInput.includes("@")) {
         return modalValidaciones(modalValidations, "Tipo de correo electrónico inválido")
     }
 
-    modalValidations.style.right = "-100%"
+    if (usersLocal !== null) {
+        const emailFound = usersLocal.find(user => emailInput === user.email)
 
-    document.getElementById('register-form-part1').style.display = 'none';
-    document.getElementById('register-form-part2').style.display = 'flex';
+        if (!emailFound) {
+            modalValidations.style.right = "-100%"
 
-    // registerFormPart1.reset()
-});
+            registerFormPart1.style.display = 'none';
+            registerFormPart2.style.display = 'flex';
+        } else {
+            return modalValidaciones(modalValidations, 'Esta cuenta de correo ya existe')
 
+        }
+
+    }
+
+
+})
+
+
+// Validación del formulario de registro completo
 let arrayUsers = []
-const usersLocal = JSON.parse(localStorage.getItem('users'))
 
 if (usersLocal !== null) {
     arrayUsers = usersLocal
@@ -48,7 +63,7 @@ registerFormPart2.addEventListener('submit', (e) => {
     if (apellido.value === '' || apellido.value.length < 3) {
         return modalValidaciones(modalValidations, "Apellido de usuario inválido")
     }
-    if (contraseña.value.length < 8 || contraseña.value.length > 16) {
+    if (password.value.length < 8 || password.value.length > 16) {
         return modalValidaciones(modalValidations, "La contraseña debe tener mínimo 8 carácteres y máximo 16")
     }
     if (!country.value) {
@@ -74,7 +89,7 @@ registerFormPart2.addEventListener('submit', (e) => {
         "email": emailInputRegister.value,
         "nombre": nombre.value,
         "apellido": apellido.value,
-        "contraseña": contraseña.value,
+        "password": password.value,
         "country": country.value,
         "phone": phone.value,
         "gender": gender.value,
@@ -89,7 +104,6 @@ registerFormPart2.addEventListener('submit', (e) => {
     localStorage.setItem('users', JSON.stringify(arrayUsers))
 
     emailInputRegister.value = '';
-    console.log(newUser)
 
     modalValidations.style.right = '-100%'
 

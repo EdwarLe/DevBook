@@ -7,10 +7,7 @@ async function dataJSON() {
 
     const dataToString = JSON.stringify(posts)
 
-
     const postsLocalStorage = JSON.parse(localStorage.getItem('posts'))
-
-    console.log(postsLocalStorage)
 
     if (!postsLocalStorage) {
         localStorage.setItem('posts', dataToString)

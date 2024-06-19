@@ -1,15 +1,15 @@
 const commentModal = document.querySelector(".commentModal")
-const closeComments =document.querySelector(".closeComment")
-const openComments= document.querySelector(".openComments")
+const closeComments = document.querySelector(".closeComment")
+const openComments = document.querySelector(".openComments")
 
-console.log (openComments)
+
 async function dataJSON() {
     const response = await fetch("../js/utils/db-publicaciones.json");
     const { posts } = await response.json();
-    
+
     posts.forEach(post => {
         const contenedor = document.createElement("div");
-        contenedor.innerHTML=`
+        contenedor.innerHTML = `
         <div class="comments-section">
             <h3>Comments</h3>
             <div class="comments-list">
@@ -25,16 +25,15 @@ async function dataJSON() {
             </div>
         </div>
         `
-        
-    commentModal.appendChild(contenedor)
-    /* console.log(contenedor) */
-    openComments.addEventListener("click",()=>{
-        commentModal.classList.remove("hiddenComment")
+
+        commentModal.appendChild(contenedor)
+        openComments.addEventListener("click", () => {
+            commentModal.classList.remove("hiddenComment")
         })
     })
-    
-    
-    closeComments.addEventListener("click",()=>{
+
+
+    closeComments.addEventListener("click", () => {
         commentModal.classList.add("hiddenComment")
     })
 }

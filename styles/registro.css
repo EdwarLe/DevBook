@@ -1,7 +1,7 @@
 @import url(./styles.css);
 
 .register-container img.logo {
-    width: 150px;
+    width: 300px;
     margin-bottom: 30px;
     align-items: center;
 }
@@ -125,7 +125,7 @@ button:hover {
     align-items: center;
     min-height: 50px;
     padding: var(--padding-10);
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: -100%;
     transition: all 0.2s ease-in-out;

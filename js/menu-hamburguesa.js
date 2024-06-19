@@ -46,7 +46,6 @@ const fracmentoNombrePagina = nombrePagina.map((ele)=>{
         const nombreHash = nombreReferencia[1]
         
         if(url.includes(nombreHash)){
-            console.log(nombreHash)
             ele.classList.add("nav-activo")
         }
     })
