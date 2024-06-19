@@ -3,15 +3,14 @@
 /* Seccion nav-menu */
 
 .nav-menu {
+    background-color: var(--oscuro-400);
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
+    height: 50px;
     justify-content: space-between;
     padding: var(--padding-10);
     color: var(--blanco);
-    padding-bottom: 0px;
     border-bottom: var(--blanco) solid 1px;
-    background-color: var(--oscuro-400);
     position: fixed;
     top: 0;
     z-index: 100;
@@ -20,46 +19,38 @@
 
 .nav-menu .title {
     font-family: "Poppins";
-    font-size: 18px;
-    font-weight: 300;
 }
 
 .nav-menu .bx {
     padding-left: 11vw;
     color: var(--blanco);
-    font-size: 18px;
-}
-.nav-menu .bx-user-circle{
-    padding-left: 0;
 }
 
-.busquedad {
+.busqueda {
     display: flex;
-    margin: var(--padding-10) 0;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin-top: 3vh;
-    padding-top: var(--padding-30);
+    margin-top: 50px;
+    padding: var(--padding-10);
     width: 100%;
+    position: relative;
 }
 
-.busquedad input {
+.busqueda input {
     width: 80%;
-    height: 50px;
-    padding: 0 var(--padding-20);
+    padding: 5px var(--padding-10);
     border-radius: 8px;
     border: 1px solid var(--gris);
     background: var(--blanco);
 }
 
-.busquedad img {
+.busqueda img {
     display: none;
 }
 
-.busquedad i {
+.busqueda i {
     position: absolute;
-    right: 16%; 
+    right: 16%;
     color: var(--gris)
 }
 
@@ -67,27 +58,29 @@
 
 /* Modal Configuracion */
 
-.modal-configuration{
+.modal-configuration {
     width: 230px;
     height: 180px;
     background-color: var(--oscuro-300);
     border-radius: 8px;
-    color:var(--blanco);
+    color: var(--blanco);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: var(--padding-10);
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 20px;
     transition: all 0.4s ease-in-out;
     transform: scale(1);
 }
-.hidden-setting{
+
+.hidden-setting {
     transform: scaleX(0) translate(200%, -200%);
 }
-.btn-configuration{
+
+.btn-configuration {
     display: flex;
     gap: var(--padding-10);
     font-size: 14px;
@@ -95,7 +88,8 @@
     align-self: flex-start;
     padding-left: var(--padding-20);
 }
-.modal-configuration>p{
+
+.modal-configuration>p {
     border-bottom: solid 1px var(--blanco);
     width: 100%;
     text-align: center;
@@ -104,53 +98,58 @@
 
 /* Modal Friends */
 
-.modal-friends{
-    background-color: var(--oscuro-300);
-    border: var(--blanco) solid 1px;
+.modal-friends {
+    background-color: var(--oscuro-400);
+    color: var(--blanco);
     position: fixed;
-    width: 90%;
-    height: 83%;
-    top:7%;
-    right: 5%;
+    width: 100%;
+    top: 0px;
+    right: 0;
+    height: 100%;
     overflow-y: scroll;
-    transition: all 0.4s ease-in-out;
-    transform: translate(0, 0) scale(1);
+    transition: all 0.2s ease-in-out;
+    transform: translate(0, 0);
+    z-index: 100;
 }
-.hidden-friends{
-    transform: translate(0, 100%) scale(0);
-    filter: blur(0px);
+
+.hidden-friends {
+    transform: translate(0, 100%);
 }
-.modal-friends .friendsTitle>h3{
-    text-align: center;
-    background-color: var(--oscuro-200); 
-    padding: 5px;  
-    border: var(--blanco) solid 0.5px; 
+
+.friendsTitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--padding-20);
+    border-bottom: solid 1px var(--blanco);
+    gap: var(--padding-10);
+    margin-bottom: var(--padding-10);
 }
-.friendsModal{
-    position: relative;
+
+.friendsTitle h3 {
+    font-size: 18px;
+    font-weight: normal;
 }
-.friendsList .friendsTitle{
-    position: sticky;
-    top:0;
-}
+
+
 .modal-friends .amigo {
     display: flex;
     align-items: center;
-    background-color: var(--oscuro-200);
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: var(--padding-10) var(--padding-20);
     transition: background-color 0.3s;
 }
+
 .modal-friends .amigo:hover {
-    background-color: var(--oscuro-100);
+    background-color: var(--oscuro-300);
 }
+
 .modal-friends .amigo img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .modal-friends .amigo p {
     font-weight: bold;
     font-size: 1em;
@@ -160,40 +159,46 @@
 
 /* Modal Notificaiones */
 
-.modal-notifications{
+.modal-notifications {
     background-color: var(--oscuro-300);
     border: var(--blanco) solid 1px;
     position: fixed;
     width: 90%;
     height: 83%;
-    top:7%;
+    top: 7%;
     right: 5%;
     overflow-y: scroll;
     transition: all 0.4s ease-in-out;
     transform: translate(0, 0) scale(1);
 }
-.hidden-notifications{
+
+.hidden-notifications {
     transform: translate(-80%, 100%) scale(0);
     filter: blur(0px);
 }
-.modal-notifications .notificattionTitle>h3{
+
+.modal-notifications .notificattionTitle>h3 {
     text-align: center;
-    background-color: var(--oscuro-200); 
-    padding: 5px;  
+    background-color: var(--oscuro-200);
+    padding: 5px;
     border: var(--blanco) solid 0.5px;
 }
-.notificacionesModal{
+
+.notificacionesModal {
     position: relative;
 }
-.notificacionesModal .notificattionTitle{
+
+.notificacionesModal .notificattionTitle {
     position: sticky;
     top: 0;
 }
+
 .modal-notifications .notificacion {
     background-color: var(--oscuro-200);
     margin: 10px 0;
     padding: 10px;
 }
+
 .modal-notifications .notificacion .titulo {
     font-weight: bold;
     margin-bottom: 5px;
@@ -211,86 +216,100 @@
 }
 
 /* Modal Comments */
-.commentModal{
+.commentModal {
     background-color: var(--oscuro-300);
     border: var(--blanco) solid 1px;
     position: fixed;
     width: 90%;
     height: 83%;
-    top:7%;
+    top: 7%;
     right: 5%;
     overflow-y: scroll;
     transition: all 0.4s ease-in-out;
     transform: translate(0, 0) scale(1);
 }
-.hiddenComment{
+
+.hiddenComment {
     transform: translate(-80%, 100%) scale(0);
 }
 
-@media (min-width: 744px){
-    .nav-menu .title{
+@media (min-width: 744px) {
+    .nav-menu .title {
         font-size: 28px;
         font-weight: 500;
     }
-    .nav-menu .bx{
+
+    .nav-menu .bx {
         padding-left: 5vw;
         font-size: 28px;
     }
-    .busquedad {
+
+    .busqueda {
         justify-content: left;
         margin-left: 10vw;
         margin-top: 5vh;
     }
-    .busquedad img {
+
+    .busqueda img {
         display: block;
         width: 75px;
         border-radius: 50%;
         margin-right: var(--padding-10);
     }
-    .busquedad input {
+
+    .busqueda input {
         width: 50%;
     }
-    .busquedad i{
+
+    .busqueda i {
         right: 43%;
         font-size: 28px;
     }
-    .modal-configuration{
+
+    .modal-configuration {
         top: 55px;
         right: 25px;
     }
-    .modal-notifications{
+
+    .modal-notifications {
         width: 90%;
         height: 40%;
-        top:50%;
+        top: 50%;
         right: 5%;
     }
-    .modal-friends{
+
+    .modal-friends {
         width: 90%;
         height: 40%;
-        top:10%;
+        top: 10%;
         right: 5%;
     }
 }
 
-@media (min-width: 1200px){
-    .nav-menu .title{
+@media (min-width: 1200px) {
+    .nav-menu .title {
         font-size: 45px;
         font-weight: 500;
     }
-    .nav-menu .bx{
+
+    .nav-menu .bx {
         margin-top: 15px;
         padding-left: 3vw;
     }
-    .busquedad{
+
+    .busqueda {
         margin-top: 8vh;
     }
-    .busquedad input {
+
+    .busqueda input {
         width: 30%;
     }
-    .busquedad i{
+
+    .busqueda i {
         right: 63%;
     }
-    .modal-configuration{
+
+    .modal-configuration {
         top: 80px;
         right: 25px;
     }
@@ -456,6 +475,7 @@ section #fecha {
     background-color: #c2c2c242;
     padding: var(--padding-10);
 }
+
 .notificaciones {
     display: none;
 }
@@ -516,7 +536,7 @@ section #fecha {
     color: var(--blanco);
     top: 100%;
     left: 0;
-    /* padding: var(--padding-10); */
+    z-index: 100;
     gap: var(--padding-10);
     transition: all 0.3s ease-in-out;
 }
@@ -650,23 +670,23 @@ section #fecha {
         font-size: 28px;
     }
 
-    .busquedad {
+    .busqueda {
         justify-content: left;
         margin-left: 10vw;
     }
 
-    .busquedad img {
+    .busqueda img {
         display: block;
         width: 75px;
         border-radius: 50%;
         margin-right: var(--padding-10);
     }
 
-    .busquedad input {
+    .busqueda input {
         width: 50%;
     }
 
-    .busquedad i {
+    .busqueda i {
         right: 37vw;
         font-size: 28px;
     }
@@ -679,7 +699,7 @@ section #fecha {
         display: flex;
         justify-content: center;
     }
-  
+
 
     .publicaciones {
         width: 80%;
@@ -811,11 +831,11 @@ section #fecha {
         padding-left: 3vw;
     }
 
-    .busquedad input {
+    .busqueda input {
         width: 30%;
     }
 
-    .busquedad i {
+    .busqueda i {
         right: 56vw;
     }
 
@@ -855,7 +875,8 @@ section #fecha {
         position: sticky;
         top: 20px;
     }
-    .notificaciones>h3{
+
+    .notificaciones>h3 {
         text-align: center;
         background-color: var(--oscuro-200);
     }
@@ -882,10 +903,11 @@ section #fecha {
         margin-top: 5px;
     }
 
-    .modal-friends{
+    .modal-friends {
         display: none;
     }
-    .modal-notifications{
+
+    .modal-notifications {
         display: none;
     }
 
@@ -900,9 +922,10 @@ section #fecha {
         background-color: var(--oscuro-300);
         overflow-y: auto;
         position: sticky;
-        top: 48vh; 
-    } 
-    .lista-amigos>h3{
+        top: 48vh;
+    }
+
+    .lista-amigos>h3 {
         text-align: center;
         background-color: var(--oscuro-200);
     }
@@ -935,71 +958,80 @@ section #fecha {
         margin: 0;
     }
 
-/* Fin seccion publicaciones */
-/* Footer */
+    /* Fin seccion publicaciones */
+    /* Footer */
 
-.pie-pagina{
-    display: flex;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    background-color: var(--oscuro-400);
-    width: 100%;
-    justify-content: space-between;
-    height: 8%;
-    flex-shrink: 0;
-    border-top: 1px solid var(--blanco);
-    z-index: 100;
+    .pie-pagina {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        background-color: var(--oscuro-400);
+        width: 100%;
+        justify-content: space-between;
+        height: 8%;
+        flex-shrink: 0;
+        border-top: 1px solid var(--blanco);
+        z-index: 100;
+    }
+
+    .pie-pagina section {
+        display: flex;
+        color: var(--blanco);
+    }
+
+    .pie-pagina .notificacion {
+        margin-left: var(--padding-10);
+    }
+
+    .pie-pagina .publicacion {
+        margin-right: var(--padding-10);
+    }
+
+    .pie-pagina h3 {
+        font-size: 12px;
+    }
+
+    .pie-pagina i {
+        color: var(--blanco);
+        padding-right: 4px;
+        font-size: 20px;
+    }
 }
 
-.pie-pagina section {
-    display: flex;
-    color: var(--blanco);
-}
-.pie-pagina .notificacion{
-    margin-left: var(--padding-10);
-}
-.pie-pagina .publicacion{
-    margin-right: var(--padding-10);
-}
-
-.pie-pagina h3 {
-    font-size: 12px;
-}
-.pie-pagina i {
-    color: var(--blanco);
-    padding-right: 4px;
-    font-size: 20px;
-}
-}
-
-@media (min-width: 744px){
-    .pie-pagina{
+@media (min-width: 744px) {
+    .pie-pagina {
         display: flex;
         justify-content: center;
     }
-    .pie-pagina section{
+
+    .pie-pagina section {
         width: 100%;
         justify-content: center;
         background-color: #ffffff00;
     }
-    .pie-pagina .notificacion{
+
+    .pie-pagina .notificacion {
         margin-left: var(--padding-20);
     }
-    .pie-pagina .publicacion{
+
+    .pie-pagina .publicacion {
         margin-right: var(--padding-20);
     }
+
     .pie-pagina h3 {
         font-size: 20px;
     }
+
     .pie-pagina i {
         color: var(--blanco);
         padding-right: 4px;
         font-size: 30px;
     }
 }
-@media (min-width: 1200px){
-    
+
+@media (min-width: 1200px) {
+
     .pie-pagina {
         display: flex;
         justify-content: center;
@@ -1014,4 +1046,3 @@ section #fecha {
 
     /* Finaliza Footer */
 }
-
