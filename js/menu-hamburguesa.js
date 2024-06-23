@@ -40,6 +40,15 @@ if(!mediaQuery.matches){
 // Esta funcion indica en que pagina estas
 const nombrePagina = Array.from(linkPagina)
 const fracmentoNombrePagina = nombrePagina.map((ele)=>{
+    window.addEventListener('load', () => {
+        const numeralGato = ele.getAttribute('href')
+        const nombreReferencia = numeralGato.split("#")
+        const nombreHash = nombreReferencia[1]
+        
+        if(url.includes(nombreHash)){
+            ele.classList.add("nav-activo")
+        }
+    })
     ele.addEventListener("click", function(e){
         const numeralGato = e.target.hash
         const nombreReferencia = numeralGato.split("#")

@@ -489,6 +489,10 @@ textarea.invalid {
         display: none;
     }
 
+    .nav-activo {
+        color: var(--primario-300);
+      }
+
     /* Finaliza estilos de la barra de navegación */
 
 
@@ -499,10 +503,12 @@ textarea.invalid {
         margin: 0 auto;
         box-shadow: 0 0 10px 10px rgb(226, 226, 226);
         margin-top: 120px;
+        padding: var(--padding-30);
     }
 
     .icons {
         font-size: 24px;
+        margin-top: var(--padding-20);
     }
 
     .datos .p {
@@ -599,6 +605,10 @@ textarea.invalid {
         display: flex;
         order: 1
     }
+
+    .nav-activo {
+        color: var(--primario-300);
+      }
 
     /* Finaliza estilos de la barra de navegación */
 
