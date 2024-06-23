@@ -1,5 +1,15 @@
+import { commentsByPost } from "./modal-comments.js";
+
 const publicaciones = document.getElementById("publicaciones");
 const listaAmigos = document.querySelector(".lista-amigos")
+const postsUsers = document.getElementsByClassName("tarjeta")
+const containerComment = document.querySelector(".containerComment")
+
+const openComments = document.getElementById("btnComment")
+const commentModal = document.querySelector(".commentModal")
+
+
+
 
 async function dataJSON() {
     const response = await fetch("../js/utils/db-publicaciones.json");
@@ -14,7 +24,7 @@ async function dataJSON() {
         location.reload()
     }
 
-    postsLocalStorage.forEach(post => {
+    postsLocalStorage.forEach((post) => {
         const contenedorPost = document.createElement("div");
         const elapsedTime = calculateElapsedTime(post.timestamp);
         let mediaContent = '';
@@ -32,8 +42,10 @@ async function dataJSON() {
             }
         }
 
+
+
         contenedorPost.innerHTML = `
-        <div class="tarjeta">
+        <div class="tarjeta" id="postByUser-${post.id}">
             <div class="encabezado">
                 <img class="foto" src="${post.user.profile_picture}" alt="${post.user.name}"> 
                 <section>
@@ -57,11 +69,9 @@ async function dataJSON() {
                         <i class='bx bx-like'></i>
                         <p>Like</p>
                     </section>
-                    <section class="Comment">
-                        <div class="openComments">
-                            <i class='bx bx-comment'></i>
-                            <p>Comment</p>
-                        </div>
+                    <section class="openComments" id='${post.id}post'>
+                        <i class='bx bx-comment'></i>
+                        <p>Comment</p>
                     </section>
                     <section class="Share">
                         <i class='bx bx-share-alt'></i>
@@ -74,13 +84,27 @@ async function dataJSON() {
 
         publicaciones.appendChild(contenedorPost);
 
+        setTimeout(() => {
+            const arrayPostsUsers = Array.from(postsUsers)
+            arrayPostsUsers.find(user => {
+                user.addEventListener("click", (e) => {
+                    if (e.target.textContent.includes("Comment") && parseInt(user.id.split('-')[1]) == post.id) {
+                        commentsByPost(post)
+                        containerComment.classList.toggle("hiddenComment")
+                    }
+                })
+            })
+        }, 1000);
+
 
     });
     friendsList(posts, listaAmigos)
 }
 
-function friendsList(posts, containerFriends){
-    posts.forEach(amigo=>{
+
+
+function friendsList(posts, containerFriends) {
+    posts.forEach(amigo => {
 
         const contenedorAmigos = document.createElement("div");
         contenedorAmigos.innerHTML = `
@@ -90,7 +114,7 @@ function friendsList(posts, containerFriends){
         </div>`
         containerFriends.appendChild(contenedorAmigos);
     })
-    
+
 }
 
 dataJSON();

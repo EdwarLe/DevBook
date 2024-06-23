@@ -11,7 +11,12 @@ dataJSONFriends()
 
 const modalFriends = document.getElementById("modal-friends")
 const btnFriends = document.getElementById("friends")
+const closeFriends = document.getElementById("close-friends")
 
 btnFriends.addEventListener("click", () => {
     modalFriends.classList.toggle("hidden-friends")
+})
+
+closeFriends.addEventListener("click", () => {
+    modalFriends.classList.add("hidden-friends")
 })

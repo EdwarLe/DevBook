@@ -1,41 +1,30 @@
+const containerComment = document.querySelector(".containerComment")
 const commentModal = document.querySelector(".commentModal")
 const closeComments = document.querySelector(".closeComment")
 const openComments = document.querySelector(".openComments")
+const postsUsers = document.getElementsByClassName("tarjeta")
 
+export function commentsByPost(postData) {
 
-async function dataJSON() {
-    const response = await fetch("../js/utils/db-publicaciones.json");
-    const { posts } = await response.json();
-
-    posts.forEach(post => {
-        const contenedor = document.createElement("div");
-        contenedor.innerHTML = `
+    commentModal.innerHTML = `
         <div class="comments-section">
-            <h3>Comments</h3>
             <div class="comments-list">
-                <div class="new-comment">
-                    <input type="text" placeholder="¿Qué estás pensando?">
-                    <button>Send</button>
-                </div>
-                ${post.comments.map(comment => `
+            ${postData.comments.map(comment => `
                 <div class="comment">
-                    <p><strong>${comment.user.name}</strong>: ${comment.text}</p>
+                    <p><strong>${comment.user.name}</strong></p>
+                    <p>${comment.text}</p>
                 </div>
-                `).join('')}
+                `)}
+            </div>
+            <div class="new-comment">
+                <input type="text" placeholder="¿Qué estás pensando?">
+                    <button>Send</button>
             </div>
         </div>
         `
 
-        commentModal.appendChild(contenedor)
-        openComments.addEventListener("click", () => {
-            commentModal.classList.remove("hiddenComment")
-        })
-    })
-
-
-    closeComments.addEventListener("click", () => {
-        commentModal.classList.add("hiddenComment")
+    closeComments.addEventListener('click', () => {
+        containerComment.classList.add("hiddenComment")
     })
 }
 
-dataJSON()
