@@ -99,6 +99,11 @@ body {
     max-width: 1200px;
     min-height: 100vh;
     margin: 0 auto;
+    color: var(--blanco);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-30);
     overflow: hidden;
+
 }

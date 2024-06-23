@@ -17,8 +17,126 @@
 
 <body>
     <div class="contenedorPrincipalApp">
+        <!-- header -->
+        <header class="header">
+            <h4>DevBook</h4>
+        </header>
+        <!-- Finaliza sección del header -->
 
+        <!-- Sección de foto de portada y perfil -->
+        <section class="cover-photo-profile">
+            <div class="cover-photo-banner">
+                <div class="banner">
+
+                </div>
+                <div class="btn-coverbanner"><i class='bx bxs-camera'></i></div>
+            </div>
+            <div class="profile-mobile">
+                <img class="photo-profile" src="../public/images/edwar-leon.png" alt="nan">
+                <div class="btn-coverphoto"><i class='bx bxs-camera'></i></div>
+            </div>
+
+            <div class="Username">
+                <h4> Eddy León</h4>
+            </div>
+            <div class="btn-notifications-desktop"><i
+                    class='bx bxs-bell icon-footer icon-notifications-desktop'></i>Notificaciones</div>
+        </section>
+        <!-- descripción del perfil -->
+        <section class="container-description-btn-edit-and-conf">
+            <div class="profile-description">
+                <p>
+                    Soy un apasionado del desarrollo frontend con más de 4 años de experiencia en la creación de interfaces web modernas y responsivas. Mi enfoque se centra en combinar diseño atractivo con funcionalidad robusta, siempre buscando mejorar la experiencia del usuario.
+                </p>
+            </div>
+            <div class="container-btn-edit-profile-config">
+                <button type="button" id="btn-edit-profile">Editar Perfil</button>
+                <button type="button" id="btn-config">Configuración</button>
+            </div>
+            <div class="line-division-btn"></div>
+        </section>
+        <!-- Finaliza descripción del perfil -->
+        <!-- contenedor con detalles, perfil, configuración y publicaciones -->
+        <div class="container-two-column">
+            <div class="container-details-profile-configuration" id="container-details-profile-configuration">
+                <div class="details" id="details">
+                    <h4>DETALLES</h4>
+                    <p>
+                        Soy un apasionado del desarrollo frontend con más de 4 años de experiencia en la creación de interfaces web modernas y responsivas. Mi enfoque se centra en combinar diseño atractivo con funcionalidad robusta, siempre buscando mejorar la experiencia del usuario.
+                    </p>
+                    <div class="main-contac">
+                        <div class="item-contac"><i class='bx bx-envelope'></i> <span>edwar.leon@genstudents.org</span></div>
+                        <div class="item-contac"><i class='bx bx-phone'></i> <span>+57 321 215 9041</span></div>
+                    </div>
+                    <div class="footer-details">
+                        <div class="btn-footer-details">Fotos</div>
+                        <div class="btn-footer-details">Amigos</div>
+                        <div class="btn-footer-details">Publicación</div>
+                    </div>
+                </div>
+                <div class="container-profile-configuration">
+                    <div class="profile-desktop" id="container-profile">
+                        <h4>PERFIL</h4>
+                        <div class="btn-close-menu-profile" id="close-menu-profile"><i class='bx bx-chevrons-left'></i>
+                        </div>
+                        <div class="item-configuration"><i class='bx bx-envelope'></i> <span>edwar.leon@genstudents.org</span><i
+                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-phone'></i> <span>+57 321 215 9041</span><i
+                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-map'></i> <span>Bogotá - Colombia</span><i
+                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-user-circle'></i> <span>Masculino</span><i
+                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-cake'></i> <span>29 - jul - 1990</span><i
+                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-cool'></i> <span>FrontEnd Developer</span><i
+                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-coin-stack'></i> <span>
+                                <div class="languege-program">
+                                    <p>NODE JS</p>
+                                    <p>JAVA </p>
+                                    <p>EXPRESS</p>
+                                </div>
+                            </span><i class='bx bx-edit'></i></div>
+                    </div>
+                    <div class="configuration" id="configuration">
+                        <h4>CONFIGURACIÓN</h4>
+                        <div class="item-configuration"><i class='bx bx-moon'></i> <span>Modo Oscuro</span></div>
+                        <div class="item-configuration"><i class='bx bx-rupee'></i> <span>Idioma</span>
+                            <select class="language">
+                                <option value="en">🇪🇸</option>
+                                <option value="es">🇺🇸</option>
+                            </select>
+                        </div>
+                        <div class="item-configuration"><i class='bx bx-log-out-circle'></i> <span>Cerar Sesión</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Publicaciones -->
+            <div class="container-post" id="post">
+
+            </div>
+
+            <!-- Finaliza publicaciones  -->
+            <!--  Finaliza contenedor con detalles, perfil, configuración y publicaciones -->
+            <!-- Footer fijo con notificaciones, amigos y crear nueva publicación -->
+            
+        </div>
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="notifications footer-btn"><i class='bx bxs-bell icon-footer'></i>
+                    <span>Notificaciones</span>
+                </div>
+                <div class="friends footer-btn"><i class='bx bxs-group icon-footer'></i><span> Amigos</span></div>
+                <div class="new-post footer-btn"><i
+                        class='bx bx-add-to-queue icon-footer'></i><span>Publicación</span></div>
+            </div>
+        </footer>
+        <!-- Finaliza footer con notificaciones, amigos y crear nueva publicación  -->
     </div>
+    <script src="../js/consumo-publicaciones-perfil.js" type="module"></script>
+    <script src="../js/btn-edit-profile.js"></script>
 </body>
 
 </html>
