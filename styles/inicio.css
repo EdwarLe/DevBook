@@ -36,6 +36,14 @@
     position: relative;
 }
 
+.searchInput {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .busqueda input {
     width: 80%;
     padding: 5px var(--padding-10);
@@ -48,10 +56,10 @@
     display: none;
 }
 
-.busqueda i {
+.searchInput i {
     position: absolute;
-    right: 16%;
-    color: var(--gris)
+    color: var(--gris);
+    right: 15%;
 }
 
 /* Finaliza Seccion nav-menu */
@@ -99,27 +107,29 @@
 /* Modal Friends */
 
 .modal-friends,
-.modal-notifications {
-    background-color: var(--oscuro-400);
+.modal-notifications,
+.containerComment {
+    background-color: var(--oscuro-300);
     color: var(--blanco);
     position: fixed;
     width: 100%;
     top: 0px;
     right: 0;
     height: 100%;
-    overflow-y: scroll;
     transition: all 0.2s ease-in-out;
     transform: translate(0, 0);
     z-index: 100;
 }
 
 .hidden-friends,
-.hidden-notifications {
+.hidden-notifications,
+.hiddenComment {
     transform: translate(0, 100%);
 }
 
 .friendsTitle,
-.notificattionTitle {
+.notificattionTitle,
+.commentsTitle {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -127,10 +137,12 @@
     border-bottom: solid 1px var(--blanco);
     gap: var(--padding-10);
     margin-bottom: var(--padding-10);
+    height: 70px;
 }
 
 .friendsTitle h3,
-.notificattionTitle h3 {
+.notificattionTitle h3,
+.commentsTitle h3 {
     font-size: 18px;
     font-weight: normal;
 }
@@ -163,36 +175,6 @@
 
 /* Modal Notificaiones */
 
-/* .modal-notifications {
-    background-color: red;
-    color: var(--blanco);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    overflow-y: scroll;
-    transition: all 0.4s ease-in-out;
-    transform: translate(0, 0);
-    z-index: 100;
-}
-
-.hidden-notifications {
-    transform: translate(0%, 100%);
-}
-
-.notificattionTitle {
-    text-align: center;
-    background-color: var(--oscuro-200);
-    padding: 5px;
-    border: var(--blanco) solid 0.5px;
-} */
-
-/* .notificacionesModal .notificattionTitle {
-    position: sticky;
-    top: 0;
-} */
-
 .modal-notifications .notificacion {
     display: flex;
     gap: 10px;
@@ -221,31 +203,14 @@
     width: 100%;
 }
 
-/* .modal-notifications .notificacion .contenido {
-    font-size: 0.9em;
-    color: var(--blanco);
-} */
-
 .modal-notifications .notificacion .timestamp {
     font-size: 8px;
 }
 
 /* Modal Comments */
 .commentModal {
-    background-color: var(--oscuro-300);
-    border: var(--blanco) solid 1px;
-    position: fixed;
-    width: 90%;
-    height: 83%;
-    top: 7%;
-    right: 5%;
-    overflow-y: scroll;
-    transition: all 0.4s ease-in-out;
-    transform: translate(0, 0) scale(1);
-}
-
-.hiddenComment {
-    transform: translate(-80%, 100%) scale(0);
+    width: 100%;
+    height: calc(100% - 70px);
 }
 
 @media (min-width: 744px) {
@@ -259,12 +224,6 @@
         font-size: 28px;
     }
 
-    .busqueda {
-        justify-content: left;
-        margin-left: 10vw;
-        margin-top: 5vh;
-    }
-
     .busqueda img {
         display: block;
         width: 75px;
@@ -272,13 +231,18 @@
         margin-right: var(--padding-10);
     }
 
-    .busqueda input {
-        width: 50%;
+    .searchInput {
+        justify-content: flex-start;
+        width: auto;
     }
 
-    .busqueda i {
-        right: 43%;
+    .busqueda input {
+        width: 300px;
+    }
+
+    .searchInput i {
         font-size: 28px;
+        right: 5%;
     }
 
     .modal-configuration {
@@ -286,18 +250,17 @@
         right: 25px;
     }
 
+    .modal-friends,
     .modal-notifications {
-        width: 90%;
-        height: 40%;
-        top: 50%;
-        right: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .modal-friends {
-        width: 90%;
-        height: 40%;
-        top: 10%;
-        right: 5%;
+
+    .friendsList,
+    .notificationsList {
+        overflow: scroll;
     }
 }
 
@@ -314,15 +277,9 @@
 
     .busqueda {
         margin-top: 8vh;
+        padding: 0 5vw;
     }
 
-    .busqueda input {
-        width: 30%;
-    }
-
-    .busqueda i {
-        right: 63%;
-    }
 
     .modal-configuration {
         top: 80px;
@@ -332,16 +289,21 @@
 
 /* Seccion publicaciones*/
 
+.contenedor-publicacion {
+    margin-bottom: 50px;
+}
+
 .publicaciones {
     display: flex;
     flex-direction: column-reverse;
 }
 
 .tarjeta {
-    background-color: var(--oscuro-200);
+    background-color: var(--oscuro-300);
     margin: var(--padding-10) 0;
     width: 100%;
     color: var(--blanco);
+    padding: var(--padding-10);
 }
 
 .tarjeta .foto {
@@ -441,54 +403,63 @@ section #fecha {
 
 .comments-section {
     width: 100%;
-    margin-top: 10px;
-    border-top: 1px solid var(--gris);
-    padding-top: 10px;
-    background-color: var(--oscuro-200);
-    padding: 10px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.new-comment {
+    padding: var(--padding-20);
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-10);
 }
 
 .comments-section input {
-    width: 67%;
-    color: var(--gris);
-    font-family: "Poppins";
+    width: 60%;
+    color: var(--blanco);
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-left: 5px;
-    border-radius: 10px;
+    padding: var(--padding-10);
+    border-radius: 8px;
+    outline: none;
+    border: solid 1px var(--blanco);
+    background-color: transparent;
+}
+
+.comments-section input::placeholder {
+    color: var(--blanco);
 }
 
 .comments-section button {
-    padding: 2px 21px;
-    gap: 10px;
+    padding: var(--padding-10);
     border-radius: 8px;
-    border: 2px solid var(--primario-400);
-    background: var(--oscuro-100);
-    color: var(--oscuro-400);
-    width: 30%;
-
+    background-color: var(--oscuro-200);
+    color: var(--blanco);
+    border: transparent 1px solid;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .comments-section button:hover {
-    background: var(--oscuro-100);
-}
-
-.comments-section h3 {
-    text-align: center;
-    margin-bottom: 10px;
+    background-color: transparent;
+    border: 1px solid var(--primario-400);
 }
 
 .comments-list {
-    max-height: 200px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-10);
+    padding: var(--padding-10);
 }
 
 .comment {
-    margin: var(--padding-10);
-    background-color: #c2c2c242;
+    background-color: var(--oscuro-200);
     padding: var(--padding-10);
+    border-radius: 8px;
 }
 
 .notificaciones {
@@ -581,7 +552,7 @@ section #fecha {
 }
 
 .btn-post {
-    padding: var(--padding-10) var(--padding-10);
+    padding: var(--padding-10);
     border-radius: 8px;
     background-color: var(--oscuro-200);
     color: var(--blanco);
@@ -687,24 +658,10 @@ section #fecha {
 
     .busqueda {
         justify-content: left;
-        margin-left: 10vw;
+        padding: 0 10vw;
     }
 
-    .busqueda img {
-        display: block;
-        width: 75px;
-        border-radius: 50%;
-        margin-right: var(--padding-10);
-    }
 
-    .busqueda input {
-        width: 50%;
-    }
-
-    .busqueda i {
-        right: 37vw;
-        font-size: 28px;
-    }
 
     /* Finaliza Seccion nav-menu */
 
@@ -815,12 +772,16 @@ section #fecha {
 
     /* Modal Publicaciones */
 
-    .modal-new-post {
+    .modal-new-post,
+    .modal-friends,
+    .modal-notifications {
         background-color: transparent;
         backdrop-filter: blur(20px);
     }
 
-    .container-modal {
+    .container-modal,
+    .friendsList,
+    .notificationsList {
         background-color: var(--oscuro-300);
         gap: var(--padding-10);
         height: 70%;
@@ -829,12 +790,18 @@ section #fecha {
         max-height: 600px;
     }
 
+
+
     /* Finaliza Modal Publicaciones */
 }
 
 @media (min-width: 1200px) {
 
     /* Seccion nav-menu */
+
+    .nav-menu {
+        height: 80px;
+    }
 
     .nav-menu .title {
         font-size: 45px;
@@ -846,13 +813,10 @@ section #fecha {
         padding-left: 3vw;
     }
 
-    .busqueda input {
-        width: 30%;
+    .busqueda {
+        padding: 0 8vw;
     }
 
-    .busqueda i {
-        right: 56vw;
-    }
 
     /* fin seccion nav-menu */
 
@@ -863,6 +827,7 @@ section #fecha {
         grid-template-columns: 2fr 1fr;
         gap: 20px;
         padding: 20px;
+        margin-bottom: 80px;
     }
 
     .publicaciones {
@@ -874,9 +839,11 @@ section #fecha {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        color: var(--blanco);
     }
 
-    .notificaciones {
+    .notificaciones,
+    .lista-amigos {
         display: block;
         width: 80%;
         height: 43vh;
@@ -887,24 +854,32 @@ section #fecha {
         border-radius: 10px;
         background-color: var(--oscuro-300);
         overflow-y: auto;
-        position: sticky;
         top: 20px;
     }
 
-    .notificaciones>h3 {
+    .notificaciones>h3,
+    .lista-amigos>h3 {
         text-align: center;
-        background-color: var(--oscuro-200);
+        border-bottom: 1px solid var(--blanco);
+        padding-bottom: 5px;
     }
 
-    .notificaciones .notificacion {
-        background-color: var(--oscuro-200);
+    .notificaciones .notificacion,
+    .amigo {
         margin: 10px 0;
         padding: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .notificacion:hover,
+    .amigo:hover {
+        background-color: var(--oscuro-200);
     }
 
     .notificaciones .notificacion .titulo {
         font-weight: bold;
-        margin-bottom: 5px;
+        margin-bottom: px;
     }
 
     .notificaciones .notificacion .contenido {
@@ -924,39 +899,6 @@ section #fecha {
 
     .modal-notifications {
         display: none;
-    }
-
-    .lista-amigos {
-        display: block;
-        width: 80%;
-        height: 45vh;
-        margin-left: var(--padding-20);
-        margin-right: 9%;
-        padding: var(--padding-10);
-        border-radius: 10px;
-        background-color: var(--oscuro-300);
-        overflow-y: auto;
-        position: sticky;
-        top: 48vh;
-    }
-
-    .lista-amigos>h3 {
-        text-align: center;
-        background-color: var(--oscuro-200);
-    }
-
-    .amigo {
-        display: flex;
-        align-items: center;
-        background-color: var(--oscuro-200);
-        margin: 10px 0;
-        padding: 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-    }
-
-    .amigo:hover {
-        background-color: var(--oscuro-100);
     }
 
     .amigo img {
@@ -984,7 +926,7 @@ section #fecha {
         background-color: var(--oscuro-400);
         width: 100%;
         justify-content: space-between;
-        height: 8%;
+        height: 80px;
         flex-shrink: 0;
         border-top: 1px solid var(--blanco);
         z-index: 100;

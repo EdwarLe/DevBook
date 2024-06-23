@@ -1,5 +1,5 @@
 const notificaciones = document.querySelector(".notificaciones")
-const notificacionesSelect = document.querySelector(".notificacionesSelect")
+const notificacionesSelect = document.querySelector(".notificacionesModal")
 
 async function dataJSON() {
     const response = await fetch("../js/utils/db-notificaciones.json");
@@ -11,13 +11,12 @@ async function dataJSON() {
 dataJSON();
 
 const dataUsersLocal = JSON.parse(localStorage.getItem('posts'))
-console.log(dataUsersLocal)
 
 function notificationsList(notificationsToLoop, containerNotifications) {
 
     notificationsToLoop.forEach(notification => {
         const userFound = dataUsersLocal.find(user => user.user.id === notification.content.userId)
-        console.log(userFound.user.id)
+
         if (notification.content.userId === userFound.user.id) {
             const contenedorNotificatios = document.createElement("div");
             contenedorNotificatios.innerHTML += `

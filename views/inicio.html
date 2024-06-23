@@ -30,9 +30,12 @@
             <!-- <hr> -->
             <div class="busqueda">
                 <img src="../public/profile/user.jpg" id="userPicture">
-                <input placeholder="Buscar">
-                <!-- Elemento i posicionado absolutamente -->
-                <i class='bx bx-search-alt'></i>
+                <div class="searchInput">
+                    <input placeholder="Buscar">
+                    <!-- Elemento i posicionado absolutamente -->
+                    <i class='bx bx-search-alt'></i>
+
+                </div>
             </div>
         </header>
         <main class="contenedor-publicacion">
@@ -84,8 +87,16 @@
             </div>
         </div>
 
-        <div class="commentModal hiddenComment">
-            <a class="closeComment"><i class='bx bx-chevrons-left'></i>Cerrar</a>
+        <div class="containerComment hiddenComment">
+            <div class="commentsTitle">
+                <i class='bx bx-chevrons-left closeComment'></i>
+                <h3>Commentarios</h3>
+
+            </div>
+
+            <div class="commentModal">
+            </div>
+
         </div>
 
         <form class="modal-new-post" id="modal-new-post">
