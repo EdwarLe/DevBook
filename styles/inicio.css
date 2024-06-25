@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 70px;
     padding: var(--padding-10);
     width: 100%;
     position: relative;
@@ -81,7 +81,7 @@
     top: 50px;
     right: 20px;
     transition: all 0.4s ease-in-out;
-    transform: scale(1);
+    box-shadow: 2px 2px 5px black;
 }
 
 .hidden-setting {
@@ -160,8 +160,8 @@
 }
 
 .modal-friends .amigo img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -260,7 +260,10 @@
 
     .friendsList,
     .notificationsList {
-        overflow: scroll;
+        overflow-y: scroll;
+        background-color: red;
+        display: flex;
+        gap: 10px;
     }
 }
 

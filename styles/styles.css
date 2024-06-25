@@ -103,7 +103,6 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--padding-30);
     overflow: hidden;
 
 }

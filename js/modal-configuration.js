@@ -1,11 +1,12 @@
 const modalConfiguration = document.getElementById("modal-configuration")
 const btnConfiguration = document.getElementById("configuration")
 
-btnConfiguration.addEventListener("click",()=>{
+btnConfiguration.addEventListener("click", () => {
     modalConfiguration.classList.toggle("hidden-setting")
+    console.log("Modal de configuraciones")
 })
 
-modalConfiguration.innerHTML=`
+modalConfiguration.innerHTML = `
     <p>Configuración</p>
     <div class="btn-configuration dark-mode">
         <i class='bx bx-moon'></i>
