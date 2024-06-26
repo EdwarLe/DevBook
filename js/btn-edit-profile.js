@@ -9,23 +9,23 @@ const configuration = document.getElementById("configuration")
 
 
 // Esta funcion muestra el menu de editar perfil en pantallas moviles 
-btn_edit_profile.addEventListener("click", function() {
-    container_profile.classList.add("mostrar-menu")
-    container_details_profile_configuration.style.display = "grid"
-    details.style.display = "none"
-    configuration.style.display = "none"
+btn_edit_profile.addEventListener("click", function () {
+    container_profile.classList.toggle("mostrar-menu")
+    // container_details_profile_configuration.style.display = "grid"
+    // details.style.display = "none"
+    // configuration.style.display = "none"
 })
 
 // Esta funcion cierra el menu de editar perfil en pantallas moviles y en tablet
-btn_close_menu_profile.addEventListener("click", function(){
+btn_close_menu_profile.addEventListener("click", function () {
     container_profile.classList.remove("mostrar-menu")
-    container_details_profile_configuration.style.display = "none"
+    // container_details_profile_configuration.style.display = "none"
 })
 
 // Esta funcion muestra el buscador en pantallas moviles
-if(!mediaQuery.matches){
-    btn_edit_profile.addEventListener("click", function(){
-        container_details_profile_configuration.classList.add("mostrar-fondo")
-        container_details_profile_configuration.style.display = "grid"    
+if (!mediaQuery.matches) {
+    btn_edit_profile.addEventListener("click", function () {
+        // container_details_profile_configuration.classList.add("mostrar-fondo")
+        // container_details_profile_configuration.style.display = "grid"
     })
 }

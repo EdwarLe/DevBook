@@ -82,7 +82,7 @@ async function dataJSON() {
         </div>`;
 
 
-        publicaciones.appendChild(contenedorPost);
+        publicaciones?.appendChild(contenedorPost);
 
         setTimeout(() => {
             const arrayPostsUsers = Array.from(postsUsers)
@@ -112,7 +112,7 @@ function friendsList(posts, containerFriends) {
             <img src="${amigo.user.profile_picture}" alt="${amigo.user.name}">
             <p>${amigo.user.name}</p>
         </div>`
-        containerFriends.appendChild(contenedorAmigos);
+        containerFriends?.appendChild(contenedorAmigos);
     })
 
 }

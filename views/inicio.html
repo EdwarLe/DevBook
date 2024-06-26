@@ -23,7 +23,7 @@
                 <section class="navegacion">
                     <a href="#"><i class='bx bx-user-circle'></i></a>
                     <a href="#"><i class='bx bx-shopping-bag'></i></a>
-                    <i id="configuration" class='bx bxs-cog'></i>
+                    <i id="btn-config" class='bx bxs-cog'></i>
 
                 </section>
             </div>
@@ -79,23 +79,27 @@
         </div>
 
         <div class="modal-notifications hidden-notifications notificacionesSelect" id="modal-notifications">
-            <div class="notificattionTitle">
-                <i class='bx bxs-chevrons-left' id="close-notifications"></i>
-                <h3>Notificaciones</h3>
-            </div>
             <div class="notificationsList notificacionesModal">
+                <div class="notificattionTitle">
+                    <i class='bx bxs-chevrons-left' id="close-notifications"></i>
+                    <h3>Notificaciones</h3>
+                </div>
 
             </div>
         </div>
 
         <div class="containerComment hiddenComment">
-            <div class="commentsTitle">
-                <i class='bx bx-chevrons-left closeComment'></i>
-                <h3>Commentarios</h3>
 
-            </div>
+            <div class="commentBox">
+                <div class="commentsTitle">
+                    <i class='bx bx-chevrons-left closeComment'></i>
+                    <h3>Commentarios</h3>
 
-            <div class="commentModal">
+                </div>
+
+                <div class="commentModal">
+                </div>
+
             </div>
 
         </div>
@@ -134,7 +138,7 @@
     </main>
     <script src="../js/consumo-publicaciones.js" type="module"></script>
     <script src="../js/consumo-notificaciones.js" type="module"></script>
-    <script src="../js/modal-configuration.js" type="module"></script>
+    <script src="../js/modal-configuration.js"></script>
     <script src="../js/modal-friends.js" type="module"></script>
     <script src="../js/modal-notifications.js" type="module"></script>
     <script src="../js/modal-comments.js" type="module"></script>

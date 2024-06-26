@@ -64,7 +64,7 @@
 
 /* Finaliza Seccion nav-menu */
 
-/* Modal Configuracion */
+/* Inicio Modal Configuracion */
 
 .modal-configuration {
     width: 230px;
@@ -77,7 +77,7 @@
     justify-content: center;
     align-items: center;
     padding: var(--padding-10);
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 20px;
     transition: all 0.4s ease-in-out;
@@ -103,6 +103,8 @@
     text-align: center;
     padding-bottom: 5px;
 }
+
+/* Finaliza Modal Configuracion */
 
 /* Modal Friends */
 
@@ -147,7 +149,6 @@
     font-weight: normal;
 }
 
-
 .modal-friends .amigo {
     display: flex;
     align-items: center;
@@ -173,7 +174,9 @@
     margin: 0;
 }
 
-/* Modal Notificaiones */
+/* Finaliza Modal Friends */
+
+/* Inica Modal Notificaciones */
 
 .modal-notifications .notificacion {
     display: flex;
@@ -207,88 +210,22 @@
     font-size: 8px;
 }
 
-/* Modal Comments */
+/* Finaliza Modal Notificaciones */
+
+/* Inicia Modal Comments */
+
+.containerComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .commentModal {
     width: 100%;
     height: calc(100% - 70px);
 }
 
-@media (min-width: 744px) {
-    .nav-menu .title {
-        font-size: 28px;
-        font-weight: 500;
-    }
-
-    .nav-menu .bx {
-        padding-left: 5vw;
-        font-size: 28px;
-    }
-
-    .busqueda img {
-        display: block;
-        width: 75px;
-        border-radius: 50%;
-        margin-right: var(--padding-10);
-    }
-
-    .searchInput {
-        justify-content: flex-start;
-        width: auto;
-    }
-
-    .busqueda input {
-        width: 300px;
-    }
-
-    .searchInput i {
-        font-size: 28px;
-        right: 5%;
-    }
-
-    .modal-configuration {
-        top: 55px;
-        right: 25px;
-    }
-
-    .modal-friends,
-    .modal-notifications {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .friendsList,
-    .notificationsList {
-        overflow-y: scroll;
-        background-color: red;
-        display: flex;
-        gap: 10px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .nav-menu .title {
-        font-size: 45px;
-        font-weight: 500;
-    }
-
-    .nav-menu .bx {
-        margin-top: 15px;
-        padding-left: 3vw;
-    }
-
-    .busqueda {
-        margin-top: 8vh;
-        padding: 0 5vw;
-    }
-
-
-    .modal-configuration {
-        top: 80px;
-        right: 25px;
-    }
-}
+/* Finaliza Modal Comments */
 
 /* Seccion publicaciones*/
 
@@ -416,6 +353,7 @@ section #fecha {
 
 .new-comment {
     padding: var(--padding-20);
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     gap: var(--padding-10);
@@ -434,6 +372,7 @@ section #fecha {
 
 .comments-section input::placeholder {
     color: var(--blanco);
+    font-size: 18px;
 }
 
 .comments-section button {
@@ -642,13 +581,12 @@ section #fecha {
     display: none;
 }
 
-
-
 /* Finaliza Modal Publicaciones */
 
 @media (min-width: 744px) {
 
     /* Seccion nav-menu */
+
     .nav-menu .title {
         font-size: 28px;
         font-weight: 500;
@@ -664,7 +602,26 @@ section #fecha {
         padding: 0 10vw;
     }
 
+    .busqueda img {
+        display: block;
+        width: 75px;
+        border-radius: 50%;
+        margin-right: var(--padding-10);
+    }
 
+    .busqueda input {
+        width: 300px;
+    }
+
+    .searchInput {
+        justify-content: flex-start;
+        width: auto;
+    }
+
+    .searchInput i {
+        font-size: 28px;
+        right: 5%;
+    }
 
     /* Finaliza Seccion nav-menu */
 
@@ -674,7 +631,6 @@ section #fecha {
         display: flex;
         justify-content: center;
     }
-
 
     .publicaciones {
         width: 80%;
@@ -722,8 +678,7 @@ section #fecha {
     }
 
     .comments-section input {
-        font-size: 23px;
-        padding: 4px;
+        font-size: 18px;
     }
 
     .comments-section button {
@@ -748,9 +703,9 @@ section #fecha {
     }
 
     .pie-pagina section {
-        width: 80%;
+        width: 100%;
         justify-content: center;
-        background-color: #ffffff00;
+        background-color: var(--oscuro-400);
     }
 
     .pie-pagina .notificacion {
@@ -777,25 +732,64 @@ section #fecha {
 
     .modal-new-post,
     .modal-friends,
-    .modal-notifications {
+    .modal-notifications,
+    .containerComment {
         background-color: transparent;
         backdrop-filter: blur(20px);
     }
 
     .container-modal,
     .friendsList,
-    .notificationsList {
+    .notificationsList,
+    .commentBox {
         background-color: var(--oscuro-300);
         gap: var(--padding-10);
         height: 70%;
         width: 60%;
         max-width: 700px;
         max-height: 600px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
     }
 
-
-
     /* Finaliza Modal Publicaciones */
+
+    /* Modales */
+
+    .modal-friends,
+    .modal-notifications {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .friendsList::-webkit-scrollbar,
+    .notificationsList::-webkit-scrollbar,
+    .notificaciones::-webkit-scrollbar,
+    .lista-amigos::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 5px;
+    }
+
+    .friendsList::-webkit-scrollbar-thumb,
+    .notificationsList::-webkit-scrollbar-thumb,
+    .notificaciones::-webkit-scrollbar-thumb,
+    .lista-amigos::-webkit-scrollbar-thumb {
+        background-color: var(--blanco);
+        width: 5px;
+        border-radius: 10px;
+    }
+
+    /* Inicia Modal Configuración */
+
+    .modal-configuration {
+        top: 55px;
+        right: 25px;
+    }
+
+    /* FInaliza Modal Configuración */
 }
 
 @media (min-width: 1200px) {
@@ -818,8 +812,8 @@ section #fecha {
 
     .busqueda {
         padding: 0 8vw;
+        margin-top: 95px;
     }
-
 
     /* fin seccion nav-menu */
 
@@ -844,6 +838,10 @@ section #fecha {
         gap: 20px;
         color: var(--blanco);
     }
+
+    /* Finaliza Sección Publicaciones */
+
+    /* Inicia Modales */
 
     .notificaciones,
     .lista-amigos {
@@ -877,12 +875,11 @@ section #fecha {
 
     .notificacion:hover,
     .amigo:hover {
-        background-color: var(--oscuro-200);
+        background-color: var(--oscuro-300);
     }
 
     .notificaciones .notificacion .titulo {
         font-weight: bold;
-        margin-bottom: px;
     }
 
     .notificaciones .notificacion .contenido {
@@ -918,12 +915,14 @@ section #fecha {
         margin: 0;
     }
 
-    /* Fin seccion publicaciones */
-    /* Footer */
+    /* Fin Modales */
+
+    /* Inicia Sección Footer */
 
     .pie-pagina {
         display: flex;
         align-items: center;
+        max-width: 1200px;
         position: fixed;
         bottom: 0;
         background-color: var(--oscuro-400);
@@ -957,52 +956,15 @@ section #fecha {
         padding-right: 4px;
         font-size: 20px;
     }
-}
 
-@media (min-width: 744px) {
-    .pie-pagina {
-        display: flex;
-        justify-content: center;
+    /* Finaliza Sección Footer */
+
+    /* Inicio Modal Configuración */
+
+    .modal-configuration {
+        top: 80px;
+        right: 25px;
     }
 
-    .pie-pagina section {
-        width: 100%;
-        justify-content: center;
-        background-color: #ffffff00;
-    }
-
-    .pie-pagina .notificacion {
-        margin-left: var(--padding-20);
-    }
-
-    .pie-pagina .publicacion {
-        margin-right: var(--padding-20);
-    }
-
-    .pie-pagina h3 {
-        font-size: 20px;
-    }
-
-    .pie-pagina i {
-        color: var(--blanco);
-        padding-right: 4px;
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .pie-pagina {
-        display: flex;
-        justify-content: center;
-        max-width: 1200px;
-    }
-
-    .pie-pagina section {
-        width: 60%;
-        background-color: #ffffff00;
-    }
-
-
-    /* Finaliza Footer */
+    /* Final Modal Configuración */
 }

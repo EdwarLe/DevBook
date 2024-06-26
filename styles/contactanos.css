@@ -2,7 +2,7 @@
 
 /* Estilos de la barra de navegación */
 
-.encabezado {
+.header {
     height: 60px;
     width: 100%;
     max-width: 1200px;
@@ -69,7 +69,7 @@
     color: var(--oscuro-400);
 }
 
-.menu-hamburguesa {
+.burguerMenu {
     color: var(--negro);
     order: 1;
     border: solid 1px var(--secundario-200);
@@ -82,7 +82,7 @@
     cursor: pointer;
 }
 
-.buscar-contenedor {
+.containerSearchContact {
     position: relative;
     display: flex;
     width: 40px;
@@ -92,7 +92,7 @@
     border: 1px solid transparent;
 }
 
-.buscar-contenedor label {
+.containerSearchContact label {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -114,7 +114,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.mostrar-input {
+.show-input {
     border-color: var(--gris);
     background-color: var(--blanco);
 }
@@ -128,7 +128,7 @@
     font-size: 40px;
 }
 
-#buscar-boton {
+#btnSearchContact {
     display: none;
     border-radius: 8px;
     width: 120px;
@@ -146,7 +146,7 @@
     font-size: 30px;
 }
 
-.boton-cerrar-menu {
+.btnCloseMenu {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -168,17 +168,17 @@
 
 /* Sección Formulario de contacto */
 
-.contenedor-formulario {
+.formContainerContact {
     width: 100%;
     padding: var(--padding-10);
     margin-top: 90px;
 }
 
-.formulario {
+.form {
     position: relative;
 }
 
-.formulario h4 {
+.form h4 {
     font-family: 'Josefin Sans';
     font-size: 23px;
     text-align: center;
@@ -190,7 +190,7 @@
     margin-top: var(--padding-30);
 }
 
-.direccion {
+.addressForm {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,7 +198,7 @@
     gap: 20px;
 }
 
-.titulo {
+.titleFormContact {
     color: var(--primario-200);
     text-align: center;
     font-family: "Ubuntu";
@@ -207,7 +207,7 @@
     width: 100%;
 }
 
-.direccion .datos {
+.addressForm .infoData {
     color: var(--oscuro-400);
     text-align: justify;
     font-family: "Ubuntu";
@@ -217,7 +217,7 @@
     margin-top: var(--padding-30);
 }
 
-.datos a {
+.infoData a {
     font-family: inherit;
     text-decoration: underline;
 }
@@ -227,12 +227,12 @@
     margin-top: var(--padding-20);
 }
 
-.direccion img {
+.addressForm img {
     width: 100%;
     border-radius: 5px;
 }
 
-.formulario input,
+.form input,
 textarea {
     width: 100%;
     height: 50px;
@@ -243,12 +243,12 @@ textarea {
 
 }
 
-.formulario textarea {
+.form textarea {
     min-height: 100px;
     padding-top: var(--padding-10);
 }
 
-.formulario button {
+.form button {
     color: white;
     display: flex;
     width: 100%;
@@ -264,7 +264,7 @@ textarea {
     transition: all ease-in-out 0.2s;
 }
 
-.formulario button:hover {
+.form button:hover {
     border: 2px solid var(--primario-300);
     color: var(--primario-400);
     background-color: transparent;
@@ -292,13 +292,13 @@ textarea.invalid {
     font-size: 12px;
 }
 
-.formulario .inputs {
+.form .inputs {
     position: relative;
     margin-bottom: 20px;
 }
 
-.formulario input,
-.formulario textarea {
+.form input,
+.form textarea {
     width: 100%;
     border: 1.2px solid var(--primario-100);
     border-radius: 4px;
@@ -309,14 +309,14 @@ textarea.invalid {
     align-items: center;
 }
 
-.formulario input:focus,
-.formulario textarea:focus {
+.form input:focus,
+.form textarea:focus {
     border-color: var(--primario-300);
 }
 
 
 
-.formulario label {
+.form label {
     position: absolute;
     top: 15px;
     left: 10px;
@@ -326,10 +326,10 @@ textarea.invalid {
     pointer-events: none;
 }
 
-.formulario input:focus+label,
-.formulario input.filled+label,
-.formulario textarea:focus+label,
-.formulario textarea.filled+label {
+.form input:focus+label,
+.form input.filled+label,
+.form textarea:focus+label,
+.form textarea.filled+label {
     top: -20px;
     left: 10px;
     font-size: 12px;
@@ -342,7 +342,7 @@ textarea.invalid {
 
 /* seccion pie de pagina  */
 
-.pie-pagina {
+.footer {
     background-color: var(--oscuro-400);
     color: white;
     padding: 2em 0;
@@ -350,89 +350,89 @@ textarea.invalid {
     width: 100%;
 }
 
-.contenedor-piepagina {
+.footerContainer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 0 1em;
 }
 
-.columnaContactoLogo {
+.columnContactLogo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.columnaContacto,
-.columnaInstitucional {
+.columnContact,
+.columnInstitutional {
     min-width: 200px;
     padding: var(--padding-10);
 }
 
-.columnaContacto ul,
-.columnaInstitucional ul {
+.columnContact ul,
+.columnInstitutional ul {
     list-style: none;
 }
 
-.columnaContacto ul li,
-.columnaInstitucional ul li {
+.columnContact ul li,
+.columnInstitutional ul li {
     margin: 0.5em 0;
     display: flex;
     align-items: center;
 }
 
-.columnaContacto ul li a,
-.columnaInstitucional ul li a {
+.columnContact ul li a,
+.columnInstitutional ul li a {
     color: white;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-.columnaContacto ul li a:hover,
-.columnaInstitucional ul li a:hover {
+.columnContact ul li a:hover,
+.columnInstitutional ul li a:hover {
     text-decoration: underline;
 }
 
-.columnaContacto ul li a i,
-.columnaInstitucional ul li a i {
+.columnContact ul li a i,
+.columnInstitutional ul li a i {
     margin-right: 0.5em;
 }
 
-.redes-sociales {
+.social {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1em;
 }
 
-.redes-sociales a {
+.social a {
     color: white;
     text-decoration: none;
     margin: 0 0.5em;
     font-size: 1.5em;
 }
 
-.redes-sociales a:hover {
+.social a:hover {
     color: var(--primario-200);
 }
 
-.derechos {
+.reservedRights {
     width: 100%;
     margin-top: var(--padding-10);
 }
 
-.derechos p {
+.reservedRights p {
     font-size: 14px;
 }
 
-.columnaLogo {
+.columnLogo {
     width: 200px;
     height: 150px;
 
 }
 
-.columnaLogo img {
+.columnLogo img {
     width: 100%;
 }
 
@@ -441,7 +441,7 @@ textarea.invalid {
 @media (min-width: 744px) {
 
     /* Estilos de la barra de navegación */
-    .encabezado {
+    .header {
         height: 80px;
     }
 
@@ -450,7 +450,7 @@ textarea.invalid {
         width: 40%;
     }
 
-    .menu-hamburguesa {
+    .burguerMenu {
         width: 44px;
         height: 44px;
     }
@@ -466,7 +466,7 @@ textarea.invalid {
         border-radius: 10px;
     }
 
-    .buscar-contenedor {
+    .containerSearchContact {
         width: 367px;
         justify-content: center;
         border: 1px solid var(--gris);
@@ -477,11 +477,11 @@ textarea.invalid {
         color: var(--gris);
     }
 
-    .buscar-contenedor label {
+    .containerSearchContact label {
         left: 6%;
     }
 
-    #buscar-boton {
+    #btnSearchContact {
         display: flex;
     }
 
@@ -491,14 +491,14 @@ textarea.invalid {
 
     .nav-activo {
         color: var(--primario-300);
-      }
+    }
 
     /* Finaliza estilos de la barra de navegación */
 
 
     /* Sección Formulario de Contacto */
 
-    .contenedor-formulario {
+    .formContainerContact {
         width: 70%;
         margin: 0 auto;
         box-shadow: 0 0 10px 10px rgb(226, 226, 226);
@@ -511,11 +511,11 @@ textarea.invalid {
         margin-top: var(--padding-20);
     }
 
-    .datos .p {
+    .infoData .p {
         text-align: left;
     }
 
-    .titulo {
+    .titleFormContact {
         text-decoration: underline;
         text-underline-offset: 3vh;
         text-transform: uppercase;
@@ -539,7 +539,7 @@ textarea.invalid {
         margin: 0 auto;
     }
 
-    .formulario h4 {
+    .form h4 {
         /* text-align: center; */
         margin: 3vh auto;
     }
@@ -548,11 +548,11 @@ textarea.invalid {
 
     /* Sección footer  */
 
-    .pie-pagina {
+    .footer {
         padding: var(--padding-10);
     }
 
-    .contenedor-piepagina {
+    .footerContainer {
         justify-content: space-around;
         flex-wrap: nowrap;
     }
@@ -583,12 +583,12 @@ textarea.invalid {
         color: var(--blanco);
     }
 
-    .buscar-contenedor label {
+    .containerSearchContact label {
         left: 7%;
     }
 
-    .menu-hamburguesa,
-    .boton-cerrar-menu {
+    .burguerMenu,
+    .btnCloseMenu {
         display: none;
     }
 
@@ -596,41 +596,41 @@ textarea.invalid {
         order: -1;
     }
 
-    .buscar-contenedor {
+    .containerSearchContact {
         order: 1;
 
     }
 
-    #buscar-boton {
+    #btnSearchContact {
         display: flex;
         order: 1
     }
 
     .nav-activo {
         color: var(--primario-300);
-      }
+    }
 
     /* Finaliza estilos de la barra de navegación */
 
     /* Sección Formulario de Contacto */
 
-    .direccion,
-    .formulario {
+    .addressForm,
+    .form {
         flex: 1;
         min-width: 300px;
         padding: 20px;
         margin-top: 2em;
     }
 
-    .direccion {
+    .addressForm {
         order: 1
     }
 
-    .direccion .datos {
+    .addressForm .infoData {
         margin-top: var(--padding-10);
     }
 
-    .titulo {
+    .titleFormContact {
         margin-top: var(--padding-30);
     }
 
@@ -650,11 +650,11 @@ textarea.invalid {
         text-align: left;
     }
 
-    .formulario h3 {
+    .form h3 {
         text-align: left;
     }
 
-    .contenido {
+    .contentForm {
         display: flex;
         align-items: center;
         justify-content: space-between;

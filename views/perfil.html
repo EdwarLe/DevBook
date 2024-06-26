@@ -12,6 +12,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/perfil.css">
+    <link rel="stylesheet" href="../styles/inicio.css">
     <title>Perfil</title>
 </head>
 
@@ -46,7 +47,9 @@
         <section class="container-description-btn-edit-and-conf">
             <div class="profile-description">
                 <p>
-                    Soy un apasionado del desarrollo frontend con más de 4 años de experiencia en la creación de interfaces web modernas y responsivas. Mi enfoque se centra en combinar diseño atractivo con funcionalidad robusta, siempre buscando mejorar la experiencia del usuario.
+                    Soy un apasionado del desarrollo frontend con más de 4 años de experiencia en la creación de
+                    interfaces web modernas y responsivas. Mi enfoque se centra en combinar diseño atractivo con
+                    funcionalidad robusta, siempre buscando mejorar la experiencia del usuario.
                 </p>
             </div>
             <div class="container-btn-edit-profile-config">
@@ -62,10 +65,13 @@
                 <div class="details" id="details">
                     <h4>DETALLES</h4>
                     <p>
-                        Soy un apasionado del desarrollo frontend con más de 4 años de experiencia en la creación de interfaces web modernas y responsivas. Mi enfoque se centra en combinar diseño atractivo con funcionalidad robusta, siempre buscando mejorar la experiencia del usuario.
+                        Soy un apasionado del desarrollo frontend con más de 4 años de experiencia en la creación de
+                        interfaces web modernas y responsivas. Mi enfoque se centra en combinar diseño atractivo con
+                        funcionalidad robusta, siempre buscando mejorar la experiencia del usuario.
                     </p>
                     <div class="main-contac">
-                        <div class="item-contac"><i class='bx bx-envelope'></i> <span>edwar.leon@genstudents.org</span></div>
+                        <div class="item-contac"><i class='bx bx-envelope'></i> <span>edwar.leon@genstudents.org</span>
+                        </div>
                         <div class="item-contac"><i class='bx bx-phone'></i> <span>+57 321 215 9041</span></div>
                     </div>
                     <div class="footer-details">
@@ -79,8 +85,9 @@
                         <h4>PERFIL</h4>
                         <div class="btn-close-menu-profile" id="close-menu-profile"><i class='bx bx-chevrons-left'></i>
                         </div>
-                        <div class="item-configuration"><i class='bx bx-envelope'></i> <span>edwar.leon@genstudents.org</span><i
-                                class='bx bx-edit'></i></div>
+                        <div class="item-configuration"><i class='bx bx-envelope'></i>
+                            <span>edwar.leon@genstudents.org</span><i class='bx bx-edit'></i>
+                        </div>
                         <div class="item-configuration"><i class='bx bx-phone'></i> <span>+57 321 215 9041</span><i
                                 class='bx bx-edit'></i></div>
                         <div class="item-configuration"><i class='bx bx-map'></i> <span>Bogotá - Colombia</span><i
@@ -99,17 +106,8 @@
                                 </div>
                             </span><i class='bx bx-edit'></i></div>
                     </div>
-                    <div class="configuration" id="configuration">
-                        <h4>CONFIGURACIÓN</h4>
-                        <div class="item-configuration"><i class='bx bx-moon'></i> <span>Modo Oscuro</span></div>
-                        <div class="item-configuration"><i class='bx bx-rupee'></i> <span>Idioma</span>
-                            <select class="language">
-                                <option value="en">🇪🇸</option>
-                                <option value="es">🇺🇸</option>
-                            </select>
-                        </div>
-                        <div class="item-configuration"><i class='bx bx-log-out-circle'></i> <span>Cerar Sesión</span>
-                        </div>
+                    <div class="configuration hidden-setting" id="modal-configuration">
+
                     </div>
                 </div>
             </div>
@@ -121,22 +119,99 @@
             <!-- Finaliza publicaciones  -->
             <!--  Finaliza contenedor con detalles, perfil, configuración y publicaciones -->
             <!-- Footer fijo con notificaciones, amigos y crear nueva publicación -->
-            
+
         </div>
-        <footer class="footer">
-            <div class="container-footer">
-                <div class="notifications footer-btn"><i class='bx bxs-bell icon-footer'></i>
-                    <span>Notificaciones</span>
-                </div>
-                <div class="friends footer-btn"><i class='bx bxs-group icon-footer'></i><span> Amigos</span></div>
-                <div class="new-post footer-btn"><i
-                        class='bx bx-add-to-queue icon-footer'></i><span>Publicación</span></div>
-            </div>
+        <footer class="pie-pagina">
+            <section class="pie notificacion" id="notifications">
+                <i class='bx bxs-bell'></i>
+                <h3>Notificaciones</h3>
+            </section>
+            <section class="pie amigos" id="friends">
+                <i class='bx bxs-group'></i>
+                <h3>Amigos</h3>
+            </section>
+            <section class="pie publicacion" id="new-post">
+                <i class='bx bxs-add-to-queue'></i>
+                <h3>Nuevo post</h3>
+            </section>
         </footer>
+        <div class="modal-configuration hidden-setting" id="modal-configuration">
+
+        </div>
+
+        <div class="modal-friends hidden-friends" id="modal-friends">
+            <div class="friendsList friendsModal">
+                <div class="friendsTitle">
+                    <i class='bx bxs-chevrons-left' id="close-friends"></i>
+                    <h3>Amigos</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-notifications hidden-notifications notificacionesSelect" id="modal-notifications">
+            <div class="notificationsList notificacionesModal">
+                <div class="notificattionTitle">
+                    <i class='bx bxs-chevrons-left' id="close-notifications"></i>
+                    <h3>Notificaciones</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="containerComment hiddenComment">
+
+            <div class="commentBox">
+                <div class="commentsTitle">
+                    <i class='bx bx-chevrons-left closeComment'></i>
+                    <h3>Commentarios</h3>
+
+                </div>
+
+                <div class="commentModal">
+                </div>
+
+            </div>
+
+        </div>
         <!-- Finaliza footer con notificaciones, amigos y crear nueva publicación  -->
     </div>
+
+    <form class="modal-new-post" id="modal-new-post">
+        <div class="container-modal">
+            <div class="back-post">
+                <i class='bx bxs-chevrons-left' id="btn-back-post"></i>
+                <p>Crear Publicación</p>
+                <button class="btn-post" type="submit" id="btn-post">Publicar</button>
+            </div>
+            <div class="profile-post">
+                <div class="img-new-post">
+                    <img src="../public/images/edwar-leon.png" alt="image profile" id="img-user-post">
+                </div>
+                <p id="name-user-post">Eddy León</p>
+            </div>
+            <textarea class="msg-post" name="msg-post" id="msg-post" placeholder="¿Qué estás pensando?"></textarea>
+            <div class="footer-post">
+                <div class="media-box-post vid-box" id="btn-video-file">
+                    <input type="file" name="video-file" id="video-file" class="media-post">
+                    <label>Videos</label>
+                    <i class='bx bxs-video'></i>
+                </div>
+                <div class="media-box-post" id="btn-photo-file">
+                    <input type="file" name="video-file" id="photo-file" class="media-post">
+                    <p>Fotos</p>
+                    <i class='bx bxs-image'></i>
+                </div>
+            </div>
+        </div>
+    </form>
     <script src="../js/consumo-publicaciones-perfil.js" type="module"></script>
-    <script src="../js/btn-edit-profile.js"></script>
+    <script src="../js/btn-edit-profile.js" type="module"></script>
+    <script src="../js/modal-configuration.js"></script>
+    <script src="../js/modal-friends.js" type="module"></script>
+    <script src="../js/modal-notifications.js" type="module"></script>
+    <script src="../js/modal-comments.js" type="module"></script>
+    <script src="/js/new-post.js"></script>
+
 </body>
 
 </html>

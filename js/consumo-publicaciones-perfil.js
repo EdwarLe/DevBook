@@ -15,20 +15,20 @@ async function dataJSON() {
         let mediaPost = null
         let commentPost = null
 
-        if(isMedia.length !==0){
-            isMedia.forEach(media=> {
+        if (isMedia.length !== 0) {
+            isMedia.forEach(media => {
                 mediaPost = media.url
             })
         }
 
-        if(isComment.length !==0){
-            isComment.map(comment=> {
-                commentPost = comment 
+        if (isComment.length !== 0) {
+            isComment.map(comment => {
+                commentPost = comment
             })
         }
-        console.log(commentPost?.user.name)
+
         const containerPost = document.createElement("div")
-            containerPost.classList.add("individualPost")
+        containerPost.classList.add("individualPost")
         containerPost.innerHTML = `
         <div class="user" >
             <img class="photo-profile-post" src="${singlePost.user.profile_picture}">
@@ -39,15 +39,15 @@ async function dataJSON() {
         </div>
         <div class="content">
             <p class="tex-post">${singlePost.content.text}</p>
-            ${mediaPost===null
+            ${mediaPost === null
                 ? "<div></div>"
                 : ` <div class='media'> 
                         <img src = ${mediaPost} alt='imagen post user'>
                     </div>`
-                    // Hacer la logica para subir videos
+            // Hacer la logica para subir videos
             }
             
-            ${isLink===null
+            ${isLink === null
                 ? "<div></div>"
                 : ` <div class="container-link-post">
                         <div class="container-link-post-img">
@@ -70,23 +70,6 @@ async function dataJSON() {
                 <div class="btn-footer-post"><i class='bx bx-like icon-footer-post'></i> <span>Me gusta</span></div>
                 <div class="btn-footer-post"><i class='bx bx-comment-detail icon-footer-post'></i> <span>Comentar</span></div>
                 <div class="btn-footer-post"><i class='bx bx-share-alt icon-footer-post'></i> <span>Compartir</span></div>
-            </div>
-            <div class="container-comments">
-                ${commentPost===null
-                    ? "<div></div>"
-                    : `
-                    <div class="single-comment" id="single-comment">
-                    <div>
-                        <p>${commentPost?.user?.name}</p>
-                        <p>${commentPost?.timestamp}</p>
-                    </div>
-                    <div>
-                        <p>${commentPost?.text}</p>
-                        <p>${commentPost?.likes}</p>
-                    </div>
-                    </div>
-                    `
-                }
             </div>
         </div>
         `
