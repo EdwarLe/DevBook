@@ -55,7 +55,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background-color: var(--gris);
+    background-color: var(--oscuro-400);
 }
 
 .mainContainer {

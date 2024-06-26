@@ -348,11 +348,6 @@
     width: 100%;
 }
 
-.container-link-post {
-    /* background-color: blue; */
-
-}
-
 .container-link-post-img {
     /* background-color: brown; */
     width: 100%;
@@ -546,19 +541,21 @@
     }
 
     .container-profile-configuration {
-        /* background-color: var(--oscuro-300); */
-        /* padding: var(--padding-30); */
         display: flex;
-        background-color: transparent;
         backdrop-filter: blur(20px);
         width: 100%;
         position: fixed;
         height: 100vh;
         top: 0;
-        left: 0;
+        right: -100%;
         justify-content: center;
         align-items: center;
         z-index: 300;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .mostrar-menu {
+        right: 0;
     }
 
     .container-description-btn-edit-and-conf {
@@ -567,9 +564,7 @@
         padding: 0 65px;
     }
 
-    .profile-description {
-        /* background-color: cadetblue; */
-    }
+
 
     .container-btn-edit-profile-config {
         display: flex;
@@ -582,29 +577,13 @@
         font-size: 24px;
     }
 
-    .mostrar-menu {
-        /* position: absolute;
-        top: 10%;
-        left: 50%;
-        translate: -50% -50%; */
-        background-color: var(--oscuro-300);
-        /* width: 500px;
-        height: 500px; */
-    }
 
     .profile-desktop {
-        display: flex;
-        flex-direction: column;
         width: 50%;
         height: max-content;
-        left: 0;
-        margin-left: 25%;
-        gap: 20px;
-        backdrop-filter: none;
-        padding: var(--padding-20);
+        position: relative;
         padding-top: 60px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        transition: all 0.2s ease-in-out;
     }
 
     .profile-desktop h4 {
@@ -687,11 +666,6 @@
     .tex-post {
         font-size: 20px;
         padding: var(--padding-20);
-    }
-
-    .container-link-post {
-        /* background-color: blue; */
-
     }
 
     .container-link-post-img {
@@ -856,6 +830,7 @@
     }
 
     .details {
+        display: block;
         background-color: var(--oscuro-300);
         padding: var(--padding-30);
     }
