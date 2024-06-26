@@ -271,10 +271,11 @@
     padding-left: 3px;
 }
 
-section #usuario {
+section .profileLink {
     font-size: 21px;
     margin-left: 3px;
-
+    text-decoration: none;
+    color: var(--blanco);
 }
 
 section #fecha {

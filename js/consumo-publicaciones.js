@@ -49,7 +49,7 @@ async function dataJSON() {
             <div class="encabezado">
                 <img class="foto" src="${post.user.profile_picture}" alt="${post.user.name}"> 
                 <section>
-                    <p id="usuario">${post.user.name}</p>
+                    <a href="../views/perfil.html" class="profileLink" id="usuario">${post.user.name}</a>
                     <p id="fecha">${elapsedTime}</p>
                 </section>
             </div>
