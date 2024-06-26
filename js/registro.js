@@ -17,6 +17,7 @@ const role = document.getElementById("role")
 const stack = document.getElementById("stack")
 
 const usersLocal = JSON.parse(localStorage.getItem('users'))
+console.log(usersLocal)
 
 // Validación del formulario del correo
 registerFormPart1.addEventListener('submit', function (event) {
@@ -29,6 +30,7 @@ registerFormPart1.addEventListener('submit', function (event) {
     }
 
     if (usersLocal !== null) {
+        console.log(emailInput)
         const emailFound = usersLocal.find(user => emailInput === user.email)
 
         if (!emailFound) {
@@ -41,6 +43,10 @@ registerFormPart1.addEventListener('submit', function (event) {
 
         }
 
+    } else {
+        console.log(emailInput)
+        registerFormPart1.style.display = 'none';
+        registerFormPart2.style.display = 'flex'
     }
 
 
@@ -53,6 +59,7 @@ let arrayUsers = []
 if (usersLocal !== null) {
     arrayUsers = usersLocal
 }
+
 
 registerFormPart2.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -112,6 +119,8 @@ registerFormPart2.addEventListener('submit', (e) => {
     registerFormPart2.reset()
 
 })
+
+
 
 
 
