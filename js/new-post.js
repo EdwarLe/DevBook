@@ -1,6 +1,7 @@
 const newPost = document.getElementById("new-post")
 const modalNewPost = document.getElementById("modal-new-post")
 const btnBackPost = document.getElementById("btn-back-post")
+const btnBackPostProfile = document.getElementById("btn-back-post-profile")
 const btnVideoPost = document.getElementById("btn-video-file")
 const btnPhotoPost = document.getElementById("btn-photo-file")
 const uploadVideo = document.getElementById("video-file")
@@ -36,6 +37,7 @@ const closeModal = () => {
 }
 
 btnBackPost.addEventListener('click', closeModal)
+btnBackPostProfile?.addEventListener('click', closeModal)
 newPost.addEventListener('click', openModal)
 modalNewPost.addEventListener('submit', (e) => {
     e.preventDefault()
