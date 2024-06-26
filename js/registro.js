@@ -114,7 +114,7 @@ registerFormPart2.addEventListener('submit', (e) => {
 
     modalValidations.style.right = '-100%'
 
-    window.location.href = 'inicio.html'
+    window.location.href = 'views/inicio.html'
 
     registerFormPart2.reset()
 
