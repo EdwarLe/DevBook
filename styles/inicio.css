@@ -339,10 +339,11 @@ section #fecha {
 }
 
 .post-actions section i {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .post-actions section p {
+    font-size: 12px;
     margin: 0;
 }
 
@@ -673,9 +674,13 @@ section #fecha {
         margin-left: var(--padding-10);
     }
 
-    .post-actions p,
-    i {
-        font-size: 25px;
+    .post-actions section p {
+        font-size: 20px;
+    }
+
+    .post-actions section i {
+        font-size: 20px;
+        margin: 0;
     }
 
     .comments-section h3 {

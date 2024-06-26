@@ -31,6 +31,13 @@
     padding: 10px;
 }
 
+#register-form-part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-10);
+}
 
 #register-form-part2 {
     display: none;
@@ -65,7 +72,8 @@
     outline: none;
 }
 
-button {
+button,
+.login {
     width: 100%;
     max-width: 300px;
     padding: var(--padding-10);
@@ -76,9 +84,11 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
 }
 
-button:hover {
+button:hover,
+.login:hover {
     background-color: #0056b3;
 }
 
