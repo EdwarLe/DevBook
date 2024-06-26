@@ -15,6 +15,7 @@ const gender = document.getElementById("gender")
 const birthday = document.getElementById("birthday")
 const role = document.getElementById("role")
 const stack = document.getElementById("stack")
+const btnCancelResgister = document.getElementById("btnCancelResgister")
 
 const usersLocal = JSON.parse(localStorage.getItem('users'))
 console.log(usersLocal)
@@ -118,6 +119,11 @@ registerFormPart2.addEventListener('submit', (e) => {
 
     registerFormPart2.reset()
 
+})
+
+btnCancelResgister.addEventListener('click', () => {
+    registerFormPart2.style.display = "none"
+    registerFormPart1.style.display = "flex"
 })
 
 

@@ -88,7 +88,8 @@ async function dataJSON() {
             const arrayPostsUsers = Array.from(postsUsers)
             arrayPostsUsers.find(user => {
                 user.addEventListener("click", (e) => {
-                    if (e.target.textContent.includes("Comment") && parseInt(user.id.split('-')[1]) == post.id) {
+                    console.log('comentario')
+                    if (e.target.textContent.includes("Comentarios") && parseInt(user.id.split('-')[1]) == post.id) {
                         commentsByPost(post)
                         containerComment.classList.toggle("hiddenComment")
                     }

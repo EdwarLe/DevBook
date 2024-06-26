@@ -92,6 +92,10 @@ button:hover,
     background-color: #0056b3;
 }
 
+#birthday[type='date'] {
+    color: #808080;
+}
+
 .icons {
     display: flex;
     justify-content: center;

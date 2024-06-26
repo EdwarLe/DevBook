@@ -19,7 +19,13 @@ modalConfiguration.innerHTML = `
             <option value="es">🇪🇸</option>
         </select>
     </div>
-    <div class="btn-configuration logout">
+    <div class="btn-configuration logout" id="logout">
         <i class='bx bx-log-out-circle'></i>
         <p>Salir</p>
     </div>`
+
+const btnLogout = document.getElementById("logout")
+
+btnLogout.addEventListener('click', () => {
+    window.location.href = '../index.html'
+})
