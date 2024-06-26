@@ -10,13 +10,27 @@
     z-index: 100;
     border-bottom: 1px solid var(--blanco);
     padding: 5px;
+    display: grid;
+    grid-template-columns: 30px auto;
 }
 
-.header h4 {
+.header h1 {
     font-family: "Josefin Sans";
     font-size: 23px;
     text-align: center;
-    margin-top: 20px;
+    justify-self: center;
+    align-self: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.header i {
+    place-content: center;
+    padding: var(--padding-10);
 }
 
 /* Finaliza Header */
@@ -30,6 +44,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .cover-photo-banner {
