@@ -67,15 +67,15 @@ async function dataJSON() {
                 <div class="post-actions">
                     <section class="Like">
                         <i class='bx bx-like'></i>
-                        <p>Like</p>
+                        <p>Me Gusta</p>
                     </section>
                     <section class="openComments" id='${post.id}post'>
                         <i class='bx bx-comment'></i>
-                        <p>Comment</p>
+                        <p>Comentarios</p>
                     </section>
                     <section class="Share">
                         <i class='bx bx-share-alt'></i>
-                        <p>Share</p>
+                        <p>Compartir</p>
                     </section>
                 </div> 
             </div>    
