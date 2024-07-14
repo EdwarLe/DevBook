@@ -1,4 +1,6 @@
 const newPost = document.getElementById("new-post")
+const newPostDesk = document.getElementById("new-post-desk")
+const btnPostsDeskProfile = document.getElementById("btn-posts-desk")
 const modalNewPost = document.getElementById("modal-new-post")
 const btnBackPost = document.getElementById("btn-back-post")
 const btnBackPostProfile = document.getElementById("btn-back-post-profile")
@@ -10,9 +12,6 @@ const btnPost = document.getElementById("btn-post")
 const nameUserPost = document.getElementById("name-user-post")
 const imgUserPost = document.getElementById("img-user-post")
 const msgPost = document.getElementById("msg-post")
-
-
-
 
 let postIdCount = 11;
 
@@ -39,6 +38,8 @@ const closeModal = () => {
 btnBackPost.addEventListener('click', closeModal)
 btnBackPostProfile?.addEventListener('click', closeModal)
 newPost.addEventListener('click', openModal)
+newPostDesk?.addEventListener('click', openModal)
+btnPostsDeskProfile?.addEventListener('click', openModal)
 modalNewPost.addEventListener('submit', (e) => {
     e.preventDefault()
     let idToString = postIdCount.toString()

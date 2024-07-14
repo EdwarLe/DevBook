@@ -35,7 +35,7 @@ function notificationsList(notificationsToLoop, containerNotifications) {
                 </div>
             </div>  
             `
-            containerNotifications.appendChild(contenedorNotificatios);
+            containerNotifications?.appendChild(contenedorNotificatios);
         }
     })
 }

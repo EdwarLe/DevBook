@@ -1,6 +1,6 @@
-export const modalValidaciones = (modal, textoError) => {
+export const modalValidaciones = (modal, textoError, infoError) => {
     modal.style.right = '0'
-    modal.textContent = textoError
+    infoError.textContent = textoError
     setTimeout(() => {
         modal.style.right = '-200%'
     }, 5000);

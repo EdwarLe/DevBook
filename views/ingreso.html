@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/LogoDevBook.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,13 +35,14 @@
                 <button type="submit">Ingresar</button>
                 <div class="links">
                     <p class="pass"><a href="">Olvidaste tu contraseña?</a></p>
-                    <p class="register"><a href="/index.html">Regístrate</a></p>
+                    <p class="register"><a href="../views/registro.html">Regístrate</a></p>
                 </div>
             </form>
 
         </div>
-        <div class="modalValidations" id="movalValidations">Error en alguna validación</div>
-
+        <div class="modalErrorContainer" id="movalValidations">
+            <div class="modalValidations" id="infoError">Error en alguna validación</div>
+        </div>
     </div>
     <script src="../js/ingreso.js" type="module"></script>
 </body>

@@ -11,8 +11,6 @@ const btnSearchContact = document.getElementById("btnSearchContact")
 const linkWeb = document.getElementsByClassName("nav-menu-item")
 const url = window.location.pathname
 
-
-
 // Esta funcion muestra el menu en pantallas moviles y en tablet
 burguer.addEventListener("click", function () {
     menuContainerContact.classList.toggle("mostrar-menu")

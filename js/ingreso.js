@@ -2,6 +2,8 @@ import { modalValidaciones } from "../components/modal-validaciones.js";
 
 const loginForm = document.getElementById('login-form')
 const modalValidations = document.getElementById('movalValidations')
+const infoError = document.getElementById("infoError")
+
 var username = document.getElementById('username');
 var password = document.getElementById('password');
 var remember = document.getElementById('remember');
@@ -25,16 +27,16 @@ loginForm.addEventListener('submit', function (event) {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(usernameValue)) {
-        return modalValidaciones(modalValidations, 'Por favor, introduce un correo electrónico válido y una contraseña.')
+        return modalValidaciones(modalValidations, 'Por favor, introduce un correo electrónico válido y una contraseña.', infoError)
     }
 
-    const userFound = usersLocal.find(user => usernameValue === user.email && passwordValue === user.password)
+    const userFound = usersLocal?.find(user => usernameValue === user.email && passwordValue === user.password)
 
     if (!userFound) {
-        return modalValidaciones(modalValidations, 'Usuario o contraseña inválido')
+        return modalValidaciones(modalValidations, 'Usuario o contraseña inválido', infoError)
     }
 
-    modalValidaciones(modalValidations, 'Bienvenido')
+    modalValidaciones(modalValidations, 'Bienvenido', infoError)
     const rememberUser = {
         usernameValue,
         passwordValue
@@ -44,7 +46,7 @@ loginForm.addEventListener('submit', function (event) {
         localStorage.setItem("UserRemember", JSON.stringify(rememberUser))
     }
     setTimeout(() => {
-        window.location.href = 'inicio.html'
+        window.location.href = '../index.html'
     }, 2000);
 
 
