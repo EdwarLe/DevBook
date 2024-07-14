@@ -9,7 +9,6 @@ btnNotifications.addEventListener("click", () => {
 })
 
 btnNotificationsDesktop?.addEventListener("click", () => {
-    console.log(btnNotificationsDesktop)
     modalNotifications.classList.toggle("hidden-notifications")
 })
 

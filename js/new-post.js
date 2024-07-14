@@ -13,9 +13,6 @@ const nameUserPost = document.getElementById("name-user-post")
 const imgUserPost = document.getElementById("img-user-post")
 const msgPost = document.getElementById("msg-post")
 
-
-console.log(btnPostsDeskProfile)
-
 let postIdCount = 11;
 
 // Función para abrir el explorador de archivos para subir vídeos
@@ -42,7 +39,7 @@ btnBackPost.addEventListener('click', closeModal)
 btnBackPostProfile?.addEventListener('click', closeModal)
 newPost.addEventListener('click', openModal)
 newPostDesk?.addEventListener('click', openModal)
-btnPostsDeskProfile.addEventListener('click', openModal)
+btnPostsDeskProfile?.addEventListener('click', openModal)
 modalNewPost.addEventListener('submit', (e) => {
     e.preventDefault()
     let idToString = postIdCount.toString()

@@ -7,7 +7,7 @@
   max-width: 1200px;
   background-color: var(--oscuro-400);
   position: fixed;
-  z-index: 100;
+  z-index: 300;
 }
 
 .nav {
@@ -19,7 +19,7 @@
   padding: var(--padding-10);
   align-items: center;
   gap: var(--padding-10);
-  z-index: 100;
+  z-index: 300;
 }
 
 .logo {
@@ -114,7 +114,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.mostrar-input {
+.show-input {
   border-color: var(--gris);
   background-color: var(--blanco);
 }
@@ -128,7 +128,7 @@
   font-size: 40px;
 }
 
-#buscar-boton {
+#btnSearchContact {
   display: none;
   border-radius: 8px;
   width: 120px;
@@ -140,6 +140,7 @@
   background: #F2FFFB;
   padding: 0 10px;
   gap: 5px;
+  cursor: pointer;
 }
 
 .bx-chevron-down {
@@ -265,7 +266,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--padding-10);
-  
+
 }
 
 /* Finaliza sección acerca de nosotros  */
@@ -349,11 +350,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap:var(--padding-20);
+  gap: var(--padding-20);
   place-content: center;
 }
 
-.contenedor-equipo > h2 {
+.contenedor-equipo>h2 {
   text-align: center;
   font-size: 40px;
   color: #0E877D;
@@ -390,12 +391,15 @@
 .edwar {
   background: url(../public/images/edwar-leon.png);
 }
+
 .vanessa {
   background: url(../public/images/vanessa-mora1.png);
 }
+
 .mateo {
   background: url(../public/images/mateo-castro.png);
 }
+
 .yuli {
   background: url(../public/images/yuli-leon.png);
 }
@@ -518,7 +522,7 @@
   margin-top: var(--padding-10);
 }
 
-.derechos p{
+.derechos p {
   font-size: 14px;
 }
 
@@ -582,7 +586,7 @@
     display: flex;
   }
 
-  .inputBuscador:focus + label {
+  .inputBuscador:focus+label {
     display: none;
   }
 
@@ -605,7 +609,7 @@
   .btn-top {
     display: flex;
     gap: var(--padding-10);
-    
+
   }
 
   .btn-bottom {

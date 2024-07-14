@@ -3,7 +3,6 @@ const btnConfiguration = document.getElementById("btn-config")
 
 
 btnConfiguration.addEventListener("click", () => {
-    console.log(btnConfiguration)
     modalConfiguration.classList.toggle("hidden-setting")
 })
 
