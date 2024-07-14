@@ -11,98 +11,145 @@
         rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/registro.css">
-    <title>Registro</title>
+    <link rel="stylesheet" href="../styles/inicio.css">
+    <title>Inicio</title>
 </head>
 
 <body>
-    <div class="contenedorPrincipalApp">
-        <div class="register-container">
-            <img src="../img/LogoDevBook.png" alt="Logo" class="logo">
-            <div>
-                <h1>Crea una cuenta</h1>
-                <p>Ingrese su correo electrónico para registrarse en esta aplicación</p>
-                <div class="doubleForm">
-                    <form id="register-form-part1">
-                        <div class="input-group">
-                            <input type="email" id="email" name="email" placeholder="email@email.com">
-                            <label for="email"></label>
-                        </div>
-                        <button type="input" id="next-button">Registrar</button>
-                        <a class="login" href="/views/ingreso.html">Iniciar Sesión</a>
-                        <section class="icons">
-                            <a href="https://www.linkedin.com/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                            <a href="https://www.google.com.co/" target="_blank"><i class='bx bxl-google'></i></a>
-                            <a href="https://github.com/" target="_blank"><i class='bx bxl-github'></i></a>
-                            <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
-                        </section>
-                        <p>Al hacer clic en Continuar, acepta nuestros Términos de servicio y Política de privacidad</p>
-                    </form>
+    <main class="contenedorPrincipalApp">
+        <header>
+            <div class="nav-menu">
+                <h1 class="title">DevBook</h1>
+                <section class="navegacion">
+                    <a href="./views/perfil.html"><i class='bx bx-user-circle'></i></a>
+                    <a href="./views/nosotros.html"><i class='bx bx-shopping-bag'></i></a>
+                    <i id="btn-config" class='bx bxs-cog'></i>
 
-                    <form id="register-form-part2">
-                        <div class="input-group">
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                        </div>
-                        <div class="input-group">
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-                        </div>
-                        <div class="input-group">
-                            <input type="password" id="password" name="password" placeholder="Contraseña">
-                        </div>
-                        <div class="input-group">
-                            <div class="form-group">
-                                <select id="country" name="country">
-                                    <option value="">Seleccione un país</option>
-                                    <option value="US">Estados Unidos</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="MX">Mexico</option>
-                                    <option value="CO">Colombia</option>
-                                </select>
-                            </div>
-                            <div class="input-group">
-                                <input type="phone" id="phone" name="phone" placeholder="Teléfono">
-                            </div>
-                            <div class="form-group">
-                                <select id="gender" name="gender">
-                                    <option value="">Seleccione un género</option>
-                                    <option value="male">Masculino</option>
-                                    <option value="female">Femenino</option>
-                                    <option value="other">Otro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="date" id="birthday" name="birthday">
-                            </div>
-                            <div class="form-group">
-                                <select id="role" name="role">
-                                    <option value="">Seleccione un rol</option>
-                                    <option value="frontend">Frontend Developer</option>
-                                    <option value="backend">Backend Developer</option>
-                                    <option value="fullstack">Fullstack Developer</option>
-                                    <option value="devops">DevOps</option>
-                                    <option value="data_scientist">Data Scientist</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <select id="stack" name="stack">
-                                    <option value="">Seleccione un stack</option>
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="python">Python</option>
-                                    <option value="java">Java</option>
-                                    <option value="ruby">Ruby</option>
-                                    <option value="php">PHP</option>
-                                </select>
-                                <button type="submit">Guardar</button>
-                                <button id="btnCancelResgister">Cancelar</button>
-                                <p>Al hacer clic en guardar, acepta nuestros Términos de servicio y Política de
-                                    privacidad</p>
-                    </form>
+                </section>
+            </div>
+            <!-- <hr> -->
+            <div class="busqueda">
+                <img src="../public/profile/user.jpg" id="userPicture">
+                <div class="searchInput">
+                    <input placeholder="Buscar">
+                    <!-- Elemento i posicionado absolutamente -->
+                    <i class='bx bx-search-alt'></i>
+
+
+                </div>
+                <section class="nueva-publicacion" id="new-post-desk">
+                    <i class='bx bxs-add-to-queue'></i>
+                    <h3>Nuevo post</h3>
+                </section>
+            </div>
+        </header>
+        <main class="contenedor-publicacion">
+            <div class="publicaciones" id="publicaciones">
+                <div id="media"> </div>
+            </div>
+            <div class="sidebar">
+                <div id="notificaciones" class="notificaciones">
+                    <h3>Notificaciones</h3>
+                </div>
+                <div class="lista-amigos">
+                    <h3>Amigos</h3>
+                </div>
+            </div>
+        </main>
+        <footer class="pie-pagina">
+            <section class="pie notificacion" id="notifications">
+                <i class='bx bxs-bell'></i>
+                <h3>Notificaciones</h3>
+            </section>
+            <section class="pie amigos" id="friends">
+                <i class='bx bxs-group'></i>
+                <h3>Amigos</h3>
+            </section>
+            <section class="pie publicacion" id="new-post">
+                <i class='bx bxs-add-to-queue'></i>
+                <h3>Nuevo post</h3>
+            </section>
+        </footer>
+        <div class="modal-configuration hidden-setting" id="modal-configuration">
+
+        </div>
+
+        <div class="modal-friends hidden-friends" id="modal-friends">
+            <div class="friendsList friendsModal">
+                <div class="friendsTitle">
+                    <i class='bx bxs-chevrons-left' id="close-friends"></i>
+                    <h3>Amigos</h3>
                 </div>
             </div>
         </div>
-        <div class="modalValidations" id="movalValidations">Error en alguna validación</div>
-    </div>
-    <script src="../js/registro.js" type="module"></script>
+
+        <div class="modal-notifications hidden-notifications notificacionesSelect" id="modal-notifications">
+            <div class="notificationsList notificacionesModal">
+                <div class="notificattionTitle">
+                    <i class='bx bxs-chevrons-left' id="close-notifications"></i>
+                    <h3>Notificaciones</h3>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="containerComment hiddenComment">
+
+            <div class="commentBox">
+                <div class="commentsTitle">
+                    <i class='bx bx-chevrons-left closeComment'></i>
+                    <h3>Commentarios</h3>
+
+                </div>
+
+                <div class="commentModal">
+                </div>
+
+            </div>
+
+        </div>
+
+        <form class="modal-new-post" id="modal-new-post">
+            <div class="container-modal">
+                <div class="back-post">
+                    <i class='bx bxs-chevrons-left' id="btn-back-post"></i>
+                    <p>Crear Publicación</p>
+                    <button class="btn-post" type="submit" id="btn-post">Publicar</button>
+                </div>
+                <div class="profile-post">
+                    <div class="img-new-post">
+                        <img src="../public/images/edwar-leon.png" alt="image profile" id="img-user-post">
+                    </div>
+                    <p id="name-user-post">Eddy León</p>
+                </div>
+                <textarea class="msg-post" name="msg-post" id="msg-post" placeholder="¿Qué estás pensando?"></textarea>
+                <div class="footer-post">
+                    <div class="media-box-post vid-box" id="btn-video-file">
+                        <input type="file" name="video-file" id="video-file" class="media-post">
+                        <label>Videos</label>
+                        <i class='bx bxs-video'></i>
+                    </div>
+                    <div class="media-box-post" id="btn-photo-file">
+                        <input type="file" name="video-file" id="photo-file" class="media-post">
+                        <p>Fotos</p>
+                        <i class='bx bxs-image'></i>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+    </main>
+    <script src="../js/consumo-publicaciones.js" type="module"></script>
+    <script src="../js/consumo-notificaciones.js" type="module"></script>
+    <script src="../js/modal-configuration.js"></script>
+    <script src="../js/modal-friends.js" type="module"></script>
+    <script src="../js/modal-notifications.js" type="module"></script>
+    <script src="../js/modal-comments.js" type="module"></script>
+    <script src="/js/new-post.js"></script>
+
 </body>
+
 
 </html>

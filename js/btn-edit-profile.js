@@ -25,11 +25,3 @@ btn_close_menu_profile.addEventListener("click", function () {
 
     // container_details_profile_configuration.style.display = "none"
 })
-
-// Esta funcion muestra el buscador en pantallas moviles
-if (!mediaQuery.matches) {
-    btn_edit_profile.addEventListener("click", function () {
-        // container_details_profile_configuration.classList.add("mostrar-fondo")
-        // container_details_profile_configuration.style.display = "grid"
-    })
-}

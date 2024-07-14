@@ -1,9 +1,12 @@
 const modalConfiguration = document.getElementById("modal-configuration")
 const btnConfiguration = document.getElementById("btn-config")
 
+
 btnConfiguration.addEventListener("click", () => {
+    console.log(btnConfiguration)
     modalConfiguration.classList.toggle("hidden-setting")
 })
+
 
 modalConfiguration.innerHTML = `
     <p>Configuración</p>

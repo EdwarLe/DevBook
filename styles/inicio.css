@@ -62,6 +62,14 @@
     right: 15%;
 }
 
+.bxs-cog {
+    cursor: pointer;
+}
+
+.nueva-publicacion {
+    display: none;
+}
+
 /* Finaliza Seccion nav-menu */
 
 /* Inicio Modal Configuracion */
@@ -76,7 +84,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: var(--padding-10); */
     position: fixed;
     top: 50px;
     right: 20px;
@@ -247,6 +254,7 @@
 .publicaciones {
     display: flex;
     flex-direction: column-reverse;
+    gap: var(--padding-10);
 }
 
 .tarjeta {
@@ -255,14 +263,14 @@
     width: 100%;
     color: var(--blanco);
     padding: var(--padding-10);
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.tarjeta .foto {
-    width: 30px;
-    height: 30px;
+.foto {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-top: 10px;
-    margin-left: 10px;
 }
 
 .encabezado {
@@ -272,9 +280,10 @@
 
 .encabezado section {
     display: grid;
-    grid-template-rows: 21px 9px;
+    grid-template-rows: auto;
+    place-content: center;
     gap: 4px;
-    padding-left: 3px;
+    padding-left: 5px;
 }
 
 section .profileLink {
@@ -297,10 +306,12 @@ section #fecha {
 
 .content {
     text-align: center;
+    margin: 0 auto;
 }
 
 .content img {
     width: 95%;
+    max-width: 400px;
 }
 
 .content video {
@@ -613,6 +624,7 @@ section #fecha {
     .busqueda {
         justify-content: left;
         padding: 0 10vw;
+
     }
 
     .busqueda img {
@@ -649,27 +661,20 @@ section #fecha {
         width: 80%;
     }
 
-    .encabezado .foto {
-        width: 10%;
-        height: 10%;
-    }
-
-    .encabezado #usuario {
-        font-size: xx-large;
-    }
-
     .encabezado #fecha {
-        font-size: 13px;
+        font-size: 9px;
         margin-left: 9px;
-        margin-top: 10px;
     }
 
-    .tarjeta .text {
-        font-size: 23px;
+    .tarjeta {
+        max-width: none;
+        width: 80%;
     }
+
 
     .tarjeta .content {
-        width: 100%;
+        max-width: none;
+        width: 90%;
     }
 
     .interactions i {
@@ -802,7 +807,7 @@ section #fecha {
     /* Inicia Modal Configuración */
 
     .modal-configuration {
-        top: 55px;
+        top: 85px;
         right: 25px;
     }
 
@@ -828,8 +833,24 @@ section #fecha {
     }
 
     .busqueda {
+        justify-content: space-between;
         padding: 0 8vw;
         margin-top: 95px;
+    }
+
+    .nueva-publicacion {
+        display: flex;
+        justify-content: center;
+        background-color: var(--oscuro-300);
+        padding: var(--padding-10);
+        border-radius: 8px;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .bxs-add-to-queue {
+        display: flex;
+        align-items: center;
     }
 
     /* fin seccion nav-menu */
@@ -841,7 +862,7 @@ section #fecha {
         grid-template-columns: 2fr 1fr;
         gap: 20px;
         padding: 20px;
-        margin-bottom: 80px;
+        margin-bottom: 0;
     }
 
     .publicaciones {
@@ -856,6 +877,23 @@ section #fecha {
         color: var(--blanco);
     }
 
+    .tarjeta .foto {
+        height: 75px;
+        width: 75px;
+    }
+
+    .encabezado #fecha {
+        font-size: 12px;
+    }
+
+    .tarjeta {
+        max-width: none;
+    }
+
+    .content img {
+        max-width: none;
+    }
+
     /* Finaliza Sección Publicaciones */
 
     /* Inicia Modales */
@@ -867,12 +905,12 @@ section #fecha {
         height: 43vh;
         margin-left: var(--padding-20);
         margin-right: 9%;
-        margin-top: var(--padding-10);
         padding: var(--padding-10);
         border-radius: 10px;
         background-color: var(--oscuro-300);
         overflow-y: auto;
         top: 20px;
+
     }
 
     .notificaciones>h3,
@@ -910,13 +948,13 @@ section #fecha {
         margin-top: 5px;
     }
 
-    .modal-friends {
+    /* .modal-friends {
         display: none;
-    }
+    } */
 
-    .modal-notifications {
-        display: none;
-    }
+    /* .modal-notifications {
+            display: none;
+        } */
 
     .amigo img {
         width: 40px;
@@ -937,19 +975,8 @@ section #fecha {
     /* Inicia Sección Footer */
 
     .pie-pagina {
-        max-width: 1200px;
+        display: none;
     }
-
-
-    .pie-pagina .notificacion {
-        margin-left: var(--padding-10);
-    }
-
-    .pie-pagina .publicacion {
-        margin-right: var(--padding-10);
-    }
-
-
 
     /* Finaliza Sección Footer */
 

@@ -20,7 +20,7 @@
     <div class="contenedorPrincipalApp">
         <!-- header -->
         <header class="header">
-            <a href="./inicio.html">
+            <a href="../index.html">
                 <i class='bx bxs-chevrons-left' id="btn-back-post"></i>
             </a>
             <h1>DevBook</h1>
@@ -43,8 +43,10 @@
             <div class="Username">
                 <h4> Eddy León</h4>
             </div>
-            <div class="btn-notifications-desktop"><i
-                    class='bx bxs-bell icon-footer icon-notifications-desktop'></i>Notificaciones</div>
+            <div class="btn-notifications-desktop" id="btn-notifications-desktop">
+                <i class='bx bxs-bell icon-footer icon-notifications-desktop'></i>
+                Notificaciones
+            </div>
         </section>
         <!-- descripción del perfil -->
         <section class="container-description-btn-edit-and-conf">
@@ -78,9 +80,9 @@
                         <div class="item-contac"><i class='bx bx-phone'></i> <span>+57 321 215 9041</span></div>
                     </div>
                     <div class="footer-details">
-                        <div class="btn-footer-details">Fotos</div>
-                        <div class="btn-footer-details">Amigos</div>
-                        <div class="btn-footer-details">Publicación</div>
+                        <div class="btn-footer-details" id="btn-pictures-desk">Fotos</div>
+                        <div class="btn-footer-details" id="btn-friends-desk">Amigos</div>
+                        <div class="btn-footer-details" id="btn-posts-desk">Publicación</div>
                     </div>
                 </div>
                 <div class="container-profile-configuration" id="container-profile-configuration">
@@ -109,9 +111,7 @@
                                 </div>
                             </span><i class='bx bx-edit'></i></div>
                     </div>
-                    <div class="configuration hidden-setting" id="modal-configuration">
 
-                    </div>
                 </div>
             </div>
             <!-- Publicaciones -->
@@ -212,8 +212,9 @@
     <script src="../js/modal-configuration.js"></script>
     <script src="../js/modal-friends.js" type="module"></script>
     <script src="../js/modal-notifications.js" type="module"></script>
+    <script src="../js/consumo-notificaciones.js" type="module"></script>
     <script src="../js/modal-comments.js" type="module"></script>
-    <script src="/js/new-post.js"></script>
+    <script src="../js/new-post.js"></script>
 
 </body>
 
