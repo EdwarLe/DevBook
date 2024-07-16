@@ -1,3 +1,5 @@
+import cld from "./cloudynari-config.js"
+
 const newPost = document.getElementById("new-post")
 const newPostDesk = document.getElementById("new-post-desk")
 const btnPostsDeskProfile = document.getElementById("btn-posts-desk")
@@ -53,7 +55,7 @@ modalNewPost.addEventListener('submit', (e) => {
     if (uploadVideo.value) {
         mediaData.push({
             "type": "video",
-            "url": uploadVideo.value
+            "url": cld.video(uploadVideo.value).format('auto').quality('auto').toURL()
         })
         msgPost.value += uploadVideo.value
         msgPost.value += "\n"
@@ -61,7 +63,7 @@ modalNewPost.addEventListener('submit', (e) => {
     if (uploadPhoto.value) {
         mediaData.push({
             "type": "image",
-            "url": uploadPhoto.value
+            "url": cld.image(uploadPhoto.value).format('auto').quality('auto').toURL()
         })
         msgPost.value += uploadPhoto.value
         msgPost.value += "\n"

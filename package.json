@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "---",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@cloudinary/url-gen": "^1.19.0",
+    "vite": "^5.3.3"
+  }
 }
