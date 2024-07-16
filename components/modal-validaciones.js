@@ -3,5 +3,5 @@ export const modalValidaciones = (modal, textoError, infoError) => {
     infoError.textContent = textoError
     setTimeout(() => {
         modal.style.right = '-200%'
-    }, 5000);
+    }, 1000);
 }
